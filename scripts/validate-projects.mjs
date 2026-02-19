@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 
 const DATA_FILE = new URL('../data/projects.json', import.meta.url);
-const requiredFields = ['id', 'title', 'description', 'thumbnail', 'repoUrl'];
+const requiredFields = ['id', 'title', 'description', 'thumbnail'];
 
 function fail(message) {
   console.error(`❌ ${message}`);
@@ -46,6 +46,11 @@ async function main() {
       }
     }
 
+
+    if (!isNonEmptyString(project.repoUrl) && !isNonEmptyString(project.demoUrl)) {
+      fail(`${pointer} 는 repoUrl 또는 demoUrl 중 하나 이상이 필요합니다.`);
+    }
+
     if (isNonEmptyString(project.id)) {
       if (ids.has(project.id)) {
         fail(`${pointer}.id '${project.id}' 는 중복될 수 없습니다.`);
@@ -59,6 +64,10 @@ async function main() {
 
     if (isNonEmptyString(project.repoUrl) && !isValidHttpUrl(project.repoUrl)) {
       fail(`${pointer}.repoUrl 은 유효한 http(s) URL이어야 합니다.`);
+    }
+
+    if (isNonEmptyString(project.demoUrl) && !isValidHttpUrl(project.demoUrl)) {
+      fail(`${pointer}.demoUrl 은 유효한 http(s) URL이어야 합니다.`);
     }
   });
 

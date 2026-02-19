@@ -26,7 +26,7 @@ function renderProjects(projects) {
   const fragment = document.createDocumentFragment();
 
   projects.forEach((project) => {
-    if (!project?.title || !project?.repoUrl) {
+    if (!project?.title || (!project?.repoUrl && !project?.demoUrl)) {
       return;
     }
 
