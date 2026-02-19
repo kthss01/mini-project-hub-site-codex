@@ -1,0 +1,7 @@
+{
+  "name": "mini-project-hub-site-codex",
+  "private": true,
+  "scripts": {
+    "lint:data": "node scripts/validate-projects.mjs"
+  }
+}

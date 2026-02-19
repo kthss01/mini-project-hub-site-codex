@@ -10,7 +10,7 @@
     "id": "sample-project-002",
     "title": "Task Timer CLI",
     "description": "작업 시간 추적을 돕는 경량 CLI 도구입니다.",
-    "thumbnail": "",
+    "thumbnail": "public/images/default-thumbnail.svg",
     "repoUrl": "https://github.com/example/task-timer-cli"
   }
 ]
