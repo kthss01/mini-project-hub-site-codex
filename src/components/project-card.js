@@ -43,6 +43,8 @@ function buildDocsAssetCandidates(path) {
 
   if (hasFilenameOnly) {
     return [
+      `packages/client/public/assets/${THUMBNAIL_FILENAME}`,
+      `packages/client/assets/${THUMBNAIL_FILENAME}`,
       `docs/assets/${THUMBNAIL_FILENAME}`,
       `docs/${THUMBNAIL_FILENAME}`,
       `assets/${THUMBNAIL_FILENAME}`,
