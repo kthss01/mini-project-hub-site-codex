@@ -1,5 +1,25 @@
 const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
 
+function buildThumbnailCandidates(thumbnailPath) {
+  const path = typeof thumbnailPath === 'string' ? thumbnailPath.trim() : '';
+
+  if (!path) {
+    return [FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg'];
+  }
+
+  const candidates = [path];
+
+  if (path.startsWith('public/')) {
+    candidates.push(`/${path.replace(/^public\//, '')}`);
+  } else if (path.startsWith('/images/')) {
+    candidates.push(`public${path}`);
+  }
+
+  candidates.push(FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg');
+
+  return [...new Set(candidates)];
+}
+
 function createTagList(tags = []) {
   const normalizedTags = Array.isArray(tags)
     ? tags.filter((tag) => typeof tag === 'string' && tag.trim().length > 0)
@@ -32,36 +52,48 @@ function createTagList(tags = []) {
   return list;
 }
 
+function createActionLink({ href, label, className }) {
+  if (typeof href !== 'string' || href.trim().length === 0) {
+    return null;
+  }
+
+  const link = document.createElement('a');
+  link.className = className;
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.textContent = label;
+
+  return link;
+}
+
 export function createProjectCard(project) {
   const article = document.createElement('article');
   article.className = 'project-card';
   article.setAttribute('role', 'listitem');
-
-  const link = document.createElement('a');
-  link.className = 'project-card-link';
-  link.href = project.repoUrl;
-  link.target = '_blank';
-  link.rel = 'noopener noreferrer';
-  link.setAttribute('aria-label', `${project.title} 저장소 열기 (새 탭)`);
 
   const thumbnailFrame = document.createElement('div');
   thumbnailFrame.className = 'project-thumbnail-frame';
 
   const thumbnail = document.createElement('img');
   thumbnail.className = 'project-thumbnail';
-  thumbnail.src = project.thumbnail?.trim() || FALLBACK_THUMBNAIL;
+  const thumbnailCandidates = buildThumbnailCandidates(project.thumbnail);
+  let candidateIndex = 0;
+
+  thumbnail.src = thumbnailCandidates[candidateIndex];
   thumbnail.alt = `${project.title} 썸네일`;
   thumbnail.loading = 'lazy';
 
   thumbnail.addEventListener('error', () => {
-    if (thumbnail.dataset.fallbackApplied === 'true') {
-      thumbnailFrame.classList.add('is-thumbnail-error');
-      thumbnail.remove();
+    candidateIndex += 1;
+
+    if (candidateIndex < thumbnailCandidates.length) {
+      thumbnail.src = thumbnailCandidates[candidateIndex];
       return;
     }
 
-    thumbnail.dataset.fallbackApplied = 'true';
-    thumbnail.src = FALLBACK_THUMBNAIL;
+    thumbnailFrame.classList.add('is-thumbnail-error');
+    thumbnail.remove();
   });
 
   thumbnailFrame.appendChild(thumbnail);
@@ -75,6 +107,29 @@ export function createProjectCard(project) {
   const description = document.createElement('p');
   description.textContent = project.description || '프로젝트 설명이 없습니다.';
 
+  const actions = document.createElement('div');
+  actions.className = 'project-actions';
+
+  const repoAction = createActionLink({
+    href: project.repoUrl,
+    label: 'GitHub Repository',
+    className: 'project-action-link',
+  });
+
+  const pageAction = createActionLink({
+    href: project.demoUrl,
+    label: 'GitHub Pages',
+    className: 'project-action-link project-action-link-secondary',
+  });
+
+  if (repoAction) {
+    actions.appendChild(repoAction);
+  }
+
+  if (pageAction) {
+    actions.appendChild(pageAction);
+  }
+
   body.append(title, description);
 
   const tagList = createTagList(project.tags);
@@ -82,8 +137,11 @@ export function createProjectCard(project) {
     body.appendChild(tagList);
   }
 
-  link.append(thumbnailFrame, body);
-  article.appendChild(link);
+  if (actions.childElementCount > 0) {
+    body.appendChild(actions);
+  }
+
+  article.append(thumbnailFrame, body);
 
   return article;
 }
