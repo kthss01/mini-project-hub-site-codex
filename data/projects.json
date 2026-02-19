@@ -1,0 +1,25 @@
+[
+  {
+    "id": "sample-project-001",
+    "title": "Mini Project Hub",
+    "description": "작은 프로젝트를 한눈에 모아보는 허브 웹사이트입니다.\n태그와 상태로 빠르게 프로젝트를 탐색할 수 있습니다.",
+    "thumbnail": "/images/projects/mini-project-hub.png",
+    "repoUrl": "https://github.com/example/mini-project-hub",
+    "demoUrl": "https://mini-project-hub.example.com",
+    "tags": ["React", "TypeScript", "Vite"],
+    "status": "completed",
+    "updatedAt": "2026-02-01",
+    "featured": true
+  },
+  {
+    "id": "sample-project-002",
+    "title": "Task Timer CLI",
+    "description": "작업 시간 추적을 돕는 경량 CLI 도구입니다.",
+    "thumbnail": "",
+    "repoUrl": "https://github.com/example/task-timer-cli",
+    "tags": ["Node.js", "CLI"],
+    "status": "in-progress",
+    "updatedAt": "2026-01-20",
+    "featured": false
+  }
+]
