@@ -5,6 +5,29 @@
   --muted: #556070;
   --border: #d8dfea;
   --focus: #1f6feb;
+
+  --state-empty-bg: #eef3ff;
+  --state-empty-text: #31456b;
+  --state-error-bg: #fff2f2;
+  --state-error-text: #9f1d1d;
+  --state-error-border: #f1bcbc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101722;
+    --surface: #1a2333;
+    --text: #eef3ff;
+    --muted: #a6b4ca;
+    --border: #2b3950;
+    --focus: #70a7ff;
+
+    --state-empty-bg: #243147;
+    --state-empty-text: #d5e2f8;
+    --state-error-bg: #46292d;
+    --state-error-text: #ffd6db;
+    --state-error-border: #6c3b43;
+  }
 }
 
 * {
@@ -34,10 +57,19 @@ body {
   color: var(--muted);
 }
 
+.empty-message,
 .error-message {
-  background: #fff2f2;
-  color: #9f1d1d;
-  border: 1px solid #f1bcbc;
   border-radius: 10px;
   padding: 1rem;
+}
+
+.empty-message {
+  background: var(--state-empty-bg);
+  color: var(--state-empty-text);
+}
+
+.error-message {
+  background: var(--state-error-bg);
+  color: var(--state-error-text);
+  border: 1px solid var(--state-error-border);
 }

@@ -1,0 +1,39 @@
+:root {
+  --card-bg: var(--surface);
+  --card-border: var(--border);
+  --card-title: var(--text);
+  --card-description: var(--muted);
+  --card-tag-bg: #eef3ff;
+  --card-tag-text: #264a8a;
+  --card-thumbnail-bg: #e9eef8;
+  --card-thumbnail-placeholder-bg: #dde6f7;
+  --card-thumbnail-placeholder-text: #4b5f84;
+
+  --card-radius: 14px;
+  --card-spacing: 1rem;
+  --card-gap: 0.75rem;
+
+  --card-title-size: 1.1rem;
+  --card-description-size: 0.95rem;
+  --card-tag-size: 0.78rem;
+
+  --card-shadow-rest: 0 1px 2px rgba(22, 29, 45, 0.06);
+  --card-shadow-hover: 0 10px 24px rgba(22, 29, 45, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: #1a2333;
+    --card-border: #2b3950;
+    --card-title: #f2f6ff;
+    --card-description: #b5c2d9;
+    --card-tag-bg: #273750;
+    --card-tag-text: #d6e6ff;
+    --card-thumbnail-bg: #233048;
+    --card-thumbnail-placeholder-bg: #2c3f5f;
+    --card-thumbnail-placeholder-text: #c6d6ef;
+
+    --card-shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --card-shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.48);
+  }
+}

@@ -18,7 +18,7 @@ async function loadProjects() {
 
     renderProjects(projects);
   } catch (error) {
-    projectList.innerHTML = `<p class="error-message">${error.message}</p>`;
+    renderError(error);
   }
 }
 
@@ -33,7 +33,16 @@ function renderProjects(projects) {
     fragment.appendChild(createProjectCard(project));
   });
 
+  if (fragment.childElementCount === 0) {
+    projectList.innerHTML = '<p class="empty-message">아직 등록된 프로젝트가 없습니다. 새 프로젝트를 추가해보세요.</p>';
+    return;
+  }
+
   projectList.replaceChildren(fragment);
+}
+
+function renderError(error) {
+  projectList.innerHTML = `<p class="error-message">${error.message}</p>`;
 }
 
 loadProjects();
