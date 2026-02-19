@@ -1,7 +1,54 @@
 const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
 
-function buildThumbnailCandidates(thumbnailPath) {
-  const path = typeof thumbnailPath === 'string' ? thumbnailPath.trim() : '';
+function sanitizeThumbnailPath(thumbnailPath) {
+  if (typeof thumbnailPath !== 'string') {
+    return '';
+  }
+
+  return thumbnailPath
+    .replace(/\\n/g, '/')
+    .replace(/\n/g, '/')
+    .replace(/\\+/g, '/')
+    .trim();
+}
+
+function parseGithubRepo(repoUrl) {
+  if (typeof repoUrl !== 'string' || repoUrl.trim().length === 0) {
+    return null;
+  }
+
+  try {
+    const url = new URL(repoUrl);
+
+    if (url.hostname !== 'github.com') {
+      return null;
+    }
+
+    const [owner, repo] = url.pathname.replace(/^\/+|\/+$/g, '').split('/');
+
+    if (!owner || !repo) {
+      return null;
+    }
+
+    return { owner, repo };
+  } catch {
+    return null;
+  }
+}
+
+function buildGithubThumbnailCandidates({ owner, repo }, path) {
+  const docsAssetPath = path.replace(/^\/+/, '');
+
+  return [
+    `https://raw.githubusercontent.com/${owner}/${repo}/main/${docsAssetPath}`,
+    `https://raw.githubusercontent.com/${owner}/${repo}/master/${docsAssetPath}`,
+    `https://cdn.jsdelivr.net/gh/${owner}/${repo}@main/${docsAssetPath}`,
+    `https://cdn.jsdelivr.net/gh/${owner}/${repo}@master/${docsAssetPath}`,
+  ];
+}
+
+function buildThumbnailCandidates(project) {
+  const path = sanitizeThumbnailPath(project.thumbnail);
 
   if (!path) {
     return [FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg'];
@@ -13,6 +60,14 @@ function buildThumbnailCandidates(thumbnailPath) {
     candidates.push(`/${path.replace(/^public\//, '')}`);
   } else if (path.startsWith('/images/')) {
     candidates.push(`public${path}`);
+  }
+
+  const isRelativeDocsAsset = /^(?:[^/]+\/)?docs\/assets\/project-thumbnail\.svg$/i.test(path);
+
+  const repoMeta = parseGithubRepo(project.repoUrl);
+  if (isRelativeDocsAsset && repoMeta) {
+    const docsAssetPath = path.startsWith('docs/') ? path : path.slice(path.indexOf('/docs/') + 1);
+    candidates.push(...buildGithubThumbnailCandidates(repoMeta, docsAssetPath));
   }
 
   candidates.push(FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg');
@@ -77,7 +132,7 @@ export function createProjectCard(project) {
 
   const thumbnail = document.createElement('img');
   thumbnail.className = 'project-thumbnail';
-  const thumbnailCandidates = buildThumbnailCandidates(project.thumbnail);
+  const thumbnailCandidates = buildThumbnailCandidates(project);
   let candidateIndex = 0;
 
   thumbnail.src = thumbnailCandidates[candidateIndex];

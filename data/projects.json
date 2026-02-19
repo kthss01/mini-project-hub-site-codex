@@ -3,7 +3,7 @@
     "id": "mini-project-hub-site-codex",
     "title": "Mini Project Hub",
     "description": "작은 프로젝트를 한눈에 모아보는 허브 웹사이트입니다. 태그와 상태로 빠르게 프로젝트를 탐색할 수 있습니다.",
-    "thumbnail": "public/images/mini-project-hub.svg",
+    "thumbnail": "mini-project-hub-site-codex/docs/assets/project-thumbnail.svg",
     "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
     "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/"
   },
@@ -11,7 +11,7 @@
     "id": "mini-idle-game-codex",
     "title": "Mini Idle Game Codex",
     "description": "간단한 규칙으로 자원을 모으고 성장시키는 미니 방치형 게임 프로젝트입니다.",
-    "thumbnail": "public/images/mini-idle-game-codex.svg",
+    "thumbnail": "mini-idle-game-codex/docs/assets/project-thumbnail.svg",
     "repoUrl": "https://github.com/kthss01/mini-idle-game-codex",
     "demoUrl": "https://kthss01.github.io/mini-idle-game-codex/"
   },
@@ -19,7 +19,7 @@
     "id": "mini-autobattle-game-codex",
     "title": "Mini Autobattle Game Codex",
     "description": "유닛 구성과 전투 흐름을 자동으로 진행하는 미니 오토배틀 게임 프로젝트입니다.",
-    "thumbnail": "public/images/mini-autobattle-game-codex.svg",
+    "thumbnail": "mini-autobattle-game-codex/docs/assets/project-thumbnail.svg",
     "repoUrl": "https://github.com/kthss01/mini-autobattle-game-codex",
     "demoUrl": "https://kthss01.github.io/mini-autobattle-game-codex/"
   },
@@ -27,7 +27,7 @@
     "id": "mini-spectrum-maze-reboot",
     "title": "Mini Spectrum Maze Reboot",
     "description": "색상과 경로 기믹을 활용해 미로를 공략하는 리부트 버전의 미니 게임 프로젝트입니다.",
-    "thumbnail": "public/images/mini-spectrum-maze-reboot.svg",
+    "thumbnail": "mini-spectrum-maze-reboot/docs/assets/project-thumbnail.svg",
     "repoUrl": "https://github.com/kthss01/mini-spectrum-maze-reboot",
     "demoUrl": "https://kthss01.github.io/mini-spectrum-maze-reboot/"
   },
@@ -35,7 +35,7 @@
     "id": "mini-threejs-speed-effect-codex",
     "title": "Mini Three.js Speed Effect Codex",
     "description": "Three.js로 속도감 있는 시각 효과를 구현하는 미니 그래픽 실험 프로젝트입니다.",
-    "thumbnail": "public/images/mini-threejs-speed-effect-codex.svg",
+    "thumbnail": "mini-threejs-speed-effect-codex/docs/assets/project-thumbnail.svg",
     "repoUrl": "https://github.com/kthss01/mini-threejs-speed-effect-codex",
     "demoUrl": "https://kthss01.github.io/mini-threejs-speed-effect-codex/"
   }
