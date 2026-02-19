@@ -10,7 +10,7 @@
 - `id` (string, 필수): 고유 식별자
 - `title` (string, 필수): 프로젝트명
 - `description` (string, 필수): 카드용 1~2줄 설명
-- `thumbnail` (string, 필수): 썸네일 이미지 경로 (`<repo>/docs/assets/project-thumbnail.svg` 권장)
+- `thumbnail` (string, 필수): 썸네일 이미지 경로 (`project-thumbnail.svg` 파일명 기준, 경로 포함 가능)
 - `repoUrl` (string, 필수): GitHub 저장소 URL
 - `demoUrl` (string, 선택): 배포 링크
 - `tags` (string[], 필수): 기술 스택/주제 배열
@@ -31,7 +31,8 @@
 - `thumbnail`이 빈 문자열이거나 누락된 경우:
   - 기본 이미지 경로 `"public/images/default-thumbnail.svg"` 사용
 - `thumbnail`은 아래 형식 중 하나를 사용:
-  - `"<repo>/docs/assets/project-thumbnail.svg"` (권장)
+  - `"project-thumbnail.svg"`
+  - `"<repo>/docs/assets/project-thumbnail.svg"` 또는 기타 경로 포함 `project-thumbnail.svg`
   - `"public/images/<name>.svg"` (레거시 호환)
 - `demoUrl`이 없으면:
   - "Live Demo" 버튼/링크를 숨김

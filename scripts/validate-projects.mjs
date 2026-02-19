@@ -61,10 +61,10 @@ async function main() {
     if (isNonEmptyString(project.thumbnail)) {
       const normalizedThumbnail = project.thumbnail.trim();
       const isLocalThumbnail = normalizedThumbnail.startsWith('public/images/');
-      const isDocsAssetThumbnail = /^(?:[^/]+\/)?docs\/assets\/project-thumbnail\.svg$/i.test(normalizedThumbnail);
+      const isProjectThumbnailFile = /^(?:[^/]+\/)*(?:docs\/assets\/)?project-thumbnail\.svg$/i.test(normalizedThumbnail);
 
-      if (!isLocalThumbnail && !isDocsAssetThumbnail) {
-        fail(`${pointer}.thumbnail 은 public/images/ 또는 <repo>/docs/assets/project-thumbnail.svg 경로를 사용해야 합니다.`);
+      if (!isLocalThumbnail && !isProjectThumbnailFile) {
+        fail(`${pointer}.thumbnail 은 public/images/ 또는 project-thumbnail.svg(경로 포함 가능) 형식을 사용해야 합니다.`);
       }
     }
 
