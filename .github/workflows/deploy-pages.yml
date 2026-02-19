@@ -28,6 +28,9 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Validate project data
+        run: npm run lint:data
+
       - name: Prepare static files
         run: |
           mkdir -p _site
