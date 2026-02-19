@@ -8,13 +8,6 @@
     "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/"
   },
   {
-    "id": "task-timer-cli-codex",
-    "title": "Task Timer CLI",
-    "description": "작업 시간 추적을 돕는 경량 CLI 도구입니다.",
-    "thumbnail": "public/images/task-timer-cli.svg",
-    "repoUrl": "https://github.com/kthss01/task-timer-cli-codex"
-  },
-  {
     "id": "mini-idle-game-codex",
     "title": "Mini Idle Game Codex",
     "description": "간단한 규칙으로 자원을 모으고 성장시키는 미니 방치형 게임 프로젝트입니다.",
