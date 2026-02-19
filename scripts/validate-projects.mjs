@@ -58,8 +58,14 @@ async function main() {
       ids.add(project.id);
     }
 
-    if (isNonEmptyString(project.thumbnail) && !project.thumbnail.startsWith('public/images/')) {
-      fail(`${pointer}.thumbnail 은 public/images/ 경로를 사용해야 합니다.`);
+    if (isNonEmptyString(project.thumbnail)) {
+      const normalizedThumbnail = project.thumbnail.trim();
+      const isLocalThumbnail = normalizedThumbnail.startsWith('public/images/');
+      const isProjectThumbnailFile = /^(?:[^/]+\/)*(?:docs\/assets\/)?project-thumbnail\.svg$/i.test(normalizedThumbnail);
+
+      if (!isLocalThumbnail && !isProjectThumbnailFile) {
+        fail(`${pointer}.thumbnail 은 public/images/ 또는 project-thumbnail.svg(경로 포함 가능) 형식을 사용해야 합니다.`);
+      }
     }
 
     if (isNonEmptyString(project.repoUrl) && !isValidHttpUrl(project.repoUrl)) {

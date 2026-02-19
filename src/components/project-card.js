@@ -1,7 +1,83 @@
 const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
+const THUMBNAIL_FILENAME = 'project-thumbnail.svg';
 
-function buildThumbnailCandidates(thumbnailPath) {
-  const path = typeof thumbnailPath === 'string' ? thumbnailPath.trim() : '';
+function sanitizeThumbnailPath(thumbnailPath) {
+  if (typeof thumbnailPath !== 'string') {
+    return '';
+  }
+
+  return thumbnailPath
+    .replace(/\\n/g, '/')
+    .replace(/\n/g, '/')
+    .replace(/\\+/g, '/')
+    .trim();
+}
+
+function parseGithubRepo(repoUrl) {
+  if (typeof repoUrl !== 'string' || repoUrl.trim().length === 0) {
+    return null;
+  }
+
+  try {
+    const url = new URL(repoUrl);
+
+    if (url.hostname !== 'github.com') {
+      return null;
+    }
+
+    const [owner, repo] = url.pathname.replace(/^\/+|\/+$/g, '').split('/');
+
+    if (!owner || !repo) {
+      return null;
+    }
+
+    return { owner, repo };
+  } catch {
+    return null;
+  }
+}
+
+function buildDocsAssetCandidates(path) {
+  const normalizedPath = path.replace(/^\/+/, '');
+  const hasFilenameOnly = normalizedPath.toLowerCase() === THUMBNAIL_FILENAME;
+
+  if (hasFilenameOnly) {
+    return [
+      `docs/assets/${THUMBNAIL_FILENAME}`,
+      `docs/${THUMBNAIL_FILENAME}`,
+      `assets/${THUMBNAIL_FILENAME}`,
+      `public/images/${THUMBNAIL_FILENAME}`,
+      `public/${THUMBNAIL_FILENAME}`,
+      `images/${THUMBNAIL_FILENAME}`,
+      THUMBNAIL_FILENAME,
+    ];
+  }
+
+  const withRepoPrefixStripped = normalizedPath.includes('/')
+    ? normalizedPath.slice(normalizedPath.indexOf('/') + 1)
+    : normalizedPath;
+
+  return [normalizedPath, withRepoPrefixStripped, THUMBNAIL_FILENAME];
+}
+
+function buildGithubThumbnailCandidates({ owner, repo }, path) {
+  const assetPaths = [...new Set(buildDocsAssetCandidates(path))];
+  const branches = ['main', 'master'];
+
+  const candidates = [];
+
+  branches.forEach((branch) => {
+    assetPaths.forEach((assetPath) => {
+      candidates.push(`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${assetPath}`);
+      candidates.push(`https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/${assetPath}`);
+    });
+  });
+
+  return candidates;
+}
+
+function buildThumbnailCandidates(project) {
+  const path = sanitizeThumbnailPath(project.thumbnail);
 
   if (!path) {
     return [FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg'];
@@ -13,6 +89,12 @@ function buildThumbnailCandidates(thumbnailPath) {
     candidates.push(`/${path.replace(/^public\//, '')}`);
   } else if (path.startsWith('/images/')) {
     candidates.push(`public${path}`);
+  }
+
+  const isThumbnailFilename = path.toLowerCase().endsWith(THUMBNAIL_FILENAME);
+  const repoMeta = parseGithubRepo(project.repoUrl);
+  if (isThumbnailFilename && repoMeta) {
+    candidates.push(...buildGithubThumbnailCandidates(repoMeta, path));
   }
 
   candidates.push(FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg');
@@ -77,7 +159,7 @@ export function createProjectCard(project) {
 
   const thumbnail = document.createElement('img');
   thumbnail.className = 'project-thumbnail';
-  const thumbnailCandidates = buildThumbnailCandidates(project.thumbnail);
+  const thumbnailCandidates = buildThumbnailCandidates(project);
   let candidateIndex = 0;
 
   thumbnail.src = thumbnailCandidates[candidateIndex];
