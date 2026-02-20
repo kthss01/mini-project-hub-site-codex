@@ -12,7 +12,6 @@ const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
 const commitChart = document.querySelector('#commit-chart');
 const prChart = document.querySelector('#pr-chart');
-const detailSummary = document.querySelector('#detail-summary');
 
 function normalizeProjects(payload) {
   if (Array.isArray(payload)) {
@@ -240,20 +239,6 @@ function renderReadmeMarkdown(markdown) {
   return html.join('\n');
 }
 
-function getProjectSummary(project) {
-  const recentCommitCount = Array.isArray(project?.recentCommits) ? project.recentCommits.length : 0;
-  const recentPrCount =
-    (Array.isArray(project?.pullRequests?.open) ? project.pullRequests.open.length : 0) +
-    (Array.isArray(project?.pullRequests?.recently_merged) ? project.pullRequests.recently_merged.length : 0);
-
-  const totalCommitCount = Number.isFinite(project?.totalCommits) ? project.totalCommits : recentCommitCount;
-  const totalPrCount = Number.isFinite(project?.pullRequests?.total_count)
-    ? project.pullRequests.total_count
-    : recentPrCount;
-
-  return `최근 Commit ${recentCommitCount}개 · 최근 PR ${recentPrCount}개 · 총 Commit ${totalCommitCount}개 · 총 PR ${totalPrCount}개`;
-}
-
 async function loadReadme(project) {
   readmeContent.innerHTML = '<p class="detail-empty-message">README를 불러오는 중...</p>';
   const repoMeta = parseGithubRepo(project.repoUrl);
@@ -286,7 +271,6 @@ async function loadReadme(project) {
 function showProjectDetail(project) {
   detailTitle.textContent = project.title;
   detailDescription.textContent = project.description || '프로젝트 설명이 없습니다.';
-  detailSummary.textContent = getProjectSummary(project);
 
   setThumbnail(project);
   toggleLink(detailRepoLink, project.repoUrl);
