@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T07:10:27.913Z",
+  "generated_at": "2026-02-20T08:51:53.724Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,12 +12,19 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-02-20T06:41:48Z",
+      "updated_at": "2026-02-20T07:10:31Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "total_commits": 87,
+      "total_commits": 88,
       "recent_commits": [
+        {
+          "sha": "1a86f1c",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-02-20T07:10:27Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/1a86f1cd45a4fd0af7f962b6014a008b490dc573"
+        },
         {
           "sha": "bc72a30",
           "message": "Merge pull request #37 from kthss01/codex/fix-missing-project-info-in-list",
@@ -80,13 +87,6 @@
           "author": "kthss01",
           "date_iso": "2026-02-20T06:28:21Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a989a43b28880586f5850b0113ea23cba95ad083"
-        },
-        {
-          "sha": "bf8d898",
-          "message": "fix: support external dispatch API for GitHub Pages",
-          "author": "kthss01",
-          "date_iso": "2026-02-20T06:27:14Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/bf8d898b2b837a104e68a04d8c0874622e4bd41f"
         }
       ],
       "pull_requests": {
@@ -158,7 +158,7 @@
         },
         {
           "date": "2026-02-20",
-          "count": 55
+          "count": 56
         }
       ]
     },
