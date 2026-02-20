@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T02:14:47.514Z",
+  "generated_at": "2026-02-20T02:20:26.760Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -215,6 +215,56 @@
       "thumbnail": "public/images/mini-threejs-speed-effect-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-threejs-speed-effect-codex",
       "demoUrl": "https://kthss01.github.io/mini-threejs-speed-effect-codex/",
+      "recent_commits": [],
+      "pull_requests": {
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-02-14",
+          "count": 0
+        },
+        {
+          "date": "2026-02-15",
+          "count": 0
+        },
+        {
+          "date": "2026-02-16",
+          "count": 0
+        },
+        {
+          "date": "2026-02-17",
+          "count": 0
+        },
+        {
+          "date": "2026-02-18",
+          "count": 0
+        },
+        {
+          "date": "2026-02-19",
+          "count": 0
+        },
+        {
+          "date": "2026-02-20",
+          "count": 0
+        }
+      ],
+      "error": "fetch failed"
+    },
+    {
+      "owner": "kthss01",
+      "repo": "mini-delivery-log-report-system",
+      "title": "Mini Delivery Log Report System",
+      "html_url": "https://github.com/kthss01/mini-delivery-log-report-system",
+      "description": "",
+      "homepage": "https://kthss01.github.io/mini-delivery-log-report-system/",
+      "default_branch": "",
+      "updated_at": null,
+      "thumbnail": "public/images/mini-delivery-log-report-system.svg",
+      "repoUrl": "https://github.com/kthss01/mini-delivery-log-report-system",
+      "demoUrl": "https://kthss01.github.io/mini-delivery-log-report-system/",
       "recent_commits": [],
       "pull_requests": {
         "open_count": 0,
