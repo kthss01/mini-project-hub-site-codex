@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T04:08:35.853Z",
+  "generated_at": "2026-02-20T04:15:39.293Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,11 +12,32 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-02-20T04:07:42Z",
+      "updated_at": "2026-02-20T04:11:52Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "recent_commits": [
+        {
+          "sha": "2cc64b1",
+          "message": "Merge pull request #20 from kthss01/codex/check-project-summary-updates-and-caching-pipeline",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T04:11:48Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2cc64b1823da0d1e97684936b5ad2c18bd86b77c"
+        },
+        {
+          "sha": "aef4381",
+          "message": "feat: show cached commit and PR summary on project cards",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T04:10:52Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/aef43810591ab480cf586fc2651b629e511ccb63"
+        },
+        {
+          "sha": "fceb997",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-02-20T04:08:35Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/fceb9976d2e212ade40f3352ca9cde9dec5401e9"
+        },
         {
           "sha": "4992f33",
           "message": "Merge pull request #19 from kthss01/codex/calculate-total-open-pr-count-separately",
@@ -65,33 +86,19 @@
           "author": "kthss01",
           "date_iso": "2026-02-20T02:19:11Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e7d583d149744460aacab5dce44f00c9a702b297"
-        },
-        {
-          "sha": "99233aa",
-          "message": "feat: add github actions project cache pipeline",
-          "author": "kthss01",
-          "date_iso": "2026-02-20T02:18:55Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/99233aa89cfb41542e0f00da6dbef8954d5b76db"
-        },
-        {
-          "sha": "74f400d",
-          "message": "Merge pull request #15 from kthss01/codex/create-and-apply-thumbnail-for-cards",
-          "author": "kthss01",
-          "date_iso": "2026-02-20T01:24:33Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/74f400d730471a29a400ed637bbe7e7699ed9ba1"
-        },
-        {
-          "sha": "c8352ba",
-          "message": "Add dedicated thumbnail for hub project card",
-          "author": "kthss01",
-          "date_iso": "2026-02-20T01:24:03Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c8352ba915584ff582bc37d06c3198f17f60b31f"
         }
       ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 20,
+            "title": "feat: show cached commit and PR summary on project cards",
+            "merged_at": "2026-02-20T04:11:48Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/20"
+          },
           {
             "number": 19,
             "title": "fix: compute total open PR count and document schema",
@@ -119,13 +126,6 @@
             "merged_at": "2026-02-20T02:19:12Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/16"
-          },
-          {
-            "number": 15,
-            "title": "Codex-generated pull request",
-            "merged_at": "2026-02-20T01:24:33Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/15"
           }
         ]
       },
@@ -156,7 +156,7 @@
         },
         {
           "date": "2026-02-20",
-          "count": 10
+          "count": 13
         }
       ]
     },
