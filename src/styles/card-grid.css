@@ -44,6 +44,14 @@
   aspect-ratio: 16 / 9;
   background: var(--card-thumbnail-bg);
   position: relative;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.project-thumbnail-frame:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .project-thumbnail {
@@ -189,7 +197,3 @@
   color: var(--state-error-text);
 }
 
-.project-action-button {
-  cursor: pointer;
-  font-family: inherit;
-}
