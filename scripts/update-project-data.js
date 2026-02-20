@@ -280,7 +280,7 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
         owner,
         repo,
         title: repoConfig.title || cachedRepo.title || `${owner}/${repo}`,
-        thumbnail: repoConfig.thumbnail || cachedRepo.thumbnail || 'public/images/default-thumbnail.svg',
+        thumbnail: repoConfig.thumbnail || cachedRepo.thumbnail || 'project-thumbnail.svg',
         demoUrl: repoConfig.demo_url || cachedRepo.demoUrl || '',
       };
     }
@@ -329,7 +329,7 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
     homepage: repoConfig.demo_url || repoMeta.homepage || '',
     default_branch: repoMeta.default_branch || '',
     updated_at: repoMeta.updated_at || null,
-    thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
+    thumbnail: repoConfig.thumbnail || 'project-thumbnail.svg',
     repoUrl: repoMeta.html_url,
     demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
     total_commits: totalCommitCount,
@@ -403,7 +403,7 @@ async function main() {
         homepage: repoConfig.demo_url || '',
         default_branch: '',
         updated_at: null,
-        thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
+        thumbnail: repoConfig.thumbnail || 'project-thumbnail.svg',
         repoUrl: `https://github.com/${repoConfig.owner}/${repoConfig.repo}`,
         demoUrl: repoConfig.demo_url || '',
         total_commits: 0,

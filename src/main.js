@@ -23,7 +23,7 @@ function normalizeProjects(payload) {
       id: repo.id || `${repo.owner}-${repo.repo}`,
       title: repo.title || `${repo.owner}/${repo.repo}`,
       description: repo.description || '프로젝트 설명이 없습니다.',
-      thumbnail: repo.thumbnail || 'public/images/default-thumbnail.svg',
+      thumbnail: repo.thumbnail || 'project-thumbnail.svg',
       repoUrl: repo.repoUrl || repo.html_url,
       demoUrl: repo.demoUrl || repo.homepage,
       totalCommits: Number.isFinite(repo.total_commits) ? repo.total_commits : null,
