@@ -75,7 +75,6 @@ body {
 }
 
 .detail-back-button {
-  margin-bottom: 1rem;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -110,6 +109,24 @@ body {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;
+}
+
+.project-detail-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail-heading h2 {
+  margin: 0;
+}
+
+.detail-summary {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .detail-chart-grid {
@@ -171,13 +188,39 @@ body {
 
 #readme-content {
   margin: 0;
-  white-space: pre-wrap;
   word-break: break-word;
   max-height: 520px;
   overflow: auto;
   background: color-mix(in srgb, var(--surface) 85%, var(--border));
   border-radius: 10px;
   padding: 0.8rem;
+  line-height: 1.5;
+}
+
+#readme-content h1,
+#readme-content h2,
+#readme-content h3,
+#readme-content h4,
+#readme-content h5,
+#readme-content h6 {
+  margin: 1rem 0 0.5rem;
+}
+
+#readme-content p,
+#readme-content ul,
+#readme-content pre {
+  margin: 0.4rem 0;
+}
+
+#readme-content pre {
+  overflow: auto;
+  padding: 0.7rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 70%, var(--border));
+}
+
+#readme-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 @media (min-width: 960px) {

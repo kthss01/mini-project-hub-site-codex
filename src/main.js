@@ -12,7 +12,7 @@ const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
 const commitChart = document.querySelector('#commit-chart');
 const prChart = document.querySelector('#pr-chart');
-
+const detailSummary = document.querySelector('#detail-summary');
 
 function normalizeProjects(payload) {
   if (Array.isArray(payload)) {
@@ -27,8 +27,9 @@ function normalizeProjects(payload) {
       thumbnail: repo.thumbnail || 'public/images/default-thumbnail.svg',
       repoUrl: repo.repoUrl || repo.html_url,
       demoUrl: repo.demoUrl || repo.homepage,
+      totalCommits: Number.isFinite(repo.total_commits) ? repo.total_commits : null,
       recentCommits: Array.isArray(repo.recent_commits) ? repo.recent_commits : [],
-      pullRequests: repo.pull_requests || { open_count: 0, open: [], recently_merged: [] },
+      pullRequests: repo.pull_requests || { total_count: 0, open_count: 0, open: [], recently_merged: [] },
       dataError: repo.error || '',
       tags: [],
     }));
@@ -151,12 +152,114 @@ function toggleLink(anchor, url) {
   anchor.hidden = true;
 }
 
+function escapeHtml(value) {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function inlineMarkdown(value) {
+  let text = escapeHtml(value);
+  text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+  text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  text = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  text = text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
+  );
+  return text;
+}
+
+function renderReadmeMarkdown(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  const html = [];
+  let inCodeBlock = false;
+  let inList = false;
+
+  lines.forEach((line) => {
+    if (line.trim().startsWith('```')) {
+      if (!inCodeBlock) {
+        if (inList) {
+          html.push('</ul>');
+          inList = false;
+        }
+        html.push('<pre><code>');
+        inCodeBlock = true;
+      } else {
+        html.push('</code></pre>');
+        inCodeBlock = false;
+      }
+      return;
+    }
+
+    if (inCodeBlock) {
+      html.push(`${escapeHtml(line)}\n`);
+      return;
+    }
+
+    const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
+    if (headingMatch) {
+      if (inList) {
+        html.push('</ul>');
+        inList = false;
+      }
+      const level = headingMatch[1].length;
+      html.push(`<h${level}>${inlineMarkdown(headingMatch[2].trim())}</h${level}>`);
+      return;
+    }
+
+    const listMatch = line.match(/^[-*]\s+(.+)$/);
+    if (listMatch) {
+      if (!inList) {
+        html.push('<ul>');
+        inList = true;
+      }
+      html.push(`<li>${inlineMarkdown(listMatch[1].trim())}</li>`);
+      return;
+    }
+
+    if (inList) {
+      html.push('</ul>');
+      inList = false;
+    }
+
+    if (line.trim().length === 0) {
+      html.push('');
+      return;
+    }
+
+    html.push(`<p>${inlineMarkdown(line.trim())}</p>`);
+  });
+
+  if (inList) {
+    html.push('</ul>');
+  }
+
+  if (inCodeBlock) {
+    html.push('</code></pre>');
+  }
+
+  return html.join('\n');
+}
+
+function getProjectSummary(project) {
+  const recentCommitCount = Array.isArray(project?.recentCommits) ? project.recentCommits.length : 0;
+  const recentPrCount =
+    (Array.isArray(project?.pullRequests?.open) ? project.pullRequests.open.length : 0) +
+    (Array.isArray(project?.pullRequests?.recently_merged) ? project.pullRequests.recently_merged.length : 0);
+
+  const totalCommitCount = Number.isFinite(project?.totalCommits) ? project.totalCommits : recentCommitCount;
+  const totalPrCount = Number.isFinite(project?.pullRequests?.total_count)
+    ? project.pullRequests.total_count
+    : recentPrCount;
+
+  return `최근 Commit ${recentCommitCount}개 · 최근 PR ${recentPrCount}개 · 총 Commit ${totalCommitCount}개 · 총 PR ${totalPrCount}개`;
+}
+
 async function loadReadme(project) {
-  readmeContent.textContent = 'README를 불러오는 중...';
+  readmeContent.innerHTML = '<p class="detail-empty-message">README를 불러오는 중...</p>';
   const repoMeta = parseGithubRepo(project.repoUrl);
 
   if (!repoMeta) {
-    readmeContent.textContent = 'README를 불러올 저장소 정보가 없습니다.';
+    readmeContent.innerHTML = '<p class="detail-empty-message">README를 불러올 저장소 정보가 없습니다.</p>';
     return;
   }
 
@@ -169,7 +272,7 @@ async function loadReadme(project) {
     try {
       const response = await fetch(url);
       if (response.ok) {
-        readmeContent.textContent = await response.text();
+        readmeContent.innerHTML = renderReadmeMarkdown(await response.text());
         return;
       }
     } catch {
@@ -177,12 +280,13 @@ async function loadReadme(project) {
     }
   }
 
-  readmeContent.textContent = 'README.md를 불러오지 못했습니다.';
+  readmeContent.innerHTML = '<p class="detail-empty-message">README.md를 불러오지 못했습니다.</p>';
 }
 
 function showProjectDetail(project) {
   detailTitle.textContent = project.title;
   detailDescription.textContent = project.description || '프로젝트 설명이 없습니다.';
+  detailSummary.textContent = getProjectSummary(project);
 
   setThumbnail(project);
   toggleLink(detailRepoLink, project.repoUrl);

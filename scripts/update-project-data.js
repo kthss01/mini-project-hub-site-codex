@@ -170,6 +170,37 @@ async function getOpenPrCount(owner, repo, token) {
   return firstPageItems.length;
 }
 
+async function getPagedCount(endpoint, token, query = {}) {
+  const response = await githubRequestRaw(endpoint, token, {
+    per_page: '1',
+    page: '1',
+    ...query,
+  });
+
+  const linkHeader = response.headers.get('link');
+  const lastPage = parseLastPageFromLinkHeader(linkHeader);
+
+  if (lastPage !== null) {
+    return lastPage;
+  }
+
+  const firstPageItems = await response.json();
+  return Array.isArray(firstPageItems) ? firstPageItems.length : 0;
+}
+
+async function getCommitCount(owner, repo, token, branch) {
+  const query = {};
+  if (branch) {
+    query.sha = branch;
+  }
+
+  return getPagedCount(`/repos/${owner}/${repo}/commits`, token, query);
+}
+
+async function getTotalPrCount(owner, repo, token) {
+  return getPagedCount(`/repos/${owner}/${repo}/pulls`, token, { state: 'all' });
+}
+
 function pickCommitDate(commit) {
   return commit?.commit?.author?.date || commit?.commit?.committer?.date || null;
 }
@@ -262,7 +293,7 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
 
   const repoMeta = repoMetaResponse.data || (await githubRequest(metaEndpoint, token)).data;
 
-  const [recentCommitsRaw, activityCommits, openPrsRaw, closedPrs, openPrCount] = await Promise.all([
+  const [recentCommitsRaw, activityCommits, openPrsRaw, closedPrs, openPrCount, totalCommitCount, totalPrCount] = await Promise.all([
     githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       per_page: String(RECENT_COMMIT_COUNT),
     }).then((result) => result.data),
@@ -280,6 +311,8 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
       direction: 'desc',
     }).then((result) => result.data),
     getOpenPrCount(owner, repo, token),
+    getCommitCount(owner, repo, token, repoMeta.default_branch),
+    getTotalPrCount(owner, repo, token),
   ]);
 
   const recentCommits = mapRecentCommits(recentCommitsRaw);
@@ -299,8 +332,10 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
     thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
     repoUrl: repoMeta.html_url,
     demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
+    total_commits: totalCommitCount,
     recent_commits: recentCommits,
     pull_requests: {
+      total_count: totalPrCount,
       open_count: openPrCount,
       open: openPullRequests,
       recently_merged: mergedPullRequests,
@@ -371,8 +406,9 @@ async function main() {
         thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
         repoUrl: `https://github.com/${repoConfig.owner}/${repoConfig.repo}`,
         demoUrl: repoConfig.demo_url || '',
+        total_commits: 0,
         recent_commits: [],
-        pull_requests: { open_count: 0, open: [], recently_merged: [] },
+        pull_requests: { total_count: 0, open_count: 0, open: [], recently_merged: [] },
         activity_last_7_days: getLastDays(timezone, ACTIVITY_WINDOW_DAYS).map((date) => ({ date, count: 0 })),
         error: error.message,
       });

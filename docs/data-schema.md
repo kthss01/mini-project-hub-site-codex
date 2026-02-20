@@ -42,6 +42,7 @@
   "thumbnail": "public/images/mini-project-hub-site-codex.svg",
   "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
   "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
+  "total_commits": 128,
   "recent_commits": [
     {
       "sha": "a1b2c3d",
@@ -52,6 +53,7 @@
     }
   ],
   "pull_requests": {
+    "total_count": 36,
     "open_count": 2,
     "open": [
       {
@@ -89,12 +91,14 @@
 - `owner`, `repo`, `html_url`
 - `description`, `homepage`, `default_branch`, `updated_at`
 
-### B. 최근 커밋 요약 (`recent_commits`)
-- 최대 10개
+### B. 커밋 요약
+- `total_commits`: 전체 커밋 수
+- `recent_commits`: 최근 커밋 목록(최대 10개)
 - 각 항목: `sha`, `message`, `author`, `date_iso`, `url`
 - 상대시간은 프론트에서 `date_iso`로 계산
 
 ### C. PR 요약 (`pull_requests`)
+- `total_count`: 전체 PR 수
 - `open_count`: 전체 오픈 PR 수 (목록이 최대 10개여도 전체 개수)
 - `open`: 최대 10개 (`number`, `title`, `author`, `created_at`, `updated_at`, `url`)
 - `recently_merged`: 최대 5개 (`number`, `title`, `merged_at`, `author`, `url`)
