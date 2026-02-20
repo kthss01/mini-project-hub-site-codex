@@ -15,9 +15,45 @@
     </header>
 
     <main>
-      <section aria-labelledby="projects-title" class="projects-section">
+      <section id="projects-list-section" aria-labelledby="projects-title" class="projects-section">
         <h2 id="projects-title">프로젝트 목록</h2>
         <div id="project-list" class="project-grid" role="list"></div>
+      </section>
+
+      <section id="project-detail-section" class="projects-section" hidden>
+        <button id="detail-back-button" class="detail-back-button" type="button">← 목록으로 돌아가기</button>
+
+        <article class="project-detail-layout">
+          <div class="project-detail-visual">
+            <img id="detail-thumbnail" class="project-detail-thumbnail" alt="" />
+          </div>
+
+          <div class="project-detail-body">
+            <h2 id="detail-title"></h2>
+            <p id="detail-description"></p>
+
+            <div class="project-actions">
+              <a id="detail-repo-link" class="project-action-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+              <a
+                id="detail-demo-link"
+                class="project-action-link project-action-link-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Pages</a
+              >
+            </div>
+
+            <div class="detail-chart-grid">
+              <section id="commit-chart" class="detail-chart"></section>
+              <section id="pr-chart" class="detail-chart"></section>
+            </div>
+          </div>
+        </article>
+
+        <section class="project-readme">
+          <h3>README.md</h3>
+          <pre id="readme-content"></pre>
+        </section>
       </section>
     </main>
 
