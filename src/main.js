@@ -2,6 +2,26 @@ import { createProjectCard } from './components/project-card.js';
 
 const projectList = document.querySelector('#project-list');
 
+function normalizeProjects(payload) {
+  if (Array.isArray(payload)) {
+    return payload;
+  }
+
+  if (payload && Array.isArray(payload.repos)) {
+    return payload.repos.map((repo) => ({
+      id: repo.id || `${repo.owner}-${repo.repo}`,
+      title: repo.title || `${repo.owner}/${repo.repo}`,
+      description: repo.description || '프로젝트 설명이 없습니다.',
+      thumbnail: repo.thumbnail || 'public/images/default-thumbnail.svg',
+      repoUrl: repo.repoUrl || repo.html_url,
+      demoUrl: repo.demoUrl || repo.homepage,
+      tags: [],
+    }));
+  }
+
+  throw new Error('프로젝트 데이터 형식이 올바르지 않습니다.');
+}
+
 async function loadProjects() {
   try {
     const response = await fetch('./data/projects.json');
@@ -10,11 +30,8 @@ async function loadProjects() {
       throw new Error(`프로젝트 데이터를 불러오지 못했습니다: ${response.status}`);
     }
 
-    const projects = await response.json();
-
-    if (!Array.isArray(projects)) {
-      throw new Error('프로젝트 데이터 형식이 올바르지 않습니다.');
-    }
+    const payload = await response.json();
+    const projects = normalizeProjects(payload);
 
     renderProjects(projects);
   } catch (error) {
