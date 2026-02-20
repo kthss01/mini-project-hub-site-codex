@@ -11,6 +11,7 @@ const RECENT_COMMIT_COUNT = 10;
 const OPEN_PR_LIMIT = 10;
 const MERGED_PR_LIMIT = 5;
 const ACTIVITY_WINDOW_DAYS = 7;
+const ACTIVITY_COMMITS_MAX_PAGES = 15;
 
 function toDateStringByTimezone(dateInput, timezone) {
   const formatter = new Intl.DateTimeFormat('en-CA', {
@@ -90,6 +91,26 @@ async function githubRequestRaw(endpoint, token, params = {}) {
   }
 
   return response;
+}
+
+async function fetchActivityCommits(owner, repo, token, sinceIso) {
+  const commits = [];
+
+  for (let page = 1; page <= ACTIVITY_COMMITS_MAX_PAGES; page += 1) {
+    const pageItems = await githubRequest(`/repos/${owner}/${repo}/commits`, token, {
+      since: sinceIso,
+      per_page: '100',
+      page: String(page),
+    });
+
+    if (!Array.isArray(pageItems) || pageItems.length === 0) {
+      break;
+    }
+
+    commits.push(...pageItems);
+  }
+
+  return commits;
 }
 
 function parseLastPageFromLinkHeader(linkHeader) {
@@ -202,10 +223,7 @@ async function collectRepoData(repoConfig, timezone, token) {
     githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       per_page: String(RECENT_COMMIT_COUNT),
     }),
-    githubRequest(`/repos/${owner}/${repo}/commits`, token, {
-      per_page: '100',
-      since: since.toISOString(),
-    }),
+    fetchActivityCommits(owner, repo, token, since.toISOString()),
     githubRequest(`/repos/${owner}/${repo}/pulls`, token, {
       state: 'open',
       per_page: String(OPEN_PR_LIMIT),
