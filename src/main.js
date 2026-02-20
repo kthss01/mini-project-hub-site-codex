@@ -16,6 +16,15 @@ const requestUpdateButton = document.querySelector('#request-update-button');
 const requestUpdateStatus = document.querySelector('#request-update-status');
 const requestUpdateButtonLabel = document.querySelector('#request-update-button-label');
 const requestUpdateButtonSpinner = document.querySelector('#request-update-button-spinner');
+const requestUpdateRetryButton = document.querySelector('#request-update-retry-button');
+
+const STATUS_POLL_INTERVAL_MS = 7000;
+const STATUS_POLL_TIMEOUT_MS = 180000;
+
+let statusPollTimerId = null;
+let statusPollingStartedAt = 0;
+let updateDispatchKey = '';
+let updateDispatchRequestedAt = 0;
 
 
 function normalizeProjects(payload) {
@@ -381,8 +390,10 @@ async function loadProjects() {
     const projects = normalizeProjects(payload);
 
     renderProjects(projects);
+    return true;
   } catch (error) {
     renderError(error);
+    return false;
   }
 }
 
@@ -418,6 +429,21 @@ function setUpdateStatus(message, tone = '') {
   requestUpdateStatus.dataset.tone = tone;
 }
 
+function setRetryButtonVisible(isVisible) {
+  if (!requestUpdateRetryButton) {
+    return;
+  }
+
+  requestUpdateRetryButton.hidden = !isVisible;
+}
+
+function stopStatusPolling() {
+  if (statusPollTimerId) {
+    window.clearInterval(statusPollTimerId);
+    statusPollTimerId = null;
+  }
+}
+
 function setRequestRefreshLoadingState(isLoading) {
   if (!requestUpdateButton) {
     return;
@@ -446,6 +472,101 @@ function getRefreshErrorMessage(status) {
   }
 
   return '업데이트 요청에 실패했습니다. 잠시 후 다시 시도해주세요.';
+}
+
+function getPollingFailureMessage(conclusion) {
+  if (conclusion === 'failure') {
+    return '업데이트 작업이 실패했습니다. 로그를 확인한 뒤 다시 시도해주세요.';
+  }
+
+  if (conclusion === 'cancelled') {
+    return '업데이트 작업이 취소되었습니다. 잠시 후 다시 요청해주세요.';
+  }
+
+  if (conclusion === 'timed_out') {
+    return '업데이트 작업이 시간 초과로 종료되었습니다. 다시 시도해주세요.';
+  }
+
+  return '업데이트 작업이 완료되지 못했습니다. 잠시 후 다시 시도해주세요.';
+}
+
+async function pollUpdateStatus() {
+  if (!updateDispatchKey) {
+    stopStatusPolling();
+    return;
+  }
+
+  if (Date.now() - statusPollingStartedAt > STATUS_POLL_TIMEOUT_MS) {
+    stopStatusPolling();
+    setUpdateStatus('대기 시간이 초과되었습니다. 수동 재시도를 눌러 상태를 다시 확인해주세요.', 'error');
+    setRetryButtonVisible(true);
+    return;
+  }
+
+  try {
+    const response = await fetch('/api/dispatch-update/status', {
+      method: 'GET',
+      headers: {
+        'X-Dispatch-Key': updateDispatchKey,
+      },
+    });
+
+    if (!response.ok) {
+      const result = await response.json().catch(() => ({}));
+
+      if (response.status === 404) {
+        setUpdateStatus('업데이트 작업이 시작되기를 기다리는 중입니다...', 'info');
+        return;
+      }
+
+      throw new Error(result.message || '업데이트 상태 조회에 실패했습니다.');
+    }
+
+    const result = await response.json();
+    const createdAt = Date.parse(result.createdAt || '');
+    if (Number.isFinite(createdAt) && createdAt + 10000 < updateDispatchRequestedAt) {
+      setUpdateStatus('새로운 업데이트 작업이 시작되기를 기다리는 중입니다...', 'info');
+      return;
+    }
+
+    if (result.status === 'completed') {
+      stopStatusPolling();
+
+      if (result.conclusion === 'success') {
+        const reloadSucceeded = await loadProjects();
+        if (reloadSucceeded) {
+          setUpdateStatus('최신 데이터 반영 완료', 'success');
+        } else {
+          setUpdateStatus('업데이트는 완료됐지만 목록을 다시 불러오지 못했습니다. 잠시 후 새로고침해주세요.', 'error');
+          setRetryButtonVisible(true);
+        }
+        return;
+      }
+
+      setUpdateStatus(getPollingFailureMessage(result.conclusion), 'error');
+      setRetryButtonVisible(true);
+      return;
+    }
+
+    setUpdateStatus('업데이트 작업 진행 중입니다. 잠시만 기다려주세요...', 'info');
+  } catch (error) {
+    stopStatusPolling();
+    setUpdateStatus(error.message || '업데이트 상태를 확인하지 못했습니다.', 'error');
+    setRetryButtonVisible(true);
+  }
+}
+
+function startStatusPolling(dispatchKey) {
+  updateDispatchKey = dispatchKey;
+  updateDispatchRequestedAt = Date.now();
+  statusPollingStartedAt = Date.now();
+
+  stopStatusPolling();
+  setRetryButtonVisible(false);
+  void pollUpdateStatus();
+  statusPollTimerId = window.setInterval(() => {
+    void pollUpdateStatus();
+  }, STATUS_POLL_INTERVAL_MS);
 }
 
 async function requestRefresh() {
@@ -478,14 +599,28 @@ async function requestRefresh() {
     }
 
     setUpdateStatus('업데이트 요청됨 · 작업 진행 중입니다. 데이터 반영까지 시간이 걸릴 수 있습니다.', 'success');
+    startStatusPolling(dispatchKey);
   } catch (error) {
     setUpdateStatus(error.message || '업데이트 요청에 실패했습니다.', 'error');
+    setRetryButtonVisible(false);
   } finally {
     setRequestRefreshLoadingState(false);
   }
 }
 
+function retryStatusPolling() {
+  if (!updateDispatchKey) {
+    setUpdateStatus('먼저 데이터 갱신 요청을 진행해주세요.', 'info');
+    setRetryButtonVisible(false);
+    return;
+  }
+
+  setUpdateStatus('업데이트 상태를 다시 확인하고 있습니다...', 'info');
+  startStatusPolling(updateDispatchKey);
+}
+
 detailBackButton.addEventListener('click', showList);
 requestUpdateButton?.addEventListener('click', requestRefresh);
+requestUpdateRetryButton?.addEventListener('click', retryStatusPolling);
 
 loadProjects();

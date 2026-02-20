@@ -387,6 +387,27 @@ body {
   border: 1px solid var(--state-error-border);
 }
 
+
+.request-update-retry-button {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.request-update-retry-button:hover {
+  color: var(--text);
+  border-color: var(--focus);
+}
+
+.request-update-retry-button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
 @keyframes request-refresh-spin {
   to {
     transform: rotate(360deg);
