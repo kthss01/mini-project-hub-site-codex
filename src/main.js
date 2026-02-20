@@ -10,8 +10,8 @@ const detailThumbnail = document.querySelector('#detail-thumbnail');
 const detailRepoLink = document.querySelector('#detail-repo-link');
 const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
-const commitChart = document.querySelector('#commit-chart');
-const prChart = document.querySelector('#pr-chart');
+const activityHeatmap = document.querySelector('#activity-heatmap');
+const activityTotals = document.querySelector('#activity-totals');
 
 function normalizeProjects(payload) {
   if (Array.isArray(payload)) {
@@ -81,16 +81,74 @@ function countByDay(items, dateField) {
   }, {});
 }
 
-function renderBarChart(container, title, countMap) {
+function getActivityCellColor(commitCount, prCount) {
+  const totalCount = commitCount + prCount;
+  if (totalCount === 0) {
+    return 'var(--activity-empty)';
+  }
+
+  const intensity = Math.min(totalCount / 4, 1);
+  const alpha = 0.35 + intensity * 0.55;
+
+  if (commitCount > 0 && prCount > 0) {
+    return `color-mix(in srgb, var(--activity-both) ${Math.round(alpha * 100)}%, transparent)`;
+  }
+
+  if (commitCount > 0) {
+    return `color-mix(in srgb, var(--activity-commit) ${Math.round(alpha * 100)}%, transparent)`;
+  }
+
+  return `color-mix(in srgb, var(--activity-pr) ${Math.round(alpha * 100)}%, transparent)`;
+}
+
+function renderActivityHeatmap(container, commitMap, prMap) {
   container.innerHTML = '';
 
   const titleNode = document.createElement('h4');
   titleNode.className = 'detail-chart-title';
-  titleNode.textContent = title;
+  titleNode.textContent = '일자별 Commit/PR 활동';
 
-  const days = Object.keys(countMap).sort().slice(-10);
+  const dayCount = 84;
+  const endDate = new Date();
+  endDate.setHours(0, 0, 0, 0);
 
-  if (days.length === 0) {
+  const dates = [];
+  for (let i = dayCount - 1; i >= 0; i -= 1) {
+    const date = new Date(endDate);
+    date.setDate(endDate.getDate() - i);
+    dates.push(date);
+  }
+
+  const hasActivity = dates.some((date) => {
+    const key = date.toISOString().slice(0, 10);
+    return (commitMap[key] || 0) + (prMap[key] || 0) > 0;
+  });
+
+  const grid = document.createElement('div');
+  grid.className = 'activity-heatmap-grid';
+
+  dates.forEach((date) => {
+    const key = date.toISOString().slice(0, 10);
+    const commitCount = commitMap[key] || 0;
+    const prCount = prMap[key] || 0;
+
+    const cell = document.createElement('span');
+    cell.className = 'activity-heatmap-cell';
+    cell.style.backgroundColor = getActivityCellColor(commitCount, prCount);
+    cell.title = `${key} · Commit ${commitCount}개 · PR ${prCount}개`;
+    cell.setAttribute('aria-label', cell.title);
+    grid.appendChild(cell);
+  });
+
+  const legend = document.createElement('div');
+  legend.className = 'activity-legend';
+  legend.innerHTML = `
+    <span class="activity-legend-item"><i style="background: var(--activity-commit);"></i>Commit</span>
+    <span class="activity-legend-item"><i style="background: var(--activity-pr);"></i>PR</span>
+    <span class="activity-legend-item"><i style="background: var(--activity-both);"></i>Commit + PR</span>
+  `;
+
+  if (!hasActivity) {
     const empty = document.createElement('p');
     empty.className = 'detail-empty-message';
     empty.textContent = '시각화할 데이터가 없습니다.';
@@ -98,31 +156,28 @@ function renderBarChart(container, title, countMap) {
     return;
   }
 
-  const maxValue = Math.max(...days.map((day) => countMap[day]), 1);
-  const list = document.createElement('ul');
-  list.className = 'detail-chart-list';
+  container.append(titleNode, grid, legend);
+}
 
-  days.forEach((day) => {
-    const item = document.createElement('li');
-    item.className = 'detail-chart-item';
+function renderTotals(container, totalCommitCount, totalPrCount) {
+  container.innerHTML = '';
 
-    const label = document.createElement('span');
-    label.className = 'detail-chart-label';
-    label.textContent = day.slice(5);
+  const titleNode = document.createElement('h4');
+  titleNode.className = 'detail-chart-title';
+  titleNode.textContent = '누적 활동';
 
-    const bar = document.createElement('span');
-    bar.className = 'detail-chart-bar';
-    bar.style.setProperty('--bar-width', `${Math.round((countMap[day] / maxValue) * 100)}%`);
+  const list = document.createElement('div');
+  list.className = 'activity-total-grid';
 
-    const value = document.createElement('span');
-    value.className = 'detail-chart-value';
-    value.textContent = String(countMap[day]);
+  const commitCard = document.createElement('article');
+  commitCard.className = 'activity-total-card';
+  commitCard.innerHTML = `<p class="activity-total-label">총 Commit</p><p class="activity-total-value">${totalCommitCount}</p>`;
 
-    bar.appendChild(value);
-    item.append(label, bar);
-    list.appendChild(item);
-  });
+  const prCard = document.createElement('article');
+  prCard.className = 'activity-total-card';
+  prCard.innerHTML = `<p class="activity-total-label">총 PR</p><p class="activity-total-value">${totalPrCount}</p>`;
 
+  list.append(commitCard, prCard);
   container.append(titleNode, list);
 }
 
@@ -276,8 +331,7 @@ function showProjectDetail(project) {
   toggleLink(detailRepoLink, project.repoUrl);
   toggleLink(detailDemoLink, project.demoUrl);
 
-  renderBarChart(commitChart, '최근 Commit 수', countByDay(project.recentCommits || [], 'date_iso'));
-
+  const commitByDay = countByDay(project.recentCommits || [], 'date_iso');
   const prEvents = [
     ...(Array.isArray(project?.pullRequests?.open)
       ? project.pullRequests.open.map((pr) => ({ date: pr.updated_at }))
@@ -286,7 +340,17 @@ function showProjectDetail(project) {
       ? project.pullRequests.recently_merged.map((pr) => ({ date: pr.merged_at }))
       : []),
   ];
-  renderBarChart(prChart, '최근 PR 수', countByDay(prEvents, 'date'));
+  const prByDay = countByDay(prEvents, 'date');
+
+  renderActivityHeatmap(activityHeatmap, commitByDay, prByDay);
+
+  const totalCommitCount = Number.isFinite(project?.totalCommits)
+    ? project.totalCommits
+    : (Array.isArray(project?.recentCommits) ? project.recentCommits.length : 0);
+  const totalPrCount = Number.isFinite(project?.pullRequests?.total_count)
+    ? project.pullRequests.total_count
+    : prEvents.length;
+  renderTotals(activityTotals, totalCommitCount, totalPrCount);
 
   loadReadme(project);
 
