@@ -17,7 +17,12 @@
   --state-error-bg: #fff2f2;
   --state-error-text: #9f1d1d;
   --state-error-border: #f1bcbc;
+  --state-info-bg: #edf4ff;
+  --state-info-text: #1e3a8a;
+  --state-success-bg: #eaf8ef;
+  --state-success-text: #166534;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -38,6 +43,10 @@
     --state-error-bg: #46292d;
     --state-error-text: #ffd6db;
     --state-error-border: #6c3b43;
+    --state-info-bg: #25354f;
+    --state-info-text: #dce9ff;
+    --state-success-bg: #1f3a2a;
+    --state-success-text: #c8f5d8;
   }
 }
 
@@ -293,31 +302,93 @@ body {
   gap: 0.75rem;
 }
 
+.projects-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects-title-row h2 {
+  margin: 0;
+}
+
+.request-refresh-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+}
+
 .request-update-button {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
   padding: 0.55rem 0.9rem;
-  border-radius: 8px;
+  border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.request-update-button:focus-visible,
+.detail-back-button:focus-visible,
+.project-action-link:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.request-update-button-spinner {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid color-mix(in srgb, var(--muted) 60%, transparent);
+  border-top-color: var(--focus);
+  border-radius: 50%;
+  animation: request-refresh-spin 0.8s linear infinite;
+  display: none;
+}
+
+.request-update-button-spinner.is-visible {
+  display: inline-block;
 }
 
 .request-update-button:disabled {
-  opacity: 0.6;
+  opacity: 0.7;
   cursor: wait;
 }
 
 .request-update-status {
-  margin: 0.5rem 0 0;
-  font-size: 0.92rem;
+  margin: 0;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  line-height: 1.25;
   color: var(--muted);
+  min-height: 1.75rem;
+}
+
+.request-update-status[data-tone='info'] {
+  background: var(--state-info-bg);
+  color: var(--state-info-text);
 }
 
 .request-update-status[data-tone='success'] {
-  color: #1a7f37;
+  background: var(--state-success-bg);
+  color: var(--state-success-text);
 }
 
 .request-update-status[data-tone='error'] {
-  color: #c62828;
+  background: var(--state-error-bg);
+  color: var(--state-error-text);
+  border: 1px solid var(--state-error-border);
+}
+
+@keyframes request-refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
