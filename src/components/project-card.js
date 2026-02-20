@@ -39,6 +39,23 @@ function parseGithubRepo(repoUrl) {
   }
 }
 
+
+function buildRepoThumbnailCandidates(repoMeta) {
+  const branches = ['main', 'master'];
+  const roots = ['docs/assets', 'docs', 'assets', 'public/images', 'public', 'images', ''];
+
+  const candidates = [];
+  branches.forEach((branch) => {
+    roots.forEach((root) => {
+      const normalizedRoot = root ? `${root}/` : '';
+      candidates.push(`https://raw.githubusercontent.com/${repoMeta.owner}/${repoMeta.repo}/${branch}/${normalizedRoot}${THUMBNAIL_FILENAME}`);
+      candidates.push(`https://cdn.jsdelivr.net/gh/${repoMeta.owner}/${repoMeta.repo}@${branch}/${normalizedRoot}${THUMBNAIL_FILENAME}`);
+    });
+  });
+
+  return candidates;
+}
+
 function buildDocsAssetCandidates(path) {
   const normalizedPath = path.replace(/^\/+/, '');
   const hasFilenameOnly = normalizedPath.toLowerCase() === THUMBNAIL_FILENAME;
@@ -82,26 +99,26 @@ function buildGithubThumbnailCandidates({ owner, repo }, path) {
 
 function buildThumbnailCandidates(project) {
   const path = sanitizeThumbnailPath(project.thumbnail);
-
-  if (!path) {
-    return [FALLBACK_THUMBNAIL];
-  }
-
   const candidates = [];
+  const repoMeta = parseGithubRepo(project.repoUrl);
 
-  if (path.startsWith('public/')) {
-    candidates.push(`/${path.replace(/^public\//, '')}`);
-    candidates.push(path);
-  } else if (path.startsWith('/images/')) {
-    candidates.push(path);
-    candidates.push(`public${path}`);
-  } else {
-    candidates.push(path);
+  if (repoMeta) {
+    candidates.push(...buildRepoThumbnailCandidates(repoMeta));
   }
 
-  const isThumbnailFilename = path.toLowerCase().endsWith(THUMBNAIL_FILENAME);
-  const repoMeta = parseGithubRepo(project.repoUrl);
-  if (isThumbnailFilename && repoMeta) {
+  if (path) {
+    if (path.startsWith('public/')) {
+      candidates.push(`/${path.replace(/^public\//, '')}`);
+      candidates.push(path);
+    } else if (path.startsWith('/images/')) {
+      candidates.push(path);
+      candidates.push(`public${path}`);
+    } else {
+      candidates.push(path);
+    }
+  }
+
+  if (path.toLowerCase().endsWith(THUMBNAIL_FILENAME) && repoMeta) {
     candidates.push(...buildGithubThumbnailCandidates(repoMeta, path));
   }
 
