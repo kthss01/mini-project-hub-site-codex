@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T04:15:39.293Z",
+  "generated_at": "2026-02-20T04:52:40.275Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,80 +12,80 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-02-20T04:11:52Z",
+      "updated_at": "2026-02-20T04:51:03Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "recent_commits": [
         {
-          "sha": "2cc64b1",
-          "message": "Merge pull request #20 from kthss01/codex/check-project-summary-updates-and-caching-pipeline",
+          "sha": "8ee0f64",
+          "message": "Merge pull request #25 from kthss01/codex/fix-thumbnail-application-issue-qdhj5s",
           "author": "kthss01",
-          "date_iso": "2026-02-20T04:11:48Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2cc64b1823da0d1e97684936b5ad2c18bd86b77c"
+          "date_iso": "2026-02-20T04:50:59Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8ee0f64c160ba425f5405dd634046973b9dcc6c5"
         },
         {
-          "sha": "aef4381",
-          "message": "feat: show cached commit and PR summary on project cards",
+          "sha": "699580a",
+          "message": "fix: 썸네일 클릭 상세 이동 및 카드 버튼 순서 조정",
           "author": "kthss01",
-          "date_iso": "2026-02-20T04:10:52Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/aef43810591ab480cf586fc2651b629e511ccb63"
+          "date_iso": "2026-02-20T04:50:41Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/699580a1f9d86b0ae7bc1e836ebd60a7529197e9"
         },
         {
-          "sha": "fceb997",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-02-20T04:08:35Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/fceb9976d2e212ade40f3352ca9cde9dec5401e9"
+          "sha": "af98425",
+          "message": "Merge pull request #24 from kthss01/codex/add-project-detail-page-with-readme-and-graphs",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T04:45:03Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/af9842560eef9f63906ccc62d14c9114ad25ddd4"
         },
         {
-          "sha": "4992f33",
-          "message": "Merge pull request #19 from kthss01/codex/calculate-total-open-pr-count-separately",
+          "sha": "c1ceae5",
+          "message": "feat: add project detail view with readme and activity charts",
           "author": "kthss01",
-          "date_iso": "2026-02-20T04:07:38Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/4992f332d12943c734a6dc693f70ab5631514829"
+          "date_iso": "2026-02-20T04:44:47Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c1ceae59b77fc6b7de99281c8cf01c0f94aee9f7"
         },
         {
-          "sha": "02f780b",
-          "message": "fix: count total open pull requests accurately",
+          "sha": "f84941e",
+          "message": "Merge pull request #23 from kthss01/codex/add-etag-optimization-to-update-project-data.js",
           "author": "kthss01",
-          "date_iso": "2026-02-20T04:07:28Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/02f780b96883f89d450c49caa0a2292a7f17281a"
+          "date_iso": "2026-02-20T04:33:58Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f84941e6f4b7bb94277f674f8fb208b226bb02f2"
         },
         {
-          "sha": "19c68be",
-          "message": "Merge pull request #18 from kthss01/codex/build-data-caching-pipeline-with-github-actions",
+          "sha": "15a5e02",
+          "message": "feat(data): add ETag-based GitHub cache reuse",
           "author": "kthss01",
-          "date_iso": "2026-02-20T02:27:54Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/19c68bea7f2db15be7936827e316c3065ed86ac5"
+          "date_iso": "2026-02-20T04:33:23Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/15a5e029085840fa0ec9bb3040d46a32fec37ef9"
         },
         {
-          "sha": "0902599",
-          "message": "feat: add scheduled github cache pipeline outputs",
+          "sha": "bec8217",
+          "message": "Merge pull request #22 from kthss01/codex/change-activity-commits-to-pagination-calls",
           "author": "kthss01",
-          "date_iso": "2026-02-20T02:27:25Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/0902599393a0e74b90d5369cd2b5dd1e5119083c"
+          "date_iso": "2026-02-20T04:29:12Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/bec821719f4035f8b87b9253ec4e644528a40fab"
         },
         {
-          "sha": "3cb42fa",
-          "message": "Merge pull request #17 from kthss01/codex/add-new-project-mini-delivery-log-report-system",
+          "sha": "8c4df2c",
+          "message": "feat: paginate activity commit collection",
           "author": "kthss01",
-          "date_iso": "2026-02-20T02:23:30Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3cb42fa49e296f5ebb90675afc0c622c158adba5"
+          "date_iso": "2026-02-20T04:28:44Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8c4df2c4383dff5ef7ed1dfa9b710bdb07df2c78"
         },
         {
-          "sha": "8151572",
-          "message": "Add mini-delivery-log-report-system project entry",
+          "sha": "e1839c0",
+          "message": "Merge pull request #21 from kthss01/codex/check-missing-projects-in-list",
           "author": "kthss01",
-          "date_iso": "2026-02-20T02:23:01Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/815157200475941ffba613a8125baadc274a737b"
+          "date_iso": "2026-02-20T04:21:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e1839c01ca042bb14b7e219a56f06b07f2e7732c"
         },
         {
-          "sha": "e7d583d",
-          "message": "Merge pull request #16 from kthss01/codex/build-github-actions-pipeline-for-json-caching",
+          "sha": "fe6d84b",
+          "message": "fix: load relative time utility as browser-compatible module",
           "author": "kthss01",
-          "date_iso": "2026-02-20T02:19:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e7d583d149744460aacab5dce44f00c9a702b297"
+          "date_iso": "2026-02-20T04:21:12Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/fe6d84b6c1c342524a340799a3213b277888c549"
         }
       ],
       "pull_requests": {
@@ -93,39 +93,39 @@
         "open": [],
         "recently_merged": [
           {
-            "number": 20,
-            "title": "feat: show cached commit and PR summary on project cards",
-            "merged_at": "2026-02-20T04:11:48Z",
+            "number": 25,
+            "title": "fix: 썸네일 클릭으로 상세 이동 및 썸네일 후보/액션 배치 개선",
+            "merged_at": "2026-02-20T04:50:59Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/20"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/25"
           },
           {
-            "number": 19,
-            "title": "fix: compute total open PR count and document schema",
-            "merged_at": "2026-02-20T04:07:38Z",
+            "number": 24,
+            "title": "feat: add project detail page with README and activity visualizations",
+            "merged_at": "2026-02-20T04:45:03Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/19"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/24"
           },
           {
-            "number": 18,
-            "title": "feat: add cached GitHub project data pipeline and schema docs",
-            "merged_at": "2026-02-20T02:27:54Z",
+            "number": 23,
+            "title": "feat(data): add ETag-aware project data refresh caching",
+            "merged_at": "2026-02-20T04:33:58Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/18"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/23"
           },
           {
-            "number": 17,
-            "title": "Add mini-delivery-log-report-system to project hub",
-            "merged_at": "2026-02-20T02:23:30Z",
+            "number": 22,
+            "title": "feat: paginate activity commit collection",
+            "merged_at": "2026-02-20T04:29:12Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/17"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/22"
           },
           {
-            "number": 16,
-            "title": "feat: add scheduled GitHub project data cache pipeline",
-            "merged_at": "2026-02-20T02:19:12Z",
+            "number": 21,
+            "title": "fix: restore project list rendering by switching time utility to JS module",
+            "merged_at": "2026-02-20T04:21:55Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/16"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/21"
           }
         ]
       },
@@ -156,7 +156,7 @@
         },
         {
           "date": "2026-02-20",
-          "count": 13
+          "count": 24
         }
       ]
     },
