@@ -10,6 +10,8 @@ const detailThumbnail = document.querySelector('#detail-thumbnail');
 const detailRepoLink = document.querySelector('#detail-repo-link');
 const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
+const languageBreakdown = document.querySelector('#language-breakdown');
+const detailSummary = document.querySelector('#detail-summary');
 const activityHeatmap = document.querySelector('#activity-heatmap');
 const activityTotals = document.querySelector('#activity-totals');
 const requestUpdateButton = document.querySelector('#request-update-button');
@@ -302,6 +304,13 @@ function renderReadmeMarkdown(markdown) {
   return html.join('\n');
 }
 
+function getProjectSummary(project) {
+  const totalCommitCount = Number.isFinite(project?.totalCommits) ? project.totalCommits : 0;
+  const totalPrCount = Number.isFinite(project?.pullRequests?.total_count) ? project.pullRequests.total_count : 0;
+
+  return `총 Commit ${totalCommitCount}개 · 총 PR ${totalPrCount}개`;
+}
+
 async function loadReadme(project) {
   readmeContent.innerHTML = '<p class="detail-empty-message">README를 불러오는 중...</p>';
   const repoMeta = parseGithubRepo(project.repoUrl);
@@ -334,6 +343,7 @@ async function loadReadme(project) {
 function showProjectDetail(project) {
   detailTitle.textContent = project.title;
   detailDescription.textContent = project.description || '프로젝트 설명이 없습니다.';
+  detailSummary.textContent = getProjectSummary(project);
 
   setThumbnail(project);
   toggleLink(detailRepoLink, project.repoUrl);
