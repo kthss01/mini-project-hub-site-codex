@@ -64,6 +64,75 @@ async function githubRequest(endpoint, token, params = {}) {
   return response.json();
 }
 
+async function githubRequestRaw(endpoint, token, params = {}) {
+  const url = new URL(`https://api.github.com${endpoint}`);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      url.searchParams.set(key, value);
+    }
+  });
+
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'User-Agent': 'mini-project-hub-data-updater',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  const response = await fetch(url, { headers });
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`${response.status} ${response.statusText} - ${body.slice(0, 200)}`);
+  }
+
+  return response;
+}
+
+function parseLastPageFromLinkHeader(linkHeader) {
+  if (!linkHeader) {
+    return null;
+  }
+
+  const parts = linkHeader.split(',').map((part) => part.trim());
+  const lastPart = parts.find((part) => part.endsWith('rel="last"'));
+
+  if (!lastPart) {
+    return null;
+  }
+
+  const match = lastPart.match(/<([^>]+)>/);
+  if (!match) {
+    return null;
+  }
+
+  const lastUrl = new URL(match[1]);
+  const page = Number.parseInt(lastUrl.searchParams.get('page') || '', 10);
+
+  return Number.isNaN(page) ? null : page;
+}
+
+async function getOpenPrCount(owner, repo, token) {
+  const response = await githubRequestRaw(`/repos/${owner}/${repo}/pulls`, token, {
+    state: 'open',
+    per_page: '1',
+    page: '1',
+  });
+
+  const linkHeader = response.headers.get('link');
+  const lastPage = parseLastPageFromLinkHeader(linkHeader);
+
+  if (lastPage !== null) {
+    return lastPage;
+  }
+
+  const firstPageItems = await response.json();
+  return firstPageItems.length;
+}
+
 function pickCommitDate(commit) {
   return commit?.commit?.author?.date || commit?.commit?.committer?.date || null;
 }
@@ -128,7 +197,7 @@ async function collectRepoData(repoConfig, timezone, token) {
   const since = new Date(now);
   since.setUTCDate(now.getUTCDate() - ACTIVITY_WINDOW_DAYS - 1);
 
-  const [repoMeta, recentCommitsRaw, activityCommits, openPrsRaw, closedPrs] = await Promise.all([
+  const [repoMeta, recentCommitsRaw, activityCommits, openPrsRaw, closedPrs, openPrCount] = await Promise.all([
     githubRequest(`/repos/${owner}/${repo}`, token),
     githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       per_page: String(RECENT_COMMIT_COUNT),
@@ -149,6 +218,7 @@ async function collectRepoData(repoConfig, timezone, token) {
       sort: 'updated',
       direction: 'desc',
     }),
+    getOpenPrCount(owner, repo, token),
   ]);
 
   const recentCommits = mapRecentCommits(recentCommitsRaw);
@@ -170,7 +240,7 @@ async function collectRepoData(repoConfig, timezone, token) {
     demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
     recent_commits: recentCommits,
     pull_requests: {
-      open_count: openPrsRaw.length,
+      open_count: openPrCount,
       open: openPullRequests,
       recently_merged: mergedPullRequests,
     },

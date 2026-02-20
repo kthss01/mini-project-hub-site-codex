@@ -95,7 +95,7 @@
 - 상대시간은 프론트에서 `date_iso`로 계산
 
 ### C. PR 요약 (`pull_requests`)
-- `open_count`
+- `open_count`: 전체 오픈 PR 수 (목록이 최대 10개여도 전체 개수)
 - `open`: 최대 10개 (`number`, `title`, `author`, `created_at`, `updated_at`, `url`)
 - `recently_merged`: 최대 5개 (`number`, `title`, `merged_at`, `author`, `url`)
 
