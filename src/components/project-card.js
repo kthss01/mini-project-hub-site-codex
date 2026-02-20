@@ -1,6 +1,6 @@
 import { formatRelativeTime } from '../lib/time.js';
 
-const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
+const FALLBACK_THUMBNAIL = '/images/default-thumbnail.svg';
 const THUMBNAIL_FILENAME = 'project-thumbnail.svg';
 
 function sanitizeThumbnailPath(thumbnailPath) {
@@ -84,15 +84,19 @@ function buildThumbnailCandidates(project) {
   const path = sanitizeThumbnailPath(project.thumbnail);
 
   if (!path) {
-    return [FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg'];
+    return [FALLBACK_THUMBNAIL];
   }
 
-  const candidates = [path];
+  const candidates = [];
 
   if (path.startsWith('public/')) {
     candidates.push(`/${path.replace(/^public\//, '')}`);
+    candidates.push(path);
   } else if (path.startsWith('/images/')) {
+    candidates.push(path);
     candidates.push(`public${path}`);
+  } else {
+    candidates.push(path);
   }
 
   const isThumbnailFilename = path.toLowerCase().endsWith(THUMBNAIL_FILENAME);
@@ -101,7 +105,7 @@ function buildThumbnailCandidates(project) {
     candidates.push(...buildGithubThumbnailCandidates(repoMeta, path));
   }
 
-  candidates.push(FALLBACK_THUMBNAIL, '/images/default-thumbnail.svg');
+  candidates.push(FALLBACK_THUMBNAIL);
 
   return [...new Set(candidates)];
 }
@@ -247,8 +251,15 @@ export function createProjectCard(project, { onSelect } = {}) {
   article.className = 'project-card';
   article.setAttribute('role', 'listitem');
 
-  const thumbnailFrame = document.createElement('div');
+  const thumbnailFrame = document.createElement('button');
   thumbnailFrame.className = 'project-thumbnail-frame';
+  thumbnailFrame.type = 'button';
+  thumbnailFrame.setAttribute('aria-label', `${project.title} 상세 보기`);
+  thumbnailFrame.addEventListener('click', () => {
+    if (typeof onSelect === 'function') {
+      onSelect(project);
+    }
+  });
 
   const thumbnail = document.createElement('img');
   thumbnail.className = 'project-thumbnail';
@@ -285,17 +296,6 @@ export function createProjectCard(project, { onSelect } = {}) {
   const actions = document.createElement('div');
   actions.className = 'project-actions';
 
-  const detailButton = document.createElement('button');
-  detailButton.className = 'project-action-link project-action-button';
-  detailButton.type = 'button';
-  detailButton.textContent = '상세 보기';
-  detailButton.addEventListener('click', () => {
-    if (typeof onSelect === 'function') {
-      onSelect(project);
-    }
-  });
-  actions.appendChild(detailButton);
-
   const repoAction = createActionLink({
     href: project.repoUrl,
     label: 'GitHub Repository',
@@ -323,6 +323,10 @@ export function createProjectCard(project, { onSelect } = {}) {
     body.appendChild(tagList);
   }
 
+  if (actions.childElementCount > 0) {
+    body.appendChild(actions);
+  }
+
   const commitSummary = createRecentCommits(project);
   if (commitSummary) {
     body.appendChild(commitSummary);
@@ -338,10 +342,6 @@ export function createProjectCard(project, { onSelect } = {}) {
     warning.className = 'project-data-warning';
     warning.textContent = '일부 GitHub 데이터를 불러오지 못했습니다.';
     body.appendChild(warning);
-  }
-
-  if (actions.childElementCount > 0) {
-    body.appendChild(actions);
   }
 
   article.append(thumbnailFrame, body);
