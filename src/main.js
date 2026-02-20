@@ -12,20 +12,21 @@ const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
 const languageBreakdown = document.querySelector('#language-breakdown');
 const detailSummary = document.querySelector('#detail-summary');
+const activityHeatmap = document.querySelector('#activity-heatmap');
+const activityTotals = document.querySelector('#activity-totals');
 const requestUpdateButton = document.querySelector('#request-update-button');
 const requestUpdateStatus = document.querySelector('#request-update-status');
-const requestUpdateButtonLabel = document.querySelector('#request-update-button-label');
-const requestUpdateButtonSpinner = document.querySelector('#request-update-button-spinner');
-const requestUpdateRetryButton = document.querySelector('#request-update-retry-button');
 
-const STATUS_POLL_INTERVAL_MS = 7000;
-const STATUS_POLL_TIMEOUT_MS = 180000;
 
-let statusPollTimerId = null;
-let statusPollingStartedAt = 0;
-let updateDispatchKey = '';
-let updateDispatchRequestedAt = 0;
+const dispatchApiBaseUrl = import.meta.env.VITE_DISPATCH_API_URL || '';
 
+function getDispatchEndpoint() {
+  if (typeof dispatchApiBaseUrl === 'string' && dispatchApiBaseUrl.trim().length > 0) {
+    return `${dispatchApiBaseUrl.replace(/\/$/, '')}/dispatch-update`;
+  }
+
+  return '/api/dispatch-update';
+}
 
 function normalizeProjects(payload) {
   if (Array.isArray(payload)) {
@@ -414,147 +415,7 @@ function setUpdateStatus(message, tone = '') {
   requestUpdateStatus.dataset.tone = tone;
 }
 
-function setRetryButtonVisible(isVisible) {
-  if (!requestUpdateRetryButton) {
-    return;
-  }
-
-  requestUpdateRetryButton.hidden = !isVisible;
-}
-
-function stopStatusPolling() {
-  if (statusPollTimerId) {
-    window.clearInterval(statusPollTimerId);
-    statusPollTimerId = null;
-  }
-}
-
-function setRequestRefreshLoadingState(isLoading) {
-  if (!requestUpdateButton) {
-    return;
-  }
-
-  requestUpdateButton.disabled = isLoading;
-  requestUpdateButton.setAttribute('aria-busy', String(isLoading));
-  requestUpdateButtonSpinner?.classList.toggle('is-visible', isLoading);
-
-  if (requestUpdateButtonLabel) {
-    requestUpdateButtonLabel.textContent = isLoading ? '요청 전송 중...' : '데이터 갱신 요청';
-  }
-}
-
-function getRefreshErrorMessage(status) {
-  if (status === 401 || status === 403) {
-    return '권한이 없거나 갱신 키가 올바르지 않습니다.';
-  }
-
-  if (status === 429) {
-    return '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.';
-  }
-
-  if (status >= 500) {
-    return '서버 오류로 요청을 처리하지 못했습니다. 잠시 후 다시 시도해주세요.';
-  }
-
-  return '업데이트 요청에 실패했습니다. 잠시 후 다시 시도해주세요.';
-}
-
-function getPollingFailureMessage(conclusion) {
-  if (conclusion === 'failure') {
-    return '업데이트 작업이 실패했습니다. 로그를 확인한 뒤 다시 시도해주세요.';
-  }
-
-  if (conclusion === 'cancelled') {
-    return '업데이트 작업이 취소되었습니다. 잠시 후 다시 요청해주세요.';
-  }
-
-  if (conclusion === 'timed_out') {
-    return '업데이트 작업이 시간 초과로 종료되었습니다. 다시 시도해주세요.';
-  }
-
-  return '업데이트 작업이 완료되지 못했습니다. 잠시 후 다시 시도해주세요.';
-}
-
-async function pollUpdateStatus() {
-  if (!updateDispatchKey) {
-    stopStatusPolling();
-    return;
-  }
-
-  if (Date.now() - statusPollingStartedAt > STATUS_POLL_TIMEOUT_MS) {
-    stopStatusPolling();
-    setUpdateStatus('대기 시간이 초과되었습니다. 수동 재시도를 눌러 상태를 다시 확인해주세요.', 'error');
-    setRetryButtonVisible(true);
-    return;
-  }
-
-  try {
-    const response = await fetch('/api/dispatch-update/status', {
-      method: 'GET',
-      headers: {
-        'X-Dispatch-Key': updateDispatchKey,
-      },
-    });
-
-    if (!response.ok) {
-      const result = await response.json().catch(() => ({}));
-
-      if (response.status === 404) {
-        setUpdateStatus('업데이트 작업이 시작되기를 기다리는 중입니다...', 'info');
-        return;
-      }
-
-      throw new Error(result.message || '업데이트 상태 조회에 실패했습니다.');
-    }
-
-    const result = await response.json();
-    const createdAt = Date.parse(result.createdAt || '');
-    if (Number.isFinite(createdAt) && createdAt + 10000 < updateDispatchRequestedAt) {
-      setUpdateStatus('새로운 업데이트 작업이 시작되기를 기다리는 중입니다...', 'info');
-      return;
-    }
-
-    if (result.status === 'completed') {
-      stopStatusPolling();
-
-      if (result.conclusion === 'success') {
-        const reloadSucceeded = await loadProjects();
-        if (reloadSucceeded) {
-          setUpdateStatus('최신 데이터 반영 완료', 'success');
-        } else {
-          setUpdateStatus('업데이트는 완료됐지만 목록을 다시 불러오지 못했습니다. 잠시 후 새로고침해주세요.', 'error');
-          setRetryButtonVisible(true);
-        }
-        return;
-      }
-
-      setUpdateStatus(getPollingFailureMessage(result.conclusion), 'error');
-      setRetryButtonVisible(true);
-      return;
-    }
-
-    setUpdateStatus('업데이트 작업 진행 중입니다. 잠시만 기다려주세요...', 'info');
-  } catch (error) {
-    stopStatusPolling();
-    setUpdateStatus(error.message || '업데이트 상태를 확인하지 못했습니다.', 'error');
-    setRetryButtonVisible(true);
-  }
-}
-
-function startStatusPolling(dispatchKey) {
-  updateDispatchKey = dispatchKey;
-  updateDispatchRequestedAt = Date.now();
-  statusPollingStartedAt = Date.now();
-
-  stopStatusPolling();
-  setRetryButtonVisible(false);
-  void pollUpdateStatus();
-  statusPollTimerId = window.setInterval(() => {
-    void pollUpdateStatus();
-  }, STATUS_POLL_INTERVAL_MS);
-}
-
-async function requestRefresh() {
+async function requestProjectDataUpdate() {
   if (!requestUpdateButton) {
     return;
   }
@@ -565,11 +426,11 @@ async function requestRefresh() {
     return;
   }
 
-  setRequestRefreshLoadingState(true);
+  requestUpdateButton.disabled = true;
   setUpdateStatus('업데이트 요청을 전송하고 있습니다...', 'info');
 
   try {
-    const response = await fetch('/api/dispatch-update', {
+    const response = await fetch(getDispatchEndpoint(), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -578,34 +439,26 @@ async function requestRefresh() {
       body: JSON.stringify({}),
     });
 
+    const result = await response.json().catch(() => ({}));
     if (!response.ok) {
-      const result = await response.json().catch(() => ({}));
-      throw new Error(result.message || getRefreshErrorMessage(response.status));
+      throw new Error(result.message || '업데이트 요청 전송에 실패했습니다.');
     }
 
-    setUpdateStatus('업데이트 요청됨 · 작업 진행 중입니다. 데이터 반영까지 시간이 걸릴 수 있습니다.', 'success');
-    startStatusPolling(dispatchKey);
+    setUpdateStatus(result.message || '업데이트 요청이 접수되었습니다.', 'success');
   } catch (error) {
     setUpdateStatus(error.message || '업데이트 요청에 실패했습니다.', 'error');
-    setRetryButtonVisible(false);
   } finally {
-    setRequestRefreshLoadingState(false);
+    requestUpdateButton.disabled = false;
   }
-}
-
-function retryStatusPolling() {
-  if (!updateDispatchKey) {
-    setUpdateStatus('먼저 데이터 갱신 요청을 진행해주세요.', 'info');
-    setRetryButtonVisible(false);
-    return;
-  }
-
-  setUpdateStatus('업데이트 상태를 다시 확인하고 있습니다...', 'info');
-  startStatusPolling(updateDispatchKey);
 }
 
 detailBackButton.addEventListener('click', showList);
-requestUpdateButton?.addEventListener('click', requestRefresh);
-requestUpdateRetryButton?.addEventListener('click', retryStatusPolling);
+requestUpdateButton?.addEventListener('click', requestProjectDataUpdate);
+
+
+if (requestUpdateButton && window.location.hostname.endsWith('github.io') && !dispatchApiBaseUrl) {
+  requestUpdateButton.disabled = true;
+  setUpdateStatus('현재 배포에서는 갱신 요청 API 주소가 설정되지 않았습니다.', 'error');
+}
 
 loadProjects();

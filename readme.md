@@ -27,7 +27,8 @@ Mini Project Hub는 여러 미니 프로젝트 저장소의 핵심 정보를 한
 ## 서버리스 워크플로 중계 엔드포인트
 `api/dispatch-update` 엔드포인트를 통해서만 `update-project-data.yml` 워크플로를 수동 실행할 수 있습니다.
 
-- 브라우저는 `/api/dispatch-update`에 `POST` 요청만 전송합니다.
+- 브라우저는 기본적으로 `/api/dispatch-update`에 `POST` 요청을 전송합니다.
+- GitHub Pages처럼 API 서버가 분리된 환경에서는 `VITE_DISPATCH_API_URL`(예: `https://your-worker.example.com`)을 빌드 시점에 설정해 `https://.../dispatch-update`로 호출합니다.
 - GitHub 토큰(`GITHUB_WORKFLOW_DISPATCH_TOKEN`)은 서버리스 런타임 시크릿으로만 사용합니다.
 - 브라우저 코드에는 GitHub 토큰을 절대 포함하지 않습니다.
 
@@ -40,3 +41,10 @@ Mini Project Hub는 여러 미니 프로젝트 저장소의 핵심 정보를 한
 - `DISPATCH_ALLOWED_ORIGIN`: 허용 Origin(예: `https://your-domain.com`)
 - `DISPATCH_RATE_LIMIT_PER_MINUTE`: IP당 분당 요청 제한 (기본 `10`)
 - `DISPATCH_REF`: 실행 브랜치(기본 `main`)
+
+### GitHub Pages에서 사용하기
+GitHub Pages는 정적 호스팅이므로 `/api/*` 서버 함수를 직접 실행할 수 없습니다.
+
+1. `api/dispatch-update`와 동일한 역할의 중계 API를 별도 서버리스(예: Cloudflare Worker)로 배포합니다.
+2. 해당 API에 `DISPATCH_AUTH_KEY`, `GITHUB_WORKFLOW_DISPATCH_TOKEN` 등 시크릿을 등록합니다.
+3. 사이트 빌드 시 `VITE_DISPATCH_API_URL=https://<중계 API 도메인>`을 설정합니다.
