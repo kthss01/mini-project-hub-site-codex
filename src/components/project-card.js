@@ -1,3 +1,5 @@
+import { formatRelativeTime } from '../lib/time.ts';
+
 const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
 const THUMBNAIL_FILENAME = 'project-thumbnail.svg';
 
@@ -151,6 +153,91 @@ function createActionLink({ href, label, className }) {
   return link;
 }
 
+function createRecentCommits(project) {
+  const commits = Array.isArray(project.recentCommits) ? project.recentCommits.slice(0, 2) : [];
+  if (commits.length === 0) {
+    return null;
+  }
+
+  const section = document.createElement('section');
+  section.className = 'project-activity';
+
+  const title = document.createElement('h4');
+  title.className = 'project-activity-title';
+  title.textContent = 'Latest commits';
+
+  const list = document.createElement('ul');
+  list.className = 'project-activity-list';
+
+  commits.forEach((commit) => {
+    const item = document.createElement('li');
+    item.className = 'project-activity-item';
+
+    const link = createActionLink({
+      href: commit.url,
+      label: commit.message || commit.sha || 'View commit',
+      className: 'project-activity-link',
+    });
+
+    if (link) {
+      item.appendChild(link);
+    }
+
+    const meta = document.createElement('p');
+    meta.className = 'project-activity-meta';
+    meta.textContent = `${commit.author || 'unknown'} · ${formatRelativeTime(commit.date_iso, 'ko') || '-'}`;
+    item.appendChild(meta);
+
+    list.appendChild(item);
+  });
+
+  section.append(title, list);
+  return section;
+}
+
+function createRecentPrs(project) {
+  const prs = Array.isArray(project?.pullRequests?.open) ? project.pullRequests.open.slice(0, 2) : [];
+  if (prs.length === 0) {
+    return null;
+  }
+
+  const section = document.createElement('section');
+  section.className = 'project-activity';
+
+  const title = document.createElement('h4');
+  title.className = 'project-activity-title';
+  const openCount = Number(project?.pullRequests?.open_count) || 0;
+  title.textContent = `Open PRs (${openCount})`;
+
+  const list = document.createElement('ul');
+  list.className = 'project-activity-list';
+
+  prs.forEach((pr) => {
+    const item = document.createElement('li');
+    item.className = 'project-activity-item';
+
+    const link = createActionLink({
+      href: pr.url,
+      label: `#${pr.number} ${pr.title}`,
+      className: 'project-activity-link',
+    });
+
+    if (link) {
+      item.appendChild(link);
+    }
+
+    const meta = document.createElement('p');
+    meta.className = 'project-activity-meta';
+    meta.textContent = `${pr.author || 'unknown'} · ${formatRelativeTime(pr.updated_at, 'ko') || '-'}`;
+    item.appendChild(meta);
+
+    list.appendChild(item);
+  });
+
+  section.append(title, list);
+  return section;
+}
+
 export function createProjectCard(project) {
   const article = document.createElement('article');
   article.className = 'project-card';
@@ -219,6 +306,23 @@ export function createProjectCard(project) {
   const tagList = createTagList(project.tags);
   if (tagList) {
     body.appendChild(tagList);
+  }
+
+  const commitSummary = createRecentCommits(project);
+  if (commitSummary) {
+    body.appendChild(commitSummary);
+  }
+
+  const prSummary = createRecentPrs(project);
+  if (prSummary) {
+    body.appendChild(prSummary);
+  }
+
+  if (project.dataError) {
+    const warning = document.createElement('p');
+    warning.className = 'project-data-warning';
+    warning.textContent = '일부 GitHub 데이터를 불러오지 못했습니다.';
+    body.appendChild(warning);
   }
 
   if (actions.childElementCount > 0) {

@@ -15,6 +15,9 @@ function normalizeProjects(payload) {
       thumbnail: repo.thumbnail || 'public/images/default-thumbnail.svg',
       repoUrl: repo.repoUrl || repo.html_url,
       demoUrl: repo.demoUrl || repo.homepage,
+      recentCommits: Array.isArray(repo.recent_commits) ? repo.recent_commits : [],
+      pullRequests: repo.pull_requests || { open_count: 0, open: [], recently_merged: [] },
+      dataError: repo.error || '',
       tags: [],
     }));
   }
