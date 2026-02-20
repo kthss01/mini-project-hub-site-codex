@@ -14,6 +14,8 @@ const activityHeatmap = document.querySelector('#activity-heatmap');
 const activityTotals = document.querySelector('#activity-totals');
 const requestUpdateButton = document.querySelector('#request-update-button');
 const requestUpdateStatus = document.querySelector('#request-update-status');
+const requestUpdateButtonLabel = document.querySelector('#request-update-button-label');
+const requestUpdateButtonSpinner = document.querySelector('#request-update-button-spinner');
 
 
 function normalizeProjects(payload) {
@@ -416,7 +418,37 @@ function setUpdateStatus(message, tone = '') {
   requestUpdateStatus.dataset.tone = tone;
 }
 
-async function requestProjectDataUpdate() {
+function setRequestRefreshLoadingState(isLoading) {
+  if (!requestUpdateButton) {
+    return;
+  }
+
+  requestUpdateButton.disabled = isLoading;
+  requestUpdateButton.setAttribute('aria-busy', String(isLoading));
+  requestUpdateButtonSpinner?.classList.toggle('is-visible', isLoading);
+
+  if (requestUpdateButtonLabel) {
+    requestUpdateButtonLabel.textContent = isLoading ? '요청 전송 중...' : '데이터 갱신 요청';
+  }
+}
+
+function getRefreshErrorMessage(status) {
+  if (status === 401 || status === 403) {
+    return '권한이 없거나 갱신 키가 올바르지 않습니다.';
+  }
+
+  if (status === 429) {
+    return '요청이 너무 많습니다. 잠시 후 다시 시도해주세요.';
+  }
+
+  if (status >= 500) {
+    return '서버 오류로 요청을 처리하지 못했습니다. 잠시 후 다시 시도해주세요.';
+  }
+
+  return '업데이트 요청에 실패했습니다. 잠시 후 다시 시도해주세요.';
+}
+
+async function requestRefresh() {
   if (!requestUpdateButton) {
     return;
   }
@@ -427,7 +459,7 @@ async function requestProjectDataUpdate() {
     return;
   }
 
-  requestUpdateButton.disabled = true;
+  setRequestRefreshLoadingState(true);
   setUpdateStatus('업데이트 요청을 전송하고 있습니다...', 'info');
 
   try {
@@ -440,20 +472,20 @@ async function requestProjectDataUpdate() {
       body: JSON.stringify({}),
     });
 
-    const result = await response.json().catch(() => ({}));
     if (!response.ok) {
-      throw new Error(result.message || '업데이트 요청 전송에 실패했습니다.');
+      const result = await response.json().catch(() => ({}));
+      throw new Error(result.message || getRefreshErrorMessage(response.status));
     }
 
-    setUpdateStatus(result.message || '업데이트 요청이 접수되었습니다.', 'success');
+    setUpdateStatus('업데이트 요청됨 · 작업 진행 중입니다. 데이터 반영까지 시간이 걸릴 수 있습니다.', 'success');
   } catch (error) {
     setUpdateStatus(error.message || '업데이트 요청에 실패했습니다.', 'error');
   } finally {
-    requestUpdateButton.disabled = false;
+    setRequestRefreshLoadingState(false);
   }
 }
 
 detailBackButton.addEventListener('click', showList);
-requestUpdateButton?.addEventListener('click', requestProjectDataUpdate);
+requestUpdateButton?.addEventListener('click', requestRefresh);
 
 loadProjects();

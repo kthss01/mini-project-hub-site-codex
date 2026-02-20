@@ -15,14 +15,21 @@
           <h1>Mini Project Hub</h1>
           <p>프로젝트 목록을 확인하고 저장소로 이동해보세요.</p>
         </div>
-        <button id="request-update-button" class="request-update-button" type="button">데이터 갱신 요청</button>
       </div>
-      <p id="request-update-status" class="request-update-status" aria-live="polite"></p>
     </header>
 
     <main>
       <section id="projects-list-section" aria-labelledby="projects-title" class="projects-section">
-        <h2 id="projects-title">프로젝트 목록</h2>
+        <div class="projects-title-row">
+          <h2 id="projects-title">프로젝트 목록</h2>
+          <div class="request-refresh-controls">
+            <button id="request-update-button" class="request-update-button" type="button">
+              <span id="request-update-button-spinner" class="request-update-button-spinner" aria-hidden="true"></span>
+              <span id="request-update-button-label">데이터 갱신 요청</span>
+            </button>
+            <p id="request-update-status" class="request-update-status" aria-live="polite"></p>
+          </div>
+        </div>
         <div id="project-list" class="project-grid" role="list"></div>
       </section>
 
