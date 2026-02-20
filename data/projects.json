@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T05:59:15.058Z",
+  "generated_at": "2026-02-20T07:10:27.913Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,122 +12,122 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-02-20T05:55:30Z",
+      "updated_at": "2026-02-20T06:41:48Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "total_commits": 70,
+      "total_commits": 87,
       "recent_commits": [
         {
-          "sha": "9f23991",
-          "message": "Merge pull request #30 from kthss01/codex/add-serverless-relay-endpoint-with-security",
+          "sha": "bc72a30",
+          "message": "Merge pull request #37 from kthss01/codex/fix-missing-project-info-in-list",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:55:23Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/9f239910cbbd276be154083cf3393bfe1cecb15c"
+          "date_iso": "2026-02-20T06:41:44Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/bc72a30171d67b645f02852456687d0ce7bcf3b8"
         },
         {
-          "sha": "c58580a",
-          "message": "feat: add secure workflow dispatch relay endpoint",
+          "sha": "6a72c44",
+          "message": "fix: guard Vite env access to restore project list rendering",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:55:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c58580a3f8510a0018a17b64115771e1b997376a"
+          "date_iso": "2026-02-20T06:41:18Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6a72c448fee9abbb1862b685e5abaa69669067d4"
         },
         {
-          "sha": "65aa84f",
-          "message": "Merge pull request #29 from kthss01/codex/update-detail-screen-layout-and-thumbnails",
+          "sha": "cbad940",
+          "message": "Merge pull request #36 from kthss01/codex/verify-pr-merge-conflict-resolution",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:42:22Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/65aa84f634b5134d28b53a98141b6531cc7a675b"
+          "date_iso": "2026-02-20T06:33:34Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/cbad94078c857bf1403d1c74d595beb1a02443e7"
         },
         {
-          "sha": "2db6a61",
-          "message": "fix: 상세 화면 UI 및 repo 썸네일 적용 개선",
+          "sha": "8e378ac",
+          "message": "fix: resolve merge conflict artifacts in update request UI",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:41:23Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2db6a61bb1a957183e741cdbb30c26335b236fe9"
+          "date_iso": "2026-02-20T06:33:18Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8e378acdf01b7bb82f18bc8c4622703b0eb62bad"
         },
         {
-          "sha": "8015f7c",
-          "message": "Merge pull request #28 from kthss01/codex/update-detail-screen-layout-5t10dh",
+          "sha": "add7e3b",
+          "message": "Merge pull request #35 from kthss01/codex/restore-total-pr-and-commit-display",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:26:02Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8015f7c1d85f686f54d761cf1841362810b1943a"
+          "date_iso": "2026-02-20T06:29:45Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/add7e3b53883cbacdc041c880dcfbb684ea3fcd6"
         },
         {
-          "sha": "97b058b",
-          "message": "히트맵 셀 크기 조정으로 상세 패널 높이 균형화",
+          "sha": "466f8d6",
+          "message": "Merge branch 'main' into codex/restore-total-pr-and-commit-display",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:25:51Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/97b058ba9296e979769de30a27c9371771ea04b7"
+          "date_iso": "2026-02-20T06:29:37Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/466f8d6db1f79dbb7d83a14a5eab3c925c535e1f"
         },
         {
-          "sha": "c7201dc",
-          "message": "상세 화면 활동 그래프를 히트맵으로 개편",
+          "sha": "960aac3",
+          "message": "fix: 상세 화면 총 commit/pr 요약 복원",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:21:35Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c7201dc648696ff72358580117699771f153f981"
+          "date_iso": "2026-02-20T06:28:34Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/960aac35179532a270461ab231e436848c8868b0"
         },
         {
-          "sha": "6698c89",
-          "message": "상세 화면에서 요약 수치 텍스트 제거",
+          "sha": "6adf61d",
+          "message": "Merge pull request #34 from kthss01/codex/add-serverless-relay-endpoint-with-security-kca503",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:16:28Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6698c89a61d85f6798248995c1cf0102f0e7d748"
+          "date_iso": "2026-02-20T06:28:27Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6adf61d502991cdead1e2542988046fc28f70e29"
         },
         {
-          "sha": "e92da56",
-          "message": "Merge pull request #27 from kthss01/codex/update-readme.md-with-project-details",
+          "sha": "a989a43",
+          "message": "Merge branch 'main' into codex/add-serverless-relay-endpoint-with-security-kca503",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:06:09Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e92da5677deea40bad81d1e1fb642f855faf0067"
+          "date_iso": "2026-02-20T06:28:21Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a989a43b28880586f5850b0113ea23cba95ad083"
         },
         {
-          "sha": "484f8a0",
-          "message": "docs: add README overview and Korean work history",
+          "sha": "bf8d898",
+          "message": "fix: support external dispatch API for GitHub Pages",
           "author": "kthss01",
-          "date_iso": "2026-02-20T05:02:26Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/484f8a0fdf5edb5555faa02b4a2ea9b3dca610fa"
+          "date_iso": "2026-02-20T06:27:14Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/bf8d898b2b837a104e68a04d8c0874622e4bd41f"
         }
       ],
       "pull_requests": {
-        "total_count": 30,
+        "total_count": 37,
         "open_count": 0,
         "open": [],
         "recently_merged": [
           {
-            "number": 30,
-            "title": "feat: add secure serverless relay for workflow dispatch",
-            "merged_at": "2026-02-20T05:55:23Z",
+            "number": 37,
+            "title": "fix: guard Vite env access to restore project list rendering",
+            "merged_at": "2026-02-20T06:41:44Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/30"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/37"
           },
           {
-            "number": 29,
-            "title": "fix: 상세 화면 UI 및 repo 썸네일 적용 개선",
-            "merged_at": "2026-02-20T05:42:22Z",
+            "number": 36,
+            "title": "fix: remove duplicate update-request UI from merge conflict",
+            "merged_at": "2026-02-20T06:33:34Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/29"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/36"
           },
           {
-            "number": 28,
-            "title": "상세 화면에서 요약 수치 텍스트 제거 및 그래프 중심 표시",
-            "merged_at": "2026-02-20T05:26:02Z",
+            "number": 35,
+            "title": "fix: 상세 화면에 총 Commit/PR 요약 복원",
+            "merged_at": "2026-02-20T06:29:45Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/28"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/35"
           },
           {
-            "number": 27,
-            "title": "docs: add README overview and Korean work-history document",
-            "merged_at": "2026-02-20T05:06:10Z",
+            "number": 34,
+            "title": "fix: support external dispatch API for GitHub Pages",
+            "merged_at": "2026-02-20T06:28:27Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/27"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/34"
           },
           {
-            "number": 26,
-            "title": "feat: improve project detail UX and render README as Markdown",
-            "merged_at": "2026-02-20T04:58:57Z",
+            "number": 33,
+            "title": "feat: replace detail activity widgets with GitHub language breakdown",
+            "merged_at": "2026-02-20T06:22:22Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/26"
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/33"
           }
         ]
       },
@@ -158,7 +158,7 @@
         },
         {
           "date": "2026-02-20",
-          "count": 38
+          "count": 55
         }
       ]
     },
