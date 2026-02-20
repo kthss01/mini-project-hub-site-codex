@@ -22,7 +22,19 @@
 
     <main>
       <section id="projects-list-section" aria-labelledby="projects-title" class="projects-section">
-        <h2 id="projects-title">프로젝트 목록</h2>
+        <div class="projects-title-row">
+          <h2 id="projects-title">프로젝트 목록</h2>
+          <div class="request-refresh-controls">
+            <button id="request-update-button" class="request-update-button" type="button">
+              <span id="request-update-button-spinner" class="request-update-button-spinner" aria-hidden="true"></span>
+              <span id="request-update-button-label">데이터 갱신 요청</span>
+            </button>
+            <p id="request-update-status" class="request-update-status" aria-live="polite"></p>
+            <button id="request-update-retry-button" class="request-update-retry-button" type="button" hidden>
+              상태 수동 재확인
+            </button>
+          </div>
+        </div>
         <div id="project-list" class="project-grid" role="list"></div>
       </section>
 
@@ -49,10 +61,7 @@
               >
             </div>
 
-            <div class="detail-chart-grid">
-              <section id="activity-heatmap" class="detail-chart"></section>
-              <section id="activity-totals" class="detail-chart"></section>
-            </div>
+            <section id="language-breakdown" class="detail-chart"></section>
           </div>
         </article>
 

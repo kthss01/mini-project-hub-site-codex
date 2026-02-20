@@ -72,126 +72,121 @@ function parseGithubRepo(repoUrl) {
   }
 }
 
-function toDateKey(isoString) {
-  const date = new Date(isoString);
-  if (Number.isNaN(date.getTime())) {
-    return null;
+function normalizeLanguageData(languages) {
+  if (!languages || typeof languages !== 'object') {
+    return [];
   }
 
-  const offsetDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
-  return offsetDate.toISOString().slice(0, 10);
+  const entries = Object.entries(languages)
+    .map(([name, bytes]) => ({
+      name,
+      bytes: Number(bytes),
+    }))
+    .filter((entry) => Number.isFinite(entry.bytes) && entry.bytes > 0)
+    .sort((a, b) => b.bytes - a.bytes);
+
+  const totalBytes = entries.reduce((sum, entry) => sum + entry.bytes, 0);
+  if (totalBytes <= 0) {
+    return [];
+  }
+
+  return entries.map((entry) => ({
+    ...entry,
+    percent: (entry.bytes / totalBytes) * 100,
+  }));
 }
 
-function countByDay(items, dateField) {
-  return items.reduce((acc, item) => {
-    const key = toDateKey(item?.[dateField]);
-    if (!key) {
-      return acc;
-    }
+function getLanguageColor(index) {
+  const palette = [
+    '#3178c6',
+    '#663399',
+    '#e34c26',
+    '#f1e05a',
+    '#2b7489',
+    '#89e051',
+    '#3572a5',
+  ];
 
-    acc[key] = (acc[key] || 0) + 1;
-    return acc;
-  }, {});
+  return palette[index % palette.length];
 }
 
-function getActivityCellColor(commitCount, prCount) {
-  const totalCount = commitCount + prCount;
-  if (totalCount === 0) {
-    return 'var(--activity-empty)';
+function renderLanguageBreakdown(container, languages) {
+  if (!container) {
+    return;
   }
 
-  const intensity = Math.min(totalCount / 4, 1);
-  const alpha = 0.35 + intensity * 0.55;
-
-  if (commitCount > 0 && prCount > 0) {
-    return `color-mix(in srgb, var(--activity-both) ${Math.round(alpha * 100)}%, transparent)`;
-  }
-
-  if (commitCount > 0) {
-    return `color-mix(in srgb, var(--activity-commit) ${Math.round(alpha * 100)}%, transparent)`;
-  }
-
-  return `color-mix(in srgb, var(--activity-pr) ${Math.round(alpha * 100)}%, transparent)`;
-}
-
-function renderActivityHeatmap(container, commitMap, prMap) {
   container.innerHTML = '';
 
   const titleNode = document.createElement('h4');
   titleNode.className = 'detail-chart-title';
-  titleNode.textContent = '일자별 Commit/PR 활동';
+  titleNode.textContent = 'Languages';
 
-  const dayCount = 84;
-  const endDate = new Date();
-  endDate.setHours(0, 0, 0, 0);
-
-  const dates = [];
-  for (let i = dayCount - 1; i >= 0; i -= 1) {
-    const date = new Date(endDate);
-    date.setDate(endDate.getDate() - i);
-    dates.push(date);
-  }
-
-  const hasActivity = dates.some((date) => {
-    const key = date.toISOString().slice(0, 10);
-    return (commitMap[key] || 0) + (prMap[key] || 0) > 0;
-  });
-
-  const grid = document.createElement('div');
-  grid.className = 'activity-heatmap-grid';
-
-  dates.forEach((date) => {
-    const key = date.toISOString().slice(0, 10);
-    const commitCount = commitMap[key] || 0;
-    const prCount = prMap[key] || 0;
-
-    const cell = document.createElement('span');
-    cell.className = 'activity-heatmap-cell';
-    cell.style.backgroundColor = getActivityCellColor(commitCount, prCount);
-    cell.title = `${key} · Commit ${commitCount}개 · PR ${prCount}개`;
-    cell.setAttribute('aria-label', cell.title);
-    grid.appendChild(cell);
-  });
-
-  const legend = document.createElement('div');
-  legend.className = 'activity-legend';
-  legend.innerHTML = `
-    <span class="activity-legend-item"><i style="background: var(--activity-commit);"></i>Commit</span>
-    <span class="activity-legend-item"><i style="background: var(--activity-pr);"></i>PR</span>
-    <span class="activity-legend-item"><i style="background: var(--activity-both);"></i>Commit + PR</span>
-  `;
-
-  if (!hasActivity) {
+  const languageItems = normalizeLanguageData(languages);
+  if (languageItems.length === 0) {
     const empty = document.createElement('p');
     empty.className = 'detail-empty-message';
-    empty.textContent = '시각화할 데이터가 없습니다.';
+    empty.textContent = '표시할 언어 데이터가 없습니다.';
     container.append(titleNode, empty);
     return;
   }
 
-  container.append(titleNode, grid, legend);
+  const bar = document.createElement('div');
+  bar.className = 'language-bar';
+
+  languageItems.forEach((language, index) => {
+    const segment = document.createElement('span');
+    segment.className = 'language-bar-segment';
+    segment.style.width = `${language.percent}%`;
+    segment.style.backgroundColor = getLanguageColor(index);
+    segment.title = `${language.name} ${language.percent.toFixed(1)}%`;
+    segment.setAttribute('aria-label', segment.title);
+    bar.append(segment);
+  });
+
+  const legend = document.createElement('ul');
+  legend.className = 'language-legend';
+
+  languageItems.forEach((language, index) => {
+    const item = document.createElement('li');
+    item.className = 'language-legend-item';
+
+    const dot = document.createElement('i');
+    dot.style.backgroundColor = getLanguageColor(index);
+
+    const label = document.createElement('span');
+    label.className = 'language-legend-label';
+    label.textContent = language.name;
+
+    const value = document.createElement('span');
+    value.className = 'language-legend-value';
+    value.textContent = `${language.percent.toFixed(1)}%`;
+
+    item.append(dot, label, value);
+    legend.append(item);
+  });
+
+  container.append(titleNode, bar, legend);
 }
 
-function renderTotals(container, totalCommitCount, totalPrCount) {
-  container.innerHTML = '';
+async function loadGithubLanguages(project) {
+  const repoMeta = parseGithubRepo(project.repoUrl);
 
-  const titleNode = document.createElement('h4');
-  titleNode.className = 'detail-chart-title';
-  titleNode.textContent = '누적 활동';
+  if (!repoMeta) {
+    renderLanguageBreakdown(languageBreakdown, null);
+    return;
+  }
 
-  const list = document.createElement('div');
-  list.className = 'activity-total-grid';
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repoMeta.owner}/${repoMeta.repo}/languages`);
+    if (!response.ok) {
+      throw new Error('language fetch failed');
+    }
 
-  const commitCard = document.createElement('article');
-  commitCard.className = 'activity-total-card';
-  commitCard.innerHTML = `<p class="activity-total-label">총 Commit</p><p class="activity-total-value">${totalCommitCount}</p>`;
-
-  const prCard = document.createElement('article');
-  prCard.className = 'activity-total-card';
-  prCard.innerHTML = `<p class="activity-total-label">총 PR</p><p class="activity-total-value">${totalPrCount}</p>`;
-
-  list.append(commitCard, prCard);
-  container.append(titleNode, list);
+    const payload = await response.json();
+    renderLanguageBreakdown(languageBreakdown, payload);
+  } catch {
+    renderLanguageBreakdown(languageBreakdown, null);
+  }
 }
 
 function setThumbnail(project) {
@@ -344,26 +339,8 @@ function showProjectDetail(project) {
   toggleLink(detailRepoLink, project.repoUrl);
   toggleLink(detailDemoLink, project.demoUrl);
 
-  const commitByDay = countByDay(project.recentCommits || [], 'date_iso');
-  const prEvents = [
-    ...(Array.isArray(project?.pullRequests?.open)
-      ? project.pullRequests.open.map((pr) => ({ date: pr.updated_at }))
-      : []),
-    ...(Array.isArray(project?.pullRequests?.recently_merged)
-      ? project.pullRequests.recently_merged.map((pr) => ({ date: pr.merged_at }))
-      : []),
-  ];
-  const prByDay = countByDay(prEvents, 'date');
-
-  renderActivityHeatmap(activityHeatmap, commitByDay, prByDay);
-
-  const totalCommitCount = Number.isFinite(project?.totalCommits)
-    ? project.totalCommits
-    : (Array.isArray(project?.recentCommits) ? project.recentCommits.length : 0);
-  const totalPrCount = Number.isFinite(project?.pullRequests?.total_count)
-    ? project.pullRequests.total_count
-    : prEvents.length;
-  renderTotals(activityTotals, totalCommitCount, totalPrCount);
+  renderLanguageBreakdown(languageBreakdown, null);
+  void loadGithubLanguages(project);
 
   loadReadme(project);
 
@@ -389,8 +366,10 @@ async function loadProjects() {
     const projects = normalizeProjects(payload);
 
     renderProjects(projects);
+    return true;
   } catch (error) {
     renderError(error);
+    return false;
   }
 }
 
