@@ -22,3 +22,21 @@ Mini Project Hub는 여러 미니 프로젝트 저장소의 핵심 정보를 한
 작업 이력은 아래 문서에서 지속적으로 관리합니다.
 
 - `docs/work-history.ko.md`: 커밋/PR 기반 변경 내역을 한글로 요약한 히스토리 문서
+
+
+## 서버리스 워크플로 중계 엔드포인트
+`api/dispatch-update` 엔드포인트를 통해서만 `update-project-data.yml` 워크플로를 수동 실행할 수 있습니다.
+
+- 브라우저는 `/api/dispatch-update`에 `POST` 요청만 전송합니다.
+- GitHub 토큰(`GITHUB_WORKFLOW_DISPATCH_TOKEN`)은 서버리스 런타임 시크릿으로만 사용합니다.
+- 브라우저 코드에는 GitHub 토큰을 절대 포함하지 않습니다.
+
+### 배포 시크릿
+아래 값은 배포 환경의 시크릿으로 설정하세요.
+
+- `GITHUB_WORKFLOW_DISPATCH_TOKEN`: workflow dispatch 권한이 있는 GitHub 토큰
+- `GITHUB_REPOSITORY`: `owner/repo` 형식
+- `DISPATCH_AUTH_KEY`: 중계 엔드포인트 최소 인증 키(`X-Dispatch-Key` 헤더와 비교)
+- `DISPATCH_ALLOWED_ORIGIN`: 허용 Origin(예: `https://your-domain.com`)
+- `DISPATCH_RATE_LIMIT_PER_MINUTE`: IP당 분당 요청 제한 (기본 `10`)
+- `DISPATCH_REF`: 실행 브랜치(기본 `main`)
