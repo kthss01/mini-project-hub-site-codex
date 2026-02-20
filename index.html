@@ -21,16 +21,18 @@
       </section>
 
       <section id="project-detail-section" class="projects-section" hidden>
-        <button id="detail-back-button" class="detail-back-button" type="button">← 목록으로 돌아가기</button>
-
         <article class="project-detail-layout">
           <div class="project-detail-visual">
             <img id="detail-thumbnail" class="project-detail-thumbnail" alt="" />
           </div>
 
           <div class="project-detail-body">
-            <h2 id="detail-title"></h2>
+            <div class="project-detail-heading">
+              <h2 id="detail-title"></h2>
+              <button id="detail-back-button" class="detail-back-button" type="button">← 목록으로 돌아가기</button>
+            </div>
             <p id="detail-description"></p>
+            <p id="detail-summary" class="detail-summary"></p>
 
             <div class="project-actions">
               <a id="detail-repo-link" class="project-action-link" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
@@ -52,7 +54,7 @@
 
         <section class="project-readme">
           <h3>README.md</h3>
-          <pre id="readme-content"></pre>
+          <div id="readme-content"></div>
         </section>
       </section>
     </main>
