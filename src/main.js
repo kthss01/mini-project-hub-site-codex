@@ -12,6 +12,19 @@ const detailDemoLink = document.querySelector('#detail-demo-link');
 const readmeContent = document.querySelector('#readme-content');
 const activityHeatmap = document.querySelector('#activity-heatmap');
 const activityTotals = document.querySelector('#activity-totals');
+const requestUpdateButton = document.querySelector('#request-update-button');
+const requestUpdateStatus = document.querySelector('#request-update-status');
+
+
+const dispatchApiBaseUrl = import.meta.env.VITE_DISPATCH_API_URL || '';
+
+function getDispatchEndpoint() {
+  if (typeof dispatchApiBaseUrl === 'string' && dispatchApiBaseUrl.trim().length > 0) {
+    return `${dispatchApiBaseUrl.replace(/\/$/, '')}/dispatch-update`;
+  }
+
+  return '/api/dispatch-update';
+}
 
 function normalizeProjects(payload) {
   if (Array.isArray(payload)) {
@@ -404,6 +417,59 @@ function renderError(error) {
   projectList.innerHTML = `<p class="error-message">${error.message}</p>`;
 }
 
+function setUpdateStatus(message, tone = '') {
+  if (!requestUpdateStatus) {
+    return;
+  }
+
+  requestUpdateStatus.textContent = message;
+  requestUpdateStatus.dataset.tone = tone;
+}
+
+async function requestProjectDataUpdate() {
+  if (!requestUpdateButton) {
+    return;
+  }
+
+  const dispatchKey = window.prompt('갱신 요청 키를 입력해주세요.');
+  if (!dispatchKey) {
+    setUpdateStatus('갱신 요청이 취소되었습니다.', 'info');
+    return;
+  }
+
+  requestUpdateButton.disabled = true;
+  setUpdateStatus('업데이트 요청을 전송하고 있습니다...', 'info');
+
+  try {
+    const response = await fetch(getDispatchEndpoint(), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Dispatch-Key': dispatchKey,
+      },
+      body: JSON.stringify({}),
+    });
+
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(result.message || '업데이트 요청 전송에 실패했습니다.');
+    }
+
+    setUpdateStatus(result.message || '업데이트 요청이 접수되었습니다.', 'success');
+  } catch (error) {
+    setUpdateStatus(error.message || '업데이트 요청에 실패했습니다.', 'error');
+  } finally {
+    requestUpdateButton.disabled = false;
+  }
+}
+
 detailBackButton.addEventListener('click', showList);
+requestUpdateButton?.addEventListener('click', requestProjectDataUpdate);
+
+
+if (requestUpdateButton && window.location.hostname.endsWith('github.io') && !dispatchApiBaseUrl) {
+  requestUpdateButton.disabled = true;
+  setUpdateStatus('현재 배포에서는 갱신 요청 API 주소가 설정되지 않았습니다.', 'error');
+}
 
 loadProjects();
