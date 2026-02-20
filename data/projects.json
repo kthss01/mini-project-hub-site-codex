@@ -1,25 +1,133 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T02:25:58.981Z",
+  "generated_at": "2026-02-20T04:08:35.853Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
+      "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
       "repo": "mini-project-hub-site-codex",
       "title": "Mini Project Hub",
       "html_url": "https://github.com/kthss01/mini-project-hub-site-codex",
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-20T04:07:42Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "4992f33",
+          "message": "Merge pull request #19 from kthss01/codex/calculate-total-open-pr-count-separately",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T04:07:38Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/4992f332d12943c734a6dc693f70ab5631514829"
+        },
+        {
+          "sha": "02f780b",
+          "message": "fix: count total open pull requests accurately",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T04:07:28Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/02f780b96883f89d450c49caa0a2292a7f17281a"
+        },
+        {
+          "sha": "19c68be",
+          "message": "Merge pull request #18 from kthss01/codex/build-data-caching-pipeline-with-github-actions",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:27:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/19c68bea7f2db15be7936827e316c3065ed86ac5"
+        },
+        {
+          "sha": "0902599",
+          "message": "feat: add scheduled github cache pipeline outputs",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:27:25Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/0902599393a0e74b90d5369cd2b5dd1e5119083c"
+        },
+        {
+          "sha": "3cb42fa",
+          "message": "Merge pull request #17 from kthss01/codex/add-new-project-mini-delivery-log-report-system",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:23:30Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3cb42fa49e296f5ebb90675afc0c622c158adba5"
+        },
+        {
+          "sha": "8151572",
+          "message": "Add mini-delivery-log-report-system project entry",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:23:01Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/815157200475941ffba613a8125baadc274a737b"
+        },
+        {
+          "sha": "e7d583d",
+          "message": "Merge pull request #16 from kthss01/codex/build-github-actions-pipeline-for-json-caching",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:19:11Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e7d583d149744460aacab5dce44f00c9a702b297"
+        },
+        {
+          "sha": "99233aa",
+          "message": "feat: add github actions project cache pipeline",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:18:55Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/99233aa89cfb41542e0f00da6dbef8954d5b76db"
+        },
+        {
+          "sha": "74f400d",
+          "message": "Merge pull request #15 from kthss01/codex/create-and-apply-thumbnail-for-cards",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:24:33Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/74f400d730471a29a400ed637bbe7e7699ed9ba1"
+        },
+        {
+          "sha": "c8352ba",
+          "message": "Add dedicated thumbnail for hub project card",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:24:03Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c8352ba915584ff582bc37d06c3198f17f60b31f"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 19,
+            "title": "fix: compute total open PR count and document schema",
+            "merged_at": "2026-02-20T04:07:38Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/19"
+          },
+          {
+            "number": 18,
+            "title": "feat: add cached GitHub project data pipeline and schema docs",
+            "merged_at": "2026-02-20T02:27:54Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/18"
+          },
+          {
+            "number": 17,
+            "title": "Add mini-delivery-log-report-system to project hub",
+            "merged_at": "2026-02-20T02:23:30Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/17"
+          },
+          {
+            "number": 16,
+            "title": "feat: add scheduled GitHub project data cache pipeline",
+            "merged_at": "2026-02-20T02:19:12Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/16"
+          },
+          {
+            "number": 15,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-02-20T01:24:33Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/15"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -44,32 +152,139 @@
         },
         {
           "date": "2026-02-19",
-          "count": 0
+          "count": 32
         },
         {
           "date": "2026-02-20",
-          "count": 0
+          "count": 10
         }
-      ],
-      "error": "fetch failed"
+      ]
     },
     {
+      "id": "kthss01-mini-idle-game-codex",
       "owner": "kthss01",
       "repo": "mini-idle-game-codex",
       "title": "Mini Idle Game Codex",
       "html_url": "https://github.com/kthss01/mini-idle-game-codex",
-      "description": "",
+      "description": "codex 를 이용한 idle 게임 만들기",
       "homepage": "https://kthss01.github.io/mini-idle-game-codex/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-19T07:07:42Z",
       "thumbnail": "public/images/mini-idle-game-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-idle-game-codex",
       "demoUrl": "https://kthss01.github.io/mini-idle-game-codex/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "67160f9",
+          "message": "Merge pull request #58 from kthss01/codex/create-project-thumbnail",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:07:38Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/67160f97d8942002ad88ec598eef5a4b840db6ef"
+        },
+        {
+          "sha": "0049cee",
+          "message": "docs: 프로젝트 썸네일 추가",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:06:25Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/0049cee4ece76790379f356b914a3382d3633688"
+        },
+        {
+          "sha": "0fb0a50",
+          "message": "Merge pull request #57 from kthss01/codex/refactor-ui-layout-calculations",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:57:32Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/0fb0a503e0be57c9ae8bdb91234f746bf36a6728"
+        },
+        {
+          "sha": "ed786c2",
+          "message": "UI 상단 패널 축소 레이아웃 재계산 단순화",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:57:11Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/ed786c285d9531a0946aebc56fd46765605d4ee9"
+        },
+        {
+          "sha": "024e71d",
+          "message": "Merge pull request #56 from kthss01/codex/change-log-panel-to-be-hidden-by-default",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:53:25Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/024e71da424379e86d1c4b97cc229d56fb0079ad"
+        },
+        {
+          "sha": "9a05ab3",
+          "message": "feat(ui): 로그 패널을 debugUI 모드에서만 노출",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:51:27Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/9a05ab35489a298c3c8666c84f0359ec00b3db04"
+        },
+        {
+          "sha": "14da88a",
+          "message": "Merge pull request #55 from kthss01/codex/remove-status-panel-components-from-layout",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:46:02Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/14da88a247e1102b4a8fcec8efefbf8119d36dd4"
+        },
+        {
+          "sha": "1d209e6",
+          "message": "UI 상태 패널 제거 및 상단 토글 레이아웃 정리",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:43:13Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/1d209e6fbd3fddbc557d9766db5d8ccaa3696a1f"
+        },
+        {
+          "sha": "c55dd1b",
+          "message": "Merge pull request #54 from kthss01/codex/extend-uilayoutscene.create-signature",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:24:04Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/c55dd1b662ee726e878ceefb0565bc854a3e5fc3"
+        },
+        {
+          "sha": "7af8c4b",
+          "message": "UI 시작 모드 분기 및 안내 문구 업데이트",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T05:23:52Z",
+          "url": "https://github.com/kthss01/mini-idle-game-codex/commit/7af8c4ba714e25cdf3a45580296e487b65e2b486"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 58,
+            "title": "docs: 프로젝트 썸네일 추가",
+            "merged_at": "2026-02-19T07:07:38Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-codex/pull/58"
+          },
+          {
+            "number": 57,
+            "title": "상단 HUD/토글 레이아웃 단순화 및 로그 패널 동기화 안정화",
+            "merged_at": "2026-02-06T05:57:32Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-codex/pull/57"
+          },
+          {
+            "number": 56,
+            "title": "feat(ui): 로그 패널을 debugUI 전용으로 변경 (?debugUI=1)",
+            "merged_at": "2026-02-06T05:53:25Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-codex/pull/56"
+          },
+          {
+            "number": 55,
+            "title": "Remove status panel and simplify top toggle layout in UILayoutScene",
+            "merged_at": "2026-02-06T05:46:02Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-codex/pull/55"
+          },
+          {
+            "number": 54,
+            "title": "UILayoutScene: add start mode (new/continue) branching and README update",
+            "merged_at": "2026-02-06T05:24:04Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-codex/pull/54"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -94,32 +309,139 @@
         },
         {
           "date": "2026-02-19",
-          "count": 0
+          "count": 2
         },
         {
           "date": "2026-02-20",
           "count": 0
         }
-      ],
-      "error": "fetch failed"
+      ]
     },
     {
+      "id": "kthss01-mini-autobattle-game-codex",
       "owner": "kthss01",
       "repo": "mini-autobattle-game-codex",
       "title": "Mini Autobattle Game Codex",
       "html_url": "https://github.com/kthss01/mini-autobattle-game-codex",
       "description": "",
       "homepage": "https://kthss01.github.io/mini-autobattle-game-codex/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-19T07:09:16Z",
       "thumbnail": "public/images/mini-autobattle-game-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-autobattle-game-codex",
       "demoUrl": "https://kthss01.github.io/mini-autobattle-game-codex/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "a348b45",
+          "message": "Merge pull request #46 from kthss01/codex/create-project-thumbnail",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:09:13Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/a348b4523184519b62fcd33d28ce9d7e61ce9646"
+        },
+        {
+          "sha": "a8f6897",
+          "message": "Add project thumbnail asset and docs reference",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:08:09Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/a8f689720e8f73d4456ccc4de4c95718aee9f61f"
+        },
+        {
+          "sha": "93db136",
+          "message": "Merge pull request #45 from kthss01/codex/update-champion-shapes-and-names",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T07:37:26Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/93db136557281a019721dbb98764dde82944e6f2"
+        },
+        {
+          "sha": "b5de453",
+          "message": "feat: distinguish unit shapes by role and enlarge map",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T07:36:44Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/b5de4533deb2eb27f453b530823225a135277963"
+        },
+        {
+          "sha": "92251ab",
+          "message": "Merge pull request #44 from kthss01/codex/hold-off-on-2d-model-application",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T07:27:02Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/92251abac529f2cc640580e158b829c58e369465"
+        },
+        {
+          "sha": "b412ce8",
+          "message": "클라이언트 2D 스프라이트 적용 임시 보류 및 도형 렌더링 유지",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T07:26:51Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/b412ce870a36031a227fd84645c290f31dd41cb3"
+        },
+        {
+          "sha": "20e94e5",
+          "message": "Merge pull request #43 from kthss01/codex/fix-character-spreadsheet-display-issues",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T01:58:44Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/20e94e55632934ba23762c548f2dcafb5d67e669"
+        },
+        {
+          "sha": "8de4f84",
+          "message": "Fix champion spritesheet frame size and animation ranges",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T01:58:28Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/8de4f84596c69a3dde33c70bc3164b5930a4b9bc"
+        },
+        {
+          "sha": "e082d6a",
+          "message": "Merge pull request #42 from kthss01/codex/update-animation-frame-indices",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T01:28:22Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/e082d6af9174ff39b4bb0af185a4ef57683d566f"
+        },
+        {
+          "sha": "a30930b",
+          "message": "fix(client): adjust champion animation frame indexes",
+          "author": "kthss01",
+          "date_iso": "2026-02-10T01:28:08Z",
+          "url": "https://github.com/kthss01/mini-autobattle-game-codex/commit/a30930b9ad7dd282c409f2eb07069b6f77aeb6e1"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 46,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-02-19T07:09:13Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-autobattle-game-codex/pull/46"
+          },
+          {
+            "number": 45,
+            "title": "feat: distinguish unit shapes by role and enlarge map",
+            "merged_at": "2026-02-10T07:37:26Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-autobattle-game-codex/pull/45"
+          },
+          {
+            "number": 44,
+            "title": "스프라이트 렌더링 임시 보류 및 도형 렌더링 유지",
+            "merged_at": "2026-02-10T07:27:02Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-autobattle-game-codex/pull/44"
+          },
+          {
+            "number": 43,
+            "title": "Fix champion spritesheet frame sizing and animation frame mapping",
+            "merged_at": "2026-02-10T01:58:44Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-autobattle-game-codex/pull/43"
+          },
+          {
+            "number": 42,
+            "title": "fix(client): use explicit frame index ranges for champion animations",
+            "merged_at": "2026-02-10T01:28:22Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-autobattle-game-codex/pull/42"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -144,32 +466,139 @@
         },
         {
           "date": "2026-02-19",
-          "count": 0
+          "count": 2
         },
         {
           "date": "2026-02-20",
           "count": 0
         }
-      ],
-      "error": "fetch failed"
+      ]
     },
     {
+      "id": "kthss01-mini-spectrum-maze-reboot",
       "owner": "kthss01",
       "repo": "mini-spectrum-maze-reboot",
       "title": "Mini Spectrum Maze Reboot",
       "html_url": "https://github.com/kthss01/mini-spectrum-maze-reboot",
-      "description": "",
+      "description": "Three.js로 구현한 빛의 색에 따라 길이 변화하는 3D 미로 퍼즐 게임",
       "homepage": "https://kthss01.github.io/mini-spectrum-maze-reboot/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-19T07:09:21Z",
       "thumbnail": "public/images/mini-spectrum-maze-reboot.svg",
       "repoUrl": "https://github.com/kthss01/mini-spectrum-maze-reboot",
       "demoUrl": "https://kthss01.github.io/mini-spectrum-maze-reboot/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "7c92aaf",
+          "message": "Merge pull request #17 from kthss01/codex/create-project-thumbnail",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:09:17Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/7c92aafaa15bea076090cfce260776df3e7bddbe"
+        },
+        {
+          "sha": "d2ebb9f",
+          "message": "Add project thumbnail artwork",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T07:08:51Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/d2ebb9f83fce897a6fe643d99be0dfad5c29a8ae"
+        },
+        {
+          "sha": "ced2557",
+          "message": "Merge pull request #16 from kthss01/codex/add-migration,-worklog,-and-benefits-documents",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:59:04Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/ced255774bdc09050972087df323b11b17afd570"
+        },
+        {
+          "sha": "8e1c4b1",
+          "message": "docs: add Korean migration summary, worklog, and benefits docs",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:58:46Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/8e1c4b11b345b0e342cf0254726554c1f5daafa4"
+        },
+        {
+          "sha": "ae3c147",
+          "message": "Merge pull request #15 from kthss01/codex/update-project-documentation-and-standards",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:53:00Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/ae3c14749bd4d5abf03fcd3bc1f111f8b782fdd0"
+        },
+        {
+          "sha": "fca7550",
+          "message": "Update migration criteria checklists",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:50:00Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/fca755028c849474bc9e5962ee38b07a6842e0d7"
+        },
+        {
+          "sha": "8206f00",
+          "message": "Merge pull request #14 from kthss01/codex/add-floor-indexing-and-optimize-highlight",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:47:46Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/8206f00083cbee23dc3e67ebc540470a8e9bf93b"
+        },
+        {
+          "sha": "49b8d0a",
+          "message": "Optimize ahead-tile highlight lookup with grid index",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:47:19Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/49b8d0aa45258b1fb55af33602bf7797043ef4ed"
+        },
+        {
+          "sha": "7017794",
+          "message": "Merge pull request #13 from kthss01/codex/refactor-auto-move-logic-in-gameengine",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:42:24Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/70177949261488e1618cd4bcb69bca2d76910ea1"
+        },
+        {
+          "sha": "72832b4",
+          "message": "Refine auto-move condition and sync concept docs",
+          "author": "kthss01",
+          "date_iso": "2026-02-06T06:41:45Z",
+          "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/commit/72832b41f3be7c8c20d8e15e2c788b7d42fb5c69"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 17,
+            "title": "Add branded project thumbnail SVG and embed in README",
+            "merged_at": "2026-02-19T07:09:17Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/pull/17"
+          },
+          {
+            "number": 16,
+            "title": "docs: add KO migration summary, worklog, and benefits docs; update README links",
+            "merged_at": "2026-02-06T06:59:05Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/pull/16"
+          },
+          {
+            "number": 15,
+            "title": "Clarify TypeScript migration status and add strict-mode checklists",
+            "merged_at": "2026-02-06T06:53:00Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/pull/15"
+          },
+          {
+            "number": 14,
+            "title": "Add floorByGrid index and use O(1) lookup for ahead-tile highlight; clear highlight on win",
+            "merged_at": "2026-02-06T06:47:46Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/pull/14"
+          },
+          {
+            "number": 13,
+            "title": "Refine auto-move rule: extract canAutoMove and sync docs",
+            "merged_at": "2026-02-06T06:42:24Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-spectrum-maze-reboot/pull/13"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -194,32 +623,139 @@
         },
         {
           "date": "2026-02-19",
-          "count": 0
+          "count": 2
         },
         {
           "date": "2026-02-20",
           "count": 0
         }
-      ],
-      "error": "fetch failed"
+      ]
     },
     {
+      "id": "kthss01-mini-threejs-speed-effect-codex",
       "owner": "kthss01",
       "repo": "mini-threejs-speed-effect-codex",
       "title": "Mini Three.js Speed Effect Codex",
       "html_url": "https://github.com/kthss01/mini-threejs-speed-effect-codex",
       "description": "",
       "homepage": "https://kthss01.github.io/mini-threejs-speed-effect-codex/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-20T01:48:51Z",
       "thumbnail": "public/images/mini-threejs-speed-effect-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-threejs-speed-effect-codex",
       "demoUrl": "https://kthss01.github.io/mini-threejs-speed-effect-codex/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "bc31c88",
+          "message": "Merge pull request #36 from kthss01/codex/add-thumbnail-and-update-readme.md",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:48:47Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/bc31c8835f0c9071bef76c4c63bcc978f000f3a7"
+        },
+        {
+          "sha": "4063077",
+          "message": "Adjust README thumbnail format and rename asset",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:45:57Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/406307746ba36536dd98e5814ea2aa12ce58ba79"
+        },
+        {
+          "sha": "7977fad",
+          "message": "Merge pull request #35 from kthss01/codex/add-stars-and-enhance-lighting-effects",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:29:41Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/7977fad5e37c1c58d6419841622a0297c5478f05"
+        },
+        {
+          "sha": "077d47d",
+          "message": "Add brighter night atmosphere, starfield, and speed-adaptive fog",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:29:28Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/077d47d685605083eb173c85b5cb2fb0d6eff1dd"
+        },
+        {
+          "sha": "3469095",
+          "message": "Merge pull request #34 from kthss01/codex/redefine-tile-properties-for-precise-placement",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T01:24:29Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/3469095d75c77792a82285468b5a449394c70f04"
+        },
+        {
+          "sha": "0509191",
+          "message": "Refine ground tile recycling and seam debugging",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T08:28:02Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/0509191f8dacdd86cae94597e79024f2f4b062da"
+        },
+        {
+          "sha": "86bb53f",
+          "message": "Merge pull request #33 from kthss01/codex/refactor-groundpool-material-creation",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T08:24:39Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/86bb53fcf4935ed2723457dc0bd612fa1847fca7"
+        },
+        {
+          "sha": "c8c8bc3",
+          "message": "Refactor ground material into procedural road texture",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T08:24:23Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/c8c8bc3fbb569a66d789338f75cabb26f5f672a1"
+        },
+        {
+          "sha": "cd23188",
+          "message": "Merge pull request #32 from kthss01/codex/refactor-prop-mesh-creation-to-separate-function",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T08:21:04Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/cd23188547d1158d7401e5235662bee97e003c5b"
+        },
+        {
+          "sha": "e8a8559",
+          "message": "Refactor parallax props into typed procedural factory",
+          "author": "kthss01",
+          "date_iso": "2026-02-19T08:20:47Z",
+          "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/commit/e8a8559d038da24c4dd88b69e6f7caabf21ccf9f"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 36,
+            "title": "Rename thumbnail to docs/assets/project-thumbnail.svg and update README",
+            "merged_at": "2026-02-20T01:48:47Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/pull/36"
+          },
+          {
+            "number": 35,
+            "title": "Add starry night lighting, procedural starfield, and speed-adaptive fog",
+            "merged_at": "2026-02-20T01:29:41Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/pull/35"
+          },
+          {
+            "number": 34,
+            "title": "Refine ground tile recycling, texture seam handling, and add seam debug",
+            "merged_at": "2026-02-20T01:24:29Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/pull/34"
+          },
+          {
+            "number": 33,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-02-19T08:24:39Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/pull/33"
+          },
+          {
+            "number": 32,
+            "title": "Refactor parallax props into procedural PropFactory (building/tree/streetLight/sign)",
+            "merged_at": "2026-02-19T08:21:04Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-threejs-speed-effect-codex/pull/32"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -244,32 +780,125 @@
         },
         {
           "date": "2026-02-19",
-          "count": 0
+          "count": 73
         },
         {
           "date": "2026-02-20",
-          "count": 0
+          "count": 5
         }
-      ],
-      "error": "fetch failed"
+      ]
     },
     {
+      "id": "kthss01-mini-delivery-log-report-system",
       "owner": "kthss01",
       "repo": "mini-delivery-log-report-system",
       "title": "Mini Delivery Log Report System",
       "html_url": "https://github.com/kthss01/mini-delivery-log-report-system",
-      "description": "",
+      "description": "This is a mini project to practice log analysis and reporting",
       "homepage": "https://kthss01.github.io/mini-delivery-log-report-system/",
-      "default_branch": "",
-      "updated_at": null,
+      "default_branch": "main",
+      "updated_at": "2026-02-20T02:19:43Z",
       "thumbnail": "public/images/mini-delivery-log-report-system.svg",
       "repoUrl": "https://github.com/kthss01/mini-delivery-log-report-system",
       "demoUrl": "https://kthss01.github.io/mini-delivery-log-report-system/",
-      "recent_commits": [],
+      "recent_commits": [
+        {
+          "sha": "141bffc",
+          "message": "Merge pull request #3 from kthss01/codex/add-project-thumbnail-to-readme",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:19:39Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/141bffca32d9def4336cc5fa57719b087ee059c0"
+        },
+        {
+          "sha": "c079f29",
+          "message": "Add project thumbnail SVG and embed it in README",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:19:09Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/c079f291a2f63cd4d5876151d0db88faab627611"
+        },
+        {
+          "sha": "1693408",
+          "message": "Merge pull request #2 from kthss01/codex/check-and-fix-github-actions-issues",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:11:26Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/16934082372df934f61f7b64ef173bb51bd5ef0b"
+        },
+        {
+          "sha": "0bfd80e",
+          "message": "fix: trigger pages deploy on master branch",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:10:59Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/0bfd80e3aec01af961a224aa5a465b138f90a6b3"
+        },
+        {
+          "sha": "236237b",
+          "message": "Merge pull request #1 from kthss01/codex/set-up-github-actions-for-github-pages",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:07:52Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/236237b11e666cf52dfdba0ebaf8a0ab5be06926"
+        },
+        {
+          "sha": "709ba1f",
+          "message": "Add GitHub Pages build and deployment workflow",
+          "author": "kthss01",
+          "date_iso": "2026-02-20T02:06:38Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/709ba1f4e249eeaf178580c73abc416ef6108a12"
+        },
+        {
+          "sha": "4f20631",
+          "message": "대시보드 구현",
+          "author": "kthss01",
+          "date_iso": "2025-12-17T07:29:45Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/4f20631ff138e79a7fe782588a740c580d9aedb0"
+        },
+        {
+          "sha": "9e8ceb7",
+          "message": "KPI 확장 및 데이터 품질 지표 추가",
+          "author": "kthss01",
+          "date_iso": "2025-12-17T07:04:50Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/9e8ceb70da343f92aa672d1adb3d6ff29c4e890e"
+        },
+        {
+          "sha": "1577aea",
+          "message": "오류 조치",
+          "author": "kthss01",
+          "date_iso": "2025-12-17T06:37:11Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/1577aeaf48dac1174dfb010bd03675d0c508f2b6"
+        },
+        {
+          "sha": "3cbd517",
+          "message": "buildTimeline 상태/이상치 요약",
+          "author": "kthss01",
+          "date_iso": "2025-12-16T07:47:48Z",
+          "url": "https://github.com/kthss01/mini-delivery-log-report-system/commit/3cbd5173f400c88cea55626533a4de34fd76d230"
+        }
+      ],
       "pull_requests": {
         "open_count": 0,
         "open": [],
-        "recently_merged": []
+        "recently_merged": [
+          {
+            "number": 3,
+            "title": "Add project-thumbnail.svg and embed preview in README",
+            "merged_at": "2026-02-20T02:19:39Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-delivery-log-report-system/pull/3"
+          },
+          {
+            "number": 2,
+            "title": "fix: trigger Pages deployment workflow on master branch too",
+            "merged_at": "2026-02-20T02:11:26Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-delivery-log-report-system/pull/2"
+          },
+          {
+            "number": 1,
+            "title": "Add GitHub Pages build & deployment workflow and auto-load bundled kpi.json",
+            "merged_at": "2026-02-20T02:07:52Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-delivery-log-report-system/pull/1"
+          }
+        ]
       },
       "activity_last_7_days": [
         {
@@ -298,10 +927,9 @@
         },
         {
           "date": "2026-02-20",
-          "count": 0
+          "count": 6
         }
-      ],
-      "error": "fetch failed"
+      ]
     }
   ]
 }
