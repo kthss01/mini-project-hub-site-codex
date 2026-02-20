@@ -1,7 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
 const DATA_FILE = new URL('../data/projects.json', import.meta.url);
-const requiredFields = ['id', 'title', 'description', 'thumbnail'];
 
 function fail(message) {
   console.error(`❌ ${message}`);
@@ -21,12 +20,25 @@ function isValidHttpUrl(value) {
   }
 }
 
+function normalizeProjects(payload) {
+  if (Array.isArray(payload)) {
+    return payload;
+  }
+
+  if (payload && Array.isArray(payload.repos)) {
+    return payload.repos;
+  }
+
+  return null;
+}
+
 async function main() {
   const raw = await readFile(DATA_FILE, 'utf8');
-  const projects = JSON.parse(raw);
+  const payload = JSON.parse(raw);
+  const projects = normalizeProjects(payload);
 
-  if (!Array.isArray(projects)) {
-    fail('data/projects.json 최상위 값은 배열이어야 합니다.');
+  if (!projects) {
+    fail('data/projects.json 최상위 값은 배열 또는 repos 배열을 가진 객체여야 합니다.');
     return;
   }
 
@@ -40,15 +52,13 @@ async function main() {
       return;
     }
 
-    for (const field of requiredFields) {
-      if (!isNonEmptyString(project[field])) {
-        fail(`${pointer}.${field} 는 비어 있지 않은 문자열이어야 합니다.`);
-      }
+    const title = project.title || `${project.owner || ''}/${project.repo || ''}`;
+    if (!isNonEmptyString(title)) {
+      fail(`${pointer}.title 또는 owner/repo 중 하나는 필요합니다.`);
     }
 
-
-    if (!isNonEmptyString(project.repoUrl) && !isNonEmptyString(project.demoUrl)) {
-      fail(`${pointer} 는 repoUrl 또는 demoUrl 중 하나 이상이 필요합니다.`);
+    if (!isNonEmptyString(project.repoUrl) && !isNonEmptyString(project.html_url) && !isNonEmptyString(project.demoUrl)) {
+      fail(`${pointer} 는 repoUrl/html_url/demoUrl 중 하나 이상이 필요합니다.`);
     }
 
     if (isNonEmptyString(project.id)) {
@@ -58,22 +68,22 @@ async function main() {
       ids.add(project.id);
     }
 
-    if (isNonEmptyString(project.thumbnail)) {
-      const normalizedThumbnail = project.thumbnail.trim();
-      const isLocalThumbnail = normalizedThumbnail.startsWith('public/images/');
-      const isProjectThumbnailFile = /^(?:[^/]+\/)*(?:docs\/assets\/)?project-thumbnail\.svg$/i.test(normalizedThumbnail);
-
-      if (!isLocalThumbnail && !isProjectThumbnailFile) {
-        fail(`${pointer}.thumbnail 은 public/images/ 또는 project-thumbnail.svg(경로 포함 가능) 형식을 사용해야 합니다.`);
-      }
-    }
-
     if (isNonEmptyString(project.repoUrl) && !isValidHttpUrl(project.repoUrl)) {
       fail(`${pointer}.repoUrl 은 유효한 http(s) URL이어야 합니다.`);
     }
 
+    if (isNonEmptyString(project.html_url) && !isValidHttpUrl(project.html_url)) {
+      fail(`${pointer}.html_url 은 유효한 http(s) URL이어야 합니다.`);
+    }
+
     if (isNonEmptyString(project.demoUrl) && !isValidHttpUrl(project.demoUrl)) {
       fail(`${pointer}.demoUrl 은 유효한 http(s) URL이어야 합니다.`);
+    }
+
+    if (Array.isArray(project.activity_last_7_days)) {
+      if (project.activity_last_7_days.length !== 7) {
+        fail(`${pointer}.activity_last_7_days 는 7개 항목이어야 합니다.`);
+      }
     }
   });
 

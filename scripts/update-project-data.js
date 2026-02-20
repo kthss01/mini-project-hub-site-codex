@@ -1,0 +1,240 @@
+#!/usr/bin/env node
+
+const fs = require('node:fs/promises');
+const path = require('node:path');
+
+const ROOT_DIR = path.resolve(__dirname, '..');
+const CONFIG_PATH = path.join(ROOT_DIR, 'projects.config.json');
+const OUTPUT_PATH = path.join(ROOT_DIR, 'data', 'projects.json');
+const SCHEMA_VERSION = '1.0.0';
+const RECENT_COMMIT_COUNT = 10;
+const OPEN_PR_LIMIT = 10;
+const MERGED_PR_LIMIT = 5;
+
+function toSeoulDateString(dateInput, timezone) {
+  const formatter = new Intl.DateTimeFormat('en-CA', {
+    timeZone: timezone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
+
+  return formatter.format(new Date(dateInput));
+}
+
+function getLastDays(timezone, days) {
+  const now = new Date();
+  const list = [];
+
+  for (let i = days - 1; i >= 0; i -= 1) {
+    const date = new Date(now);
+    date.setUTCDate(now.getUTCDate() - i);
+    list.push(toSeoulDateString(date, timezone));
+  }
+
+  return list;
+}
+
+async function githubRequest(endpoint, token, params = {}) {
+  const baseUrl = new URL(`https://api.github.com${endpoint}`);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null) {
+      baseUrl.searchParams.set(key, value);
+    }
+  });
+
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'User-Agent': 'mini-project-hub-data-updater',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  const response = await fetch(baseUrl, { headers });
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`${response.status} ${response.statusText} - ${body.slice(0, 200)}`);
+  }
+
+  return response.json();
+}
+
+function pickCommitDate(commit) {
+  return commit?.commit?.author?.date || commit?.commit?.committer?.date || null;
+}
+
+function mapRecentCommits(commits) {
+  return commits.slice(0, RECENT_COMMIT_COUNT).map((commit) => ({
+    sha: commit.sha.slice(0, 7),
+    message: (commit?.commit?.message || '').split('\n')[0],
+    author: commit?.author?.login || commit?.commit?.author?.name || 'unknown',
+    date_iso: pickCommitDate(commit),
+    url: commit.html_url,
+  }));
+}
+
+function buildActivityLast7Days(commits, timezone) {
+  const days = getLastDays(timezone, 7);
+  const counts = new Map(days.map((date) => [date, 0]));
+
+  commits.forEach((commit) => {
+    const dateIso = pickCommitDate(commit);
+    if (!dateIso) {
+      return;
+    }
+
+    const day = toSeoulDateString(dateIso, timezone);
+    if (counts.has(day)) {
+      counts.set(day, counts.get(day) + 1);
+    }
+  });
+
+  return days.map((date) => ({ date, count: counts.get(date) || 0 }));
+}
+
+function mapOpenPrs(prs) {
+  return prs.slice(0, OPEN_PR_LIMIT).map((pr) => ({
+    number: pr.number,
+    title: pr.title,
+    author: pr?.user?.login || 'unknown',
+    created_at: pr.created_at,
+    updated_at: pr.updated_at,
+    url: pr.html_url,
+  }));
+}
+
+function mapMergedPrs(prs) {
+  return prs
+    .filter((pr) => Boolean(pr.merged_at))
+    .slice(0, MERGED_PR_LIMIT)
+    .map((pr) => ({
+      number: pr.number,
+      title: pr.title,
+      merged_at: pr.merged_at,
+      author: pr?.user?.login || 'unknown',
+      url: pr.html_url,
+    }));
+}
+
+async function collectRepoData(repoConfig, timezone, token) {
+  const { owner, repo } = repoConfig;
+  const repoName = `${owner}/${repo}`;
+  const now = new Date();
+  const since = new Date(now);
+  since.setUTCDate(now.getUTCDate() - 8);
+
+  const [repoMeta, commits, openPrs, closedPrs] = await Promise.all([
+    githubRequest(`/repos/${owner}/${repo}`, token),
+    githubRequest(`/repos/${owner}/${repo}/commits`, token, {
+      per_page: '100',
+      since: since.toISOString(),
+    }),
+    githubRequest(`/repos/${owner}/${repo}/pulls`, token, {
+      state: 'open',
+      per_page: String(OPEN_PR_LIMIT),
+      sort: 'updated',
+      direction: 'desc',
+    }),
+    githubRequest(`/repos/${owner}/${repo}/pulls`, token, {
+      state: 'closed',
+      per_page: '30',
+      sort: 'updated',
+      direction: 'desc',
+    }),
+  ]);
+
+  const recentCommits = mapRecentCommits(commits);
+  const openPullRequests = mapOpenPrs(openPrs);
+  const mergedPullRequests = mapMergedPrs(closedPrs);
+
+  return {
+    id: repoName.toLowerCase().replace(/[^a-z0-9-]/g, '-'),
+    owner,
+    repo,
+    title: repoConfig.title || repoMeta.name,
+    html_url: repoMeta.html_url,
+    description: repoConfig.description || repoMeta.description || '',
+    homepage: repoConfig.demo_url || repoMeta.homepage || '',
+    default_branch: repoMeta.default_branch || '',
+    updated_at: repoMeta.updated_at || null,
+    thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
+    repoUrl: repoMeta.html_url,
+    demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
+    recent_commits: recentCommits,
+    pull_requests: {
+      open_count: repoMeta.open_issues_count || openPullRequests.length,
+      open: openPullRequests,
+      recently_merged: mergedPullRequests,
+    },
+    activity_last_7_days: buildActivityLast7Days(commits, timezone),
+  };
+}
+
+async function main() {
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
+  const configRaw = await fs.readFile(CONFIG_PATH, 'utf8');
+  const config = JSON.parse(configRaw);
+  const timezone = config.timezone || 'Asia/Seoul';
+
+  if (!Array.isArray(config.repos) || config.repos.length === 0) {
+    throw new Error('projects.config.json 의 repos 배열이 비어 있습니다.');
+  }
+
+  const repos = [];
+
+  for (const repoConfig of config.repos) {
+    if (!repoConfig?.owner || !repoConfig?.repo) {
+      repos.push({
+        owner: repoConfig?.owner || '',
+        repo: repoConfig?.repo || '',
+        error: 'owner/repo 값이 없습니다.',
+      });
+      continue;
+    }
+
+    try {
+      const repoData = await collectRepoData(repoConfig, timezone, token);
+      repos.push(repoData);
+      console.log(`✅ collected ${repoConfig.owner}/${repoConfig.repo}`);
+    } catch (error) {
+      console.warn(`⚠️ failed ${repoConfig.owner}/${repoConfig.repo}: ${error.message}`);
+      repos.push({
+        owner: repoConfig.owner,
+        repo: repoConfig.repo,
+        title: repoConfig.title || `${repoConfig.owner}/${repoConfig.repo}`,
+        html_url: `https://github.com/${repoConfig.owner}/${repoConfig.repo}`,
+        description: repoConfig.description || '',
+        homepage: repoConfig.demo_url || '',
+        default_branch: '',
+        updated_at: null,
+        thumbnail: repoConfig.thumbnail || 'public/images/default-thumbnail.svg',
+        repoUrl: `https://github.com/${repoConfig.owner}/${repoConfig.repo}`,
+        demoUrl: repoConfig.demo_url || '',
+        recent_commits: [],
+        pull_requests: { open_count: 0, open: [], recently_merged: [] },
+        activity_last_7_days: getLastDays(timezone, 7).map((date) => ({ date, count: 0 })),
+        error: error.message,
+      });
+    }
+  }
+
+  const payload = {
+    schema_version: SCHEMA_VERSION,
+    generated_at: new Date().toISOString(),
+    timezone,
+    repos,
+  };
+
+  await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+  await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  console.log(`✅ wrote ${OUTPUT_PATH}`);
+}
+
+main().catch((error) => {
+  console.error(`❌ update failed: ${error.message}`);
+  process.exitCode = 1;
+});
