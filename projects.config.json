@@ -35,6 +35,13 @@
       "title": "Mini Three.js Speed Effect Codex",
       "thumbnail": "public/images/mini-threejs-speed-effect-codex.svg",
       "demo_url": "https://kthss01.github.io/mini-threejs-speed-effect-codex/"
+    },
+    {
+      "owner": "kthss01",
+      "repo": "mini-delivery-log-report-system",
+      "title": "Mini Delivery Log Report System",
+      "thumbnail": "public/images/mini-delivery-log-report-system.svg",
+      "demo_url": "https://kthss01.github.io/mini-delivery-log-report-system/"
     }
   ]
 }
