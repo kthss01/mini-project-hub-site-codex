@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-02-20T16:51:21.329Z",
+  "generated_at": "2026-02-20T17:43:34.546Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,12 +12,19 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-02-20T15:43:24Z",
+      "updated_at": "2026-02-20T16:51:25Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "total_commits": 95,
+      "total_commits": 96,
       "recent_commits": [
+        {
+          "sha": "7ee883b",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-02-20T16:51:21Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/7ee883b08ca93a31a7e466c9ab98b4faac9cb3d3"
+        },
         {
           "sha": "f717a08",
           "message": "chore(data): refresh project cache",
@@ -80,13 +87,6 @@
           "author": "kthss01",
           "date_iso": "2026-02-20T06:41:44Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/bc72a30171d67b645f02852456687d0ce7bcf3b8"
-        },
-        {
-          "sha": "6a72c44",
-          "message": "fix: guard Vite env access to restore project list rendering",
-          "author": "kthss01",
-          "date_iso": "2026-02-20T06:41:18Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6a72c448fee9abbb1862b685e5abaa69669067d4"
         }
       ],
       "pull_requests": {
@@ -158,7 +158,7 @@
         },
         {
           "date": "2026-02-21",
-          "count": 1
+          "count": 2
         }
       ]
     },
