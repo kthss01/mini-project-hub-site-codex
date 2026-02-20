@@ -10,8 +10,9 @@ const SCHEMA_VERSION = '1.0.0';
 const RECENT_COMMIT_COUNT = 10;
 const OPEN_PR_LIMIT = 10;
 const MERGED_PR_LIMIT = 5;
+const ACTIVITY_WINDOW_DAYS = 7;
 
-function toSeoulDateString(dateInput, timezone) {
+function toDateStringByTimezone(dateInput, timezone) {
   const formatter = new Intl.DateTimeFormat('en-CA', {
     timeZone: timezone,
     year: 'numeric',
@@ -29,17 +30,17 @@ function getLastDays(timezone, days) {
   for (let i = days - 1; i >= 0; i -= 1) {
     const date = new Date(now);
     date.setUTCDate(now.getUTCDate() - i);
-    list.push(toSeoulDateString(date, timezone));
+    list.push(toDateStringByTimezone(date, timezone));
   }
 
   return list;
 }
 
 async function githubRequest(endpoint, token, params = {}) {
-  const baseUrl = new URL(`https://api.github.com${endpoint}`);
+  const url = new URL(`https://api.github.com${endpoint}`);
   Object.entries(params).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
-      baseUrl.searchParams.set(key, value);
+      url.searchParams.set(key, value);
     }
   });
 
@@ -53,7 +54,7 @@ async function githubRequest(endpoint, token, params = {}) {
     headers.Authorization = `Bearer ${token}`;
   }
 
-  const response = await fetch(baseUrl, { headers });
+  const response = await fetch(url, { headers });
 
   if (!response.ok) {
     const body = await response.text();
@@ -78,7 +79,7 @@ function mapRecentCommits(commits) {
 }
 
 function buildActivityLast7Days(commits, timezone) {
-  const days = getLastDays(timezone, 7);
+  const days = getLastDays(timezone, ACTIVITY_WINDOW_DAYS);
   const counts = new Map(days.map((date) => [date, 0]));
 
   commits.forEach((commit) => {
@@ -87,7 +88,7 @@ function buildActivityLast7Days(commits, timezone) {
       return;
     }
 
-    const day = toSeoulDateString(dateIso, timezone);
+    const day = toDateStringByTimezone(dateIso, timezone);
     if (counts.has(day)) {
       counts.set(day, counts.get(day) + 1);
     }
@@ -125,10 +126,13 @@ async function collectRepoData(repoConfig, timezone, token) {
   const repoName = `${owner}/${repo}`;
   const now = new Date();
   const since = new Date(now);
-  since.setUTCDate(now.getUTCDate() - 8);
+  since.setUTCDate(now.getUTCDate() - ACTIVITY_WINDOW_DAYS - 1);
 
-  const [repoMeta, commits, openPrs, closedPrs] = await Promise.all([
+  const [repoMeta, recentCommitsRaw, activityCommits, openPrsRaw, closedPrs] = await Promise.all([
     githubRequest(`/repos/${owner}/${repo}`, token),
+    githubRequest(`/repos/${owner}/${repo}/commits`, token, {
+      per_page: String(RECENT_COMMIT_COUNT),
+    }),
     githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       per_page: '100',
       since: since.toISOString(),
@@ -147,8 +151,8 @@ async function collectRepoData(repoConfig, timezone, token) {
     }),
   ]);
 
-  const recentCommits = mapRecentCommits(commits);
-  const openPullRequests = mapOpenPrs(openPrs);
+  const recentCommits = mapRecentCommits(recentCommitsRaw);
+  const openPullRequests = mapOpenPrs(openPrsRaw);
   const mergedPullRequests = mapMergedPrs(closedPrs);
 
   return {
@@ -166,11 +170,11 @@ async function collectRepoData(repoConfig, timezone, token) {
     demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
     recent_commits: recentCommits,
     pull_requests: {
-      open_count: repoMeta.open_issues_count || openPullRequests.length,
+      open_count: openPrsRaw.length,
       open: openPullRequests,
       recently_merged: mergedPullRequests,
     },
-    activity_last_7_days: buildActivityLast7Days(commits, timezone),
+    activity_last_7_days: buildActivityLast7Days(activityCommits, timezone),
   };
 }
 
@@ -216,7 +220,7 @@ async function main() {
         demoUrl: repoConfig.demo_url || '',
         recent_commits: [],
         pull_requests: { open_count: 0, open: [], recently_merged: [] },
-        activity_last_7_days: getLastDays(timezone, 7).map((date) => ({ date, count: 0 })),
+        activity_last_7_days: getLastDays(timezone, ACTIVITY_WINDOW_DAYS).map((date) => ({ date, count: 0 })),
         error: error.message,
       });
     }
