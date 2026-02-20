@@ -106,6 +106,10 @@ function buildThumbnailCandidates(project) {
   return [...new Set(candidates)];
 }
 
+export function getProjectThumbnailCandidates(project) {
+  return buildThumbnailCandidates(project);
+}
+
 function createTagList(tags = []) {
   const normalizedTags = Array.isArray(tags)
     ? tags.filter((tag) => typeof tag === 'string' && tag.trim().length > 0)
@@ -238,7 +242,7 @@ function createRecentPrs(project) {
   return section;
 }
 
-export function createProjectCard(project) {
+export function createProjectCard(project, { onSelect } = {}) {
   const article = document.createElement('article');
   article.className = 'project-card';
   article.setAttribute('role', 'listitem');
@@ -280,6 +284,17 @@ export function createProjectCard(project) {
 
   const actions = document.createElement('div');
   actions.className = 'project-actions';
+
+  const detailButton = document.createElement('button');
+  detailButton.className = 'project-action-link project-action-button';
+  detailButton.type = 'button';
+  detailButton.textContent = '상세 보기';
+  detailButton.addEventListener('click', () => {
+    if (typeof onSelect === 'function') {
+      onSelect(project);
+    }
+  });
+  actions.appendChild(detailButton);
 
   const repoAction = createActionLink({
     href: project.repoUrl,

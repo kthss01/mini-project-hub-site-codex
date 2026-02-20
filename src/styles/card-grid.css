@@ -188,3 +188,8 @@
   font-size: 0.75rem;
   color: var(--state-error-text);
 }
+
+.project-action-button {
+  cursor: pointer;
+  font-family: inherit;
+}
