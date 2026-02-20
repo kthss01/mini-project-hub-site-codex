@@ -155,3 +155,11 @@ export function toActivitySeries(activity) {
 ```
 
 차트 라이브러리(Chart.js, ECharts 등)에 `labels`/`series`를 그대로 연결할 수 있습니다.
+
+## 6) ETag 기반 재사용/부분 실패 동작
+
+- ETag 캐시 파일: `data/.github-etags.json`
+- `scripts/update-project-data.js`는 저장소 메타 엔드포인트(`/repos/{owner}/{repo}`)의 ETag를 저장하고, 다음 실행에서 `If-None-Match`를 전송합니다.
+- GitHub 응답이 `304 Not Modified`이면 해당 저장소는 `data/projects.json`의 기존 항목을 재사용합니다.
+- `200 OK`이면 응답의 최신 `ETag`를 `data/.github-etags.json`에 갱신합니다.
+- API 호출 실패 시에도 기존 `data/projects.json`에 해당 저장소 캐시가 있으면 재사용하여 전체 파일 생성을 계속 진행합니다. (기존 캐시가 없으면 `error` 필드가 포함된 fallback 객체를 생성)

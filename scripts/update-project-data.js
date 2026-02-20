@@ -6,6 +6,7 @@ const path = require('node:path');
 const ROOT_DIR = path.resolve(__dirname, '..');
 const CONFIG_PATH = path.join(ROOT_DIR, 'projects.config.json');
 const OUTPUT_PATH = path.join(ROOT_DIR, 'data', 'projects.json');
+const ETAG_PATH = path.join(ROOT_DIR, 'data', '.github-etags.json');
 const SCHEMA_VERSION = '1.0.0';
 const RECENT_COMMIT_COUNT = 10;
 const OPEN_PR_LIMIT = 10;
@@ -38,8 +39,10 @@ function getLastDays(timezone, days) {
 }
 
 async function githubRequest(endpoint, token, params = {}) {
+  const { etag, ...queryParams } = params;
   const url = new URL(`https://api.github.com${endpoint}`);
-  Object.entries(params).forEach(([key, value]) => {
+
+  Object.entries(queryParams).forEach(([key, value]) => {
     if (value !== undefined && value !== null) {
       url.searchParams.set(key, value);
     }
@@ -55,14 +58,26 @@ async function githubRequest(endpoint, token, params = {}) {
     headers.Authorization = `Bearer ${token}`;
   }
 
+  if (etag) {
+    headers['If-None-Match'] = etag;
+  }
+
   const response = await fetch(url, { headers });
+
+  if (response.status === 304) {
+    return { notModified: true, data: null, etag };
+  }
 
   if (!response.ok) {
     const body = await response.text();
     throw new Error(`${response.status} ${response.statusText} - ${body.slice(0, 200)}`);
   }
 
-  return response.json();
+  return {
+    notModified: false,
+    data: await response.json(),
+    etag: response.headers.get('etag'),
+  };
 }
 
 async function githubRequestRaw(endpoint, token, params = {}) {
@@ -97,12 +112,13 @@ async function fetchActivityCommits(owner, repo, token, sinceIso) {
   const commits = [];
 
   for (let page = 1; page <= ACTIVITY_COMMITS_MAX_PAGES; page += 1) {
-    const pageItems = await githubRequest(`/repos/${owner}/${repo}/commits`, token, {
+    const pageResult = await githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       since: sinceIso,
       per_page: '100',
       page: String(page),
     });
 
+    const pageItems = pageResult.data;
     if (!Array.isArray(pageItems) || pageItems.length === 0) {
       break;
     }
@@ -211,31 +227,58 @@ function mapMergedPrs(prs) {
     }));
 }
 
-async function collectRepoData(repoConfig, timezone, token) {
+async function collectRepoData(repoConfig, timezone, token, options = {}) {
   const { owner, repo } = repoConfig;
   const repoName = `${owner}/${repo}`;
+  const repoKey = repoName.toLowerCase();
+  const { etags = {}, existingRepoMap = new Map() } = options;
   const now = new Date();
   const since = new Date(now);
   since.setUTCDate(now.getUTCDate() - ACTIVITY_WINDOW_DAYS - 1);
 
-  const [repoMeta, recentCommitsRaw, activityCommits, openPrsRaw, closedPrs, openPrCount] = await Promise.all([
-    githubRequest(`/repos/${owner}/${repo}`, token),
+  const metaEndpoint = `/repos/${owner}/${repo}`;
+  const repoMetaResponse = await githubRequest(metaEndpoint, token, {
+    etag: etags[metaEndpoint],
+  });
+
+  if (repoMetaResponse.notModified) {
+    const cachedRepo = existingRepoMap.get(repoKey);
+    if (cachedRepo) {
+      return {
+        ...cachedRepo,
+        owner,
+        repo,
+        title: repoConfig.title || cachedRepo.title || `${owner}/${repo}`,
+        thumbnail: repoConfig.thumbnail || cachedRepo.thumbnail || 'public/images/default-thumbnail.svg',
+        demoUrl: repoConfig.demo_url || cachedRepo.demoUrl || '',
+      };
+    }
+
+    delete etags[metaEndpoint];
+    console.warn(`⚠️ 304 returned but no cached repo data for ${repoName}. Retrying without ETag.`);
+  } else if (repoMetaResponse.etag) {
+    etags[metaEndpoint] = repoMetaResponse.etag;
+  }
+
+  const repoMeta = repoMetaResponse.data || (await githubRequest(metaEndpoint, token)).data;
+
+  const [recentCommitsRaw, activityCommits, openPrsRaw, closedPrs, openPrCount] = await Promise.all([
     githubRequest(`/repos/${owner}/${repo}/commits`, token, {
       per_page: String(RECENT_COMMIT_COUNT),
-    }),
+    }).then((result) => result.data),
     fetchActivityCommits(owner, repo, token, since.toISOString()),
     githubRequest(`/repos/${owner}/${repo}/pulls`, token, {
       state: 'open',
       per_page: String(OPEN_PR_LIMIT),
       sort: 'updated',
       direction: 'desc',
-    }),
+    }).then((result) => result.data),
     githubRequest(`/repos/${owner}/${repo}/pulls`, token, {
       state: 'closed',
       per_page: '30',
       sort: 'updated',
       direction: 'desc',
-    }),
+    }).then((result) => result.data),
     getOpenPrCount(owner, repo, token),
   ]);
 
@@ -271,6 +314,18 @@ async function main() {
   const configRaw = await fs.readFile(CONFIG_PATH, 'utf8');
   const config = JSON.parse(configRaw);
   const timezone = config.timezone || 'Asia/Seoul';
+  const existingPayloadRaw = await fs.readFile(OUTPUT_PATH, 'utf8').catch(() => null);
+  const existingPayload = existingPayloadRaw ? JSON.parse(existingPayloadRaw) : null;
+  const existingRepoMap = new Map(
+    Array.isArray(existingPayload?.repos)
+      ? existingPayload.repos
+          .filter((repoItem) => repoItem?.owner && repoItem?.repo)
+          .map((repoItem) => [`${repoItem.owner}/${repoItem.repo}`.toLowerCase(), repoItem])
+      : [],
+  );
+
+  const etagsRaw = await fs.readFile(ETAG_PATH, 'utf8').catch(() => null);
+  const etags = etagsRaw ? JSON.parse(etagsRaw) : {};
 
   if (!Array.isArray(config.repos) || config.repos.length === 0) {
     throw new Error('projects.config.json 의 repos 배열이 비어 있습니다.');
@@ -289,11 +344,21 @@ async function main() {
     }
 
     try {
-      const repoData = await collectRepoData(repoConfig, timezone, token);
+      const repoData = await collectRepoData(repoConfig, timezone, token, {
+        etags,
+        existingRepoMap,
+      });
       repos.push(repoData);
       console.log(`✅ collected ${repoConfig.owner}/${repoConfig.repo}`);
     } catch (error) {
       console.warn(`⚠️ failed ${repoConfig.owner}/${repoConfig.repo}: ${error.message}`);
+      const cachedRepo = existingRepoMap.get(`${repoConfig.owner}/${repoConfig.repo}`.toLowerCase());
+      if (cachedRepo) {
+        repos.push(cachedRepo);
+        console.warn(`ℹ️ reused cached data for ${repoConfig.owner}/${repoConfig.repo}`);
+        continue;
+      }
+
       repos.push({
         owner: repoConfig.owner,
         repo: repoConfig.repo,
@@ -323,7 +388,9 @@ async function main() {
 
   await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
   await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  await fs.writeFile(ETAG_PATH, `${JSON.stringify(etags, null, 2)}\n`, 'utf8');
   console.log(`✅ wrote ${OUTPUT_PATH}`);
+  console.log(`✅ wrote ${ETAG_PATH}`);
 }
 
 main().catch((error) => {
