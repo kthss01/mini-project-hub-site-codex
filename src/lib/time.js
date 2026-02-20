@@ -1,11 +1,11 @@
-export function formatRelativeTime(dateIso: string, locale = 'en') {
+export function formatRelativeTime(dateIso, locale = 'en') {
   const date = new Date(dateIso);
   if (Number.isNaN(date.getTime())) {
     return '';
   }
 
   const diffMs = date.getTime() - Date.now();
-  const units: Array<[Intl.RelativeTimeFormatUnit, number]> = [
+  const units = [
     ['year', 1000 * 60 * 60 * 24 * 365],
     ['month', 1000 * 60 * 60 * 24 * 30],
     ['day', 1000 * 60 * 60 * 24],

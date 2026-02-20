@@ -1,4 +1,4 @@
-import { formatRelativeTime } from '../lib/time.ts';
+import { formatRelativeTime } from '../lib/time.js';
 
 const FALLBACK_THUMBNAIL = 'public/images/default-thumbnail.svg';
 const THUMBNAIL_FILENAME = 'project-thumbnail.svg';
