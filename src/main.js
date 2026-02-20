@@ -18,7 +18,7 @@ const requestUpdateButton = document.querySelector('#request-update-button');
 const requestUpdateStatus = document.querySelector('#request-update-status');
 
 
-const dispatchApiBaseUrl = import.meta.env.VITE_DISPATCH_API_URL || '';
+const dispatchApiBaseUrl = import.meta?.env?.VITE_DISPATCH_API_URL || '';
 
 function getDispatchEndpoint() {
   if (typeof dispatchApiBaseUrl === 'string' && dispatchApiBaseUrl.trim().length > 0) {
