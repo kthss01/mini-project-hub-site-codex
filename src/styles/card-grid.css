@@ -142,3 +142,49 @@
   outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
+
+.project-activity {
+  border-top: 1px dashed var(--card-border);
+  padding-top: 0.6rem;
+}
+
+.project-activity-title {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.project-activity-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.project-activity-item {
+  min-width: 0;
+}
+
+.project-activity-link {
+  color: var(--card-title);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-activity-meta {
+  margin: 0.12rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.project-data-warning {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--state-error-text);
+}
