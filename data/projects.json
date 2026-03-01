@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-01T14:31:32.631Z",
+  "generated_at": "2026-03-01T15:31:02.284Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,12 +12,19 @@
       "description": "",
       "homepage": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "default_branch": "main",
-      "updated_at": "2026-03-01T13:03:43Z",
+      "updated_at": "2026-03-01T14:31:36Z",
       "thumbnail": "public/images/mini-project-hub-site-codex.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "total_commits": 254,
+      "total_commits": 255,
       "recent_commits": [
+        {
+          "sha": "be4b2dd",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-01T14:31:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/be4b2dd8bf04443e2ecf0270e235109a981f4925"
+        },
         {
           "sha": "f50e9f9",
           "message": "chore(data): refresh project cache",
@@ -80,13 +87,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-01T02:55:59Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/26710e198802d3a4e2d2f53d9619d7536c33c2e0"
-        },
-        {
-          "sha": "d24b358",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-02-28T23:29:36Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/d24b3580797d96d2409b686b813d68f0f379fa9c"
         }
       ],
       "pull_requests": {
@@ -133,10 +133,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 17
-        },
-        {
           "date": "2026-02-24",
           "count": 16
         },
@@ -158,7 +154,11 @@
         },
         {
           "date": "2026-03-01",
-          "count": 18
+          "count": 19
+        },
+        {
+          "date": "2026-03-02",
+          "count": 0
         }
       ]
     },
@@ -292,10 +292,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 0
-        },
-        {
           "date": "2026-02-24",
           "count": 0
         },
@@ -317,6 +313,10 @@
         },
         {
           "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
           "count": 0
         }
       ]
@@ -451,10 +451,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 0
-        },
-        {
           "date": "2026-02-24",
           "count": 0
         },
@@ -476,6 +472,10 @@
         },
         {
           "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
           "count": 0
         }
       ]
@@ -610,10 +610,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 0
-        },
-        {
           "date": "2026-02-24",
           "count": 0
         },
@@ -635,6 +631,10 @@
         },
         {
           "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
           "count": 0
         }
       ]
@@ -769,10 +769,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 0
-        },
-        {
           "date": "2026-02-24",
           "count": 0
         },
@@ -794,6 +790,10 @@
         },
         {
           "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
           "count": 0
         }
       ]
@@ -914,10 +914,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-02-23",
-          "count": 0
-        },
-        {
           "date": "2026-02-24",
           "count": 0
         },
@@ -939,6 +935,10 @@
         },
         {
           "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
           "count": 0
         }
       ]
