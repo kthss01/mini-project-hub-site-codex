@@ -1,47 +1,8 @@
 {
   "timezone": "Asia/Seoul",
-  "repos": [
-    {
-      "owner": "kthss01",
-      "repo": "mini-project-hub-site-codex",
-      "title": "Mini Project Hub",
-      "thumbnail": "public/images/mini-project-hub-site-codex.svg",
-      "demo_url": "https://kthss01.github.io/mini-project-hub-site-codex/"
-    },
-    {
-      "owner": "kthss01",
-      "repo": "mini-idle-game-codex",
-      "title": "Mini Idle Game Codex",
-      "thumbnail": "public/images/mini-idle-game-codex.svg",
-      "demo_url": "https://kthss01.github.io/mini-idle-game-codex/"
-    },
-    {
-      "owner": "kthss01",
-      "repo": "mini-autobattle-game-codex",
-      "title": "Mini Autobattle Game Codex",
-      "thumbnail": "public/images/mini-autobattle-game-codex.svg",
-      "demo_url": "https://kthss01.github.io/mini-autobattle-game-codex/"
-    },
-    {
-      "owner": "kthss01",
-      "repo": "mini-spectrum-maze-reboot",
-      "title": "Mini Spectrum Maze Reboot",
-      "thumbnail": "public/images/mini-spectrum-maze-reboot.svg",
-      "demo_url": "https://kthss01.github.io/mini-spectrum-maze-reboot/"
-    },
-    {
-      "owner": "kthss01",
-      "repo": "mini-threejs-speed-effect-codex",
-      "title": "Mini Three.js Speed Effect Codex",
-      "thumbnail": "public/images/mini-threejs-speed-effect-codex.svg",
-      "demo_url": "https://kthss01.github.io/mini-threejs-speed-effect-codex/"
-    },
-    {
-      "owner": "kthss01",
-      "repo": "mini-delivery-log-report-system",
-      "title": "Mini Delivery Log Report System",
-      "thumbnail": "public/images/mini-delivery-log-report-system.svg",
-      "demo_url": "https://kthss01.github.io/mini-delivery-log-report-system/"
-    }
-  ]
+  "repo_discovery": {
+    "owner": "kthss01",
+    "prefix": "mini-"
+  },
+  "repos": []
 }
