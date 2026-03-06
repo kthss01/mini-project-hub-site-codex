@@ -1,8 +1,170 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-06T08:11:36.705Z",
+  "generated_at": "2026-03-06T08:49:39.791Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-strava-dashboard-codex",
+      "owner": "kthss01",
+      "repo": "mini-strava-dashboard-codex",
+      "title": "mini-strava-dashboard-codex",
+      "html_url": "https://github.com/kthss01/mini-strava-dashboard-codex",
+      "description": "",
+      "homepage": "https://mini-strava-dashboard-codex.vercel.app",
+      "default_branch": "main",
+      "updated_at": "2026-03-06T08:14:41Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-strava-dashboard-codex",
+      "demoUrl": "https://mini-strava-dashboard-codex.vercel.app",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "https://mini-strava-dashboard-codex.vercel.app",
+      "total_commits": 43,
+      "recent_commits": [
+        {
+          "sha": "b2b156a",
+          "message": "Merge pull request #21 from kthss01/codex/check-activity-path-display-logic",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:14:36Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/b2b156a063ca7d656a856e035084b5c0e4a1602d"
+        },
+        {
+          "sha": "5fc887f",
+          "message": "Show exact-route view per activity instead of merged path",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:13:56Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/5fc887f0c70efe5b5a1f032e2ed032326eab3ecf"
+        },
+        {
+          "sha": "9b5451f",
+          "message": "Merge pull request #20 from kthss01/codex/update-heatmap-checkbox-behavior",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:05:51Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/9b5451f209b02a597cf3427f8c74bc5ac8687b6f"
+        },
+        {
+          "sha": "9f444ab",
+          "message": "Add exact route toggle for heatmap map",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:04:10Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/9f444abf1e0241e7635a2e18974c41d76c712276"
+        },
+        {
+          "sha": "884c84f",
+          "message": "Merge pull request #19 from kthss01/codex/improve-loading-progress-for-heatmap-components-q90ofa",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:47:40Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/884c84f684a7fcce858b3b4d0e4e6f724fb567b6"
+        },
+        {
+          "sha": "b3c500e",
+          "message": "Improve heatmap loading phases and request cancellation",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:47:03Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/b3c500ec76fe99c83568c70541c3c7ea3486d7af"
+        },
+        {
+          "sha": "7e60b26",
+          "message": "Merge pull request #18 from kthss01/codex/add-timing-metrics-to-activities-heatmap",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:38:30Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/7e60b262a8221d7eb9c36af8306bdd3f6cc2a171"
+        },
+        {
+          "sha": "30b1266",
+          "message": "Add heatmap route timing metrics and debug metadata",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:37:18Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/30b1266a184b9715d196f1cf781945e9844e072b"
+        },
+        {
+          "sha": "f5a5716",
+          "message": "Merge pull request #17 from kthss01/codex/improve-heatmap-processing-in-utils-and-api",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:33:46Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/f5a5716007d107f4fe0a28e544d0275920cf8767"
+        },
+        {
+          "sha": "a579cb9",
+          "message": "Improve heatmap aggregation scaling and memory controls",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:32:18Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/a579cb96c680ced1738315b8cb44c238d615ee27"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 21,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 21,
+            "title": "Show exact-route heatmap overlays per activity only",
+            "merged_at": "2026-03-06T08:14:36Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/21"
+          },
+          {
+            "number": 20,
+            "title": "Add exact route display toggle on heatmap page",
+            "merged_at": "2026-03-06T08:05:51Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/20"
+          },
+          {
+            "number": 19,
+            "title": "Improve heatmap loading UX with phased progress and request aborts",
+            "merged_at": "2026-03-06T07:47:40Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/19"
+          },
+          {
+            "number": 18,
+            "title": "Add timing instrumentation and debug metadata to activities heatmap route",
+            "merged_at": "2026-03-06T07:38:30Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/18"
+          },
+          {
+            "number": 17,
+            "title": "Heatmap: per-activity caching, streaming decode, adaptive sampling and output limits",
+            "merged_at": "2026-03-06T07:33:46Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/17"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-02-28",
+          "count": 0
+        },
+        {
+          "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
+          "count": 0
+        },
+        {
+          "date": "2026-03-03",
+          "count": 0
+        },
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 0
+        },
+        {
+          "date": "2026-03-06",
+          "count": 43
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +174,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-06T08:09:03Z",
+      "updated_at": "2026-03-06T08:11:40Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 350,
+      "total_commits": 351,
       "recent_commits": [
+        {
+          "sha": "4709153",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T08:11:36Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/470915373d8f7faa217acb9b8dd09ff0bf691a69"
+        },
         {
           "sha": "6086abb",
           "message": "Merge pull request #41 from kthss01/codex/show-github-page-button-if-available",
@@ -83,13 +252,6 @@
           "author": "kthss01",
           "date_iso": "2026-03-06T07:17:11Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f66a40dbf7c8964505ff7143f78b817ae945d051"
-        },
-        {
-          "sha": "ba455ed",
-          "message": "feat: discover mini repos automatically from GitHub",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:17:01Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ba455ed9a337ca9635dac480624cdfec3148b842"
         }
       ],
       "pull_requests": {
@@ -161,169 +323,7 @@
         },
         {
           "date": "2026-03-06",
-          "count": 20
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-strava-dashboard-codex",
-      "owner": "kthss01",
-      "repo": "mini-strava-dashboard-codex",
-      "title": "mini-strava-dashboard-codex",
-      "html_url": "https://github.com/kthss01/mini-strava-dashboard-codex",
-      "description": "",
-      "homepage": "https://mini-strava-dashboard-codex.vercel.app",
-      "default_branch": "main",
-      "updated_at": "2026-03-06T08:05:55Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-strava-dashboard-codex",
-      "demoUrl": "https://mini-strava-dashboard-codex.vercel.app",
-      "has_pages": false,
-      "github_pages_url": "",
-      "deployment_url": "https://mini-strava-dashboard-codex.vercel.app",
-      "total_commits": 41,
-      "recent_commits": [
-        {
-          "sha": "9b5451f",
-          "message": "Merge pull request #20 from kthss01/codex/update-heatmap-checkbox-behavior",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T08:05:51Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/9b5451f209b02a597cf3427f8c74bc5ac8687b6f"
-        },
-        {
-          "sha": "9f444ab",
-          "message": "Add exact route toggle for heatmap map",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T08:04:10Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/9f444abf1e0241e7635a2e18974c41d76c712276"
-        },
-        {
-          "sha": "884c84f",
-          "message": "Merge pull request #19 from kthss01/codex/improve-loading-progress-for-heatmap-components-q90ofa",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:47:40Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/884c84f684a7fcce858b3b4d0e4e6f724fb567b6"
-        },
-        {
-          "sha": "b3c500e",
-          "message": "Improve heatmap loading phases and request cancellation",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:47:03Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/b3c500ec76fe99c83568c70541c3c7ea3486d7af"
-        },
-        {
-          "sha": "7e60b26",
-          "message": "Merge pull request #18 from kthss01/codex/add-timing-metrics-to-activities-heatmap",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:38:30Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/7e60b262a8221d7eb9c36af8306bdd3f6cc2a171"
-        },
-        {
-          "sha": "30b1266",
-          "message": "Add heatmap route timing metrics and debug metadata",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:37:18Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/30b1266a184b9715d196f1cf781945e9844e072b"
-        },
-        {
-          "sha": "f5a5716",
-          "message": "Merge pull request #17 from kthss01/codex/improve-heatmap-processing-in-utils-and-api",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:33:46Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/f5a5716007d107f4fe0a28e544d0275920cf8767"
-        },
-        {
-          "sha": "a579cb9",
-          "message": "Improve heatmap aggregation scaling and memory controls",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:32:18Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/a579cb96c680ced1738315b8cb44c238d615ee27"
-        },
-        {
-          "sha": "fb65604",
-          "message": "Merge pull request #16 from kthss01/codex/add-cache-layer-to-heatmap-route",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:25:59Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/fb65604b6e44f94da658df0b5ffab75a4040625a"
-        },
-        {
-          "sha": "4a51002",
-          "message": "Add heatmap API response caching with cache hit metadata",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:25:17Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/4a510025b3720f1ebd6bdafb19525144718af255"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 20,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 20,
-            "title": "Add exact route display toggle on heatmap page",
-            "merged_at": "2026-03-06T08:05:51Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/20"
-          },
-          {
-            "number": 19,
-            "title": "Improve heatmap loading UX with phased progress and request aborts",
-            "merged_at": "2026-03-06T07:47:40Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/19"
-          },
-          {
-            "number": 18,
-            "title": "Add timing instrumentation and debug metadata to activities heatmap route",
-            "merged_at": "2026-03-06T07:38:30Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/18"
-          },
-          {
-            "number": 17,
-            "title": "Heatmap: per-activity caching, streaming decode, adaptive sampling and output limits",
-            "merged_at": "2026-03-06T07:33:46Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/17"
-          },
-          {
-            "number": 16,
-            "title": "Add cache layer for heatmap activities API",
-            "merged_at": "2026-03-06T07:25:59Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/16"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-02-28",
-          "count": 0
-        },
-        {
-          "date": "2026-03-01",
-          "count": 0
-        },
-        {
-          "date": "2026-03-02",
-          "count": 0
-        },
-        {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
-          "date": "2026-03-04",
-          "count": 0
-        },
-        {
-          "date": "2026-03-05",
-          "count": 0
-        },
-        {
-          "date": "2026-03-06",
-          "count": 41
+          "count": 21
         }
       ]
     },
