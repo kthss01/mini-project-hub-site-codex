@@ -304,6 +304,29 @@ function isVercelUrl(value) {
   }
 }
 
+function buildGithubPagesUrl({ owner, repo, homepage, hasPages }) {
+  if (isGithubPagesUrl(homepage)) {
+    return homepage;
+  }
+
+  if (!hasPages || !owner || !repo) {
+    return '';
+  }
+
+  const normalizedOwner = owner.trim();
+  const normalizedRepo = repo.trim();
+
+  if (!normalizedOwner || !normalizedRepo) {
+    return '';
+  }
+
+  if (normalizedRepo.toLowerCase() === `${normalizedOwner.toLowerCase()}.github.io`) {
+    return `https://${normalizedRepo}/`;
+  }
+
+  return `https://${normalizedOwner}.github.io/${normalizedRepo}/`;
+}
+
 function mapMergedPrs(prs) {
   return prs
     .filter((pr) => Boolean(pr.merged_at))
@@ -382,6 +405,12 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
 
   const configuredDemoUrl = repoConfig.demo_url || '';
   const demoUrl = configuredDemoUrl || repoMeta.homepage || '';
+  const githubPagesUrl = buildGithubPagesUrl({
+    owner,
+    repo,
+    homepage: demoUrl,
+    hasPages: Boolean(repoMeta.has_pages),
+  });
 
   return {
     id: repoName.toLowerCase().replace(/[^a-z0-9-]/g, '-'),
@@ -396,7 +425,8 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
     thumbnail: repoConfig.thumbnail || '/images/default-thumbnail.svg',
     repoUrl: repoMeta.html_url,
     demoUrl,
-    github_pages_url: isGithubPagesUrl(demoUrl) ? demoUrl : '',
+    has_pages: Boolean(repoMeta.has_pages),
+    github_pages_url: githubPagesUrl,
     deployment_url: isVercelUrl(demoUrl) ? demoUrl : '',
     total_commits: totalCommitCount,
     recent_commits: recentCommits,
