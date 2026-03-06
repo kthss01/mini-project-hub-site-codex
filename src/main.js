@@ -39,9 +39,11 @@ function normalizeProjects(payload) {
     const githubPagesUrl = repo.githubPagesUrl || repo.github_pages_url || '';
     const deploymentUrl = repo.deploymentUrl || repo.deployment_url || '';
     const demoUrl = repo.demoUrl || repo.demo_url || repo.homepage || '';
+    const hasPages = Boolean(repo.has_pages || repo.hasPages);
+    const repoUrl = repo.repoUrl || repo.repo_url || repo.html_url || '';
 
     return {
-      githubPagesUrl: githubPagesUrl || (isGithubPagesUrl(demoUrl) ? demoUrl : ''),
+      githubPagesUrl: githubPagesUrl || (isGithubPagesUrl(demoUrl) ? demoUrl : '') || (hasPages ? buildGithubPagesUrl(repoUrl) : ''),
       deploymentUrl: deploymentUrl || (isVercelUrl(demoUrl) ? demoUrl : ''),
     };
   };
@@ -104,6 +106,21 @@ function isVercelUrl(value) {
   } catch {
     return false;
   }
+}
+
+
+function buildGithubPagesUrl(repoUrl) {
+  const repoMeta = parseGithubRepo(repoUrl);
+
+  if (!repoMeta) {
+    return '';
+  }
+
+  if (repoMeta.repo.toLowerCase() === `${repoMeta.owner.toLowerCase()}.github.io`) {
+    return `https://${repoMeta.repo}/`;
+  }
+
+  return `https://${repoMeta.owner}.github.io/${repoMeta.repo}/`;
 }
 
 function parseGithubRepo(repoUrl) {
