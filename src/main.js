@@ -29,24 +29,39 @@ function getDispatchEndpoint() {
 }
 
 function normalizeProjects(payload) {
+  const toFiniteNumberOrNull = (value) => {
+    const number = Number(value);
+    return Number.isFinite(number) ? number : null;
+  };
+
+  const normalizeRepo = (repo) => ({
+    id: repo.id || `${repo.owner}-${repo.repo}`,
+    title: repo.title || `${repo.owner}/${repo.repo}`,
+    description: repo.description || '프로젝트 설명이 없습니다.',
+    thumbnail: repo.thumbnail || 'project-thumbnail.svg',
+    repoUrl: repo.repoUrl || repo.repo_url || repo.html_url,
+    demoUrl: repo.demoUrl || repo.demo_url || repo.homepage,
+    totalCommits: toFiniteNumberOrNull(repo.totalCommits ?? repo.total_commits),
+    recentCommits: Array.isArray(repo.recentCommits)
+      ? repo.recentCommits
+      : (Array.isArray(repo.recent_commits) ? repo.recent_commits : []),
+    pullRequests:
+      repo.pullRequests
+      || repo.pull_requests
+      || { total_count: 0, open_count: 0, open: [], recently_merged: [] },
+    dataError: repo.dataError || repo.error || '',
+    tags: Array.isArray(repo.tags) ? repo.tags : [],
+    activityLast7Days: Array.isArray(repo.activityLast7Days)
+      ? repo.activityLast7Days
+      : (Array.isArray(repo.activity_last_7_days) ? repo.activity_last_7_days : []),
+  });
+
   if (Array.isArray(payload)) {
-    return payload;
+    return payload.map((repo) => normalizeRepo(repo));
   }
 
   if (payload && Array.isArray(payload.repos)) {
-    return payload.repos.map((repo) => ({
-      id: repo.id || `${repo.owner}-${repo.repo}`,
-      title: repo.title || `${repo.owner}/${repo.repo}`,
-      description: repo.description || '프로젝트 설명이 없습니다.',
-      thumbnail: repo.thumbnail || 'project-thumbnail.svg',
-      repoUrl: repo.repoUrl || repo.html_url,
-      demoUrl: repo.demoUrl || repo.homepage,
-      totalCommits: Number.isFinite(repo.total_commits) ? repo.total_commits : null,
-      recentCommits: Array.isArray(repo.recent_commits) ? repo.recent_commits : [],
-      pullRequests: repo.pull_requests || { total_count: 0, open_count: 0, open: [], recently_merged: [] },
-      dataError: repo.error || '',
-      tags: [],
-    }));
+    return payload.repos.map((repo) => normalizeRepo(repo));
   }
 
   throw new Error('프로젝트 데이터 형식이 올바르지 않습니다.');
@@ -366,7 +381,10 @@ function showList() {
 
 async function loadProjects() {
   try {
-    const response = await fetch('./data/projects.json');
+    const cacheBustingUrl = new URL('./data/projects.json', window.location.href);
+    cacheBustingUrl.searchParams.set('t', String(Date.now()));
+
+    const response = await fetch(cacheBustingUrl, { cache: 'no-store' });
 
     if (!response.ok) {
       throw new Error(`프로젝트 데이터를 불러오지 못했습니다: ${response.status}`);
