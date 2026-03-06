@@ -1,8 +1,170 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-06T08:49:39.791Z",
+  "generated_at": "2026-03-06T09:50:05.821Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-project-hub-site-codex",
+      "owner": "kthss01",
+      "repo": "mini-project-hub-site-codex",
+      "title": "mini-project-hub-site-codex",
+      "html_url": "https://github.com/kthss01/mini-project-hub-site-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-06T08:49:43Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
+      "demoUrl": "",
+      "has_pages": true,
+      "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
+      "deployment_url": "",
+      "total_commits": 352,
+      "recent_commits": [
+        {
+          "sha": "8a3efa2",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T08:49:39Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8a3efa29da522618f8cfd4852a82ae9ab4a524ce"
+        },
+        {
+          "sha": "4709153",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T08:11:36Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/470915373d8f7faa217acb9b8dd09ff0bf691a69"
+        },
+        {
+          "sha": "6086abb",
+          "message": "Merge pull request #41 from kthss01/codex/show-github-page-button-if-available",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:08:57Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6086abb1b66c9d90219c70ee2be218400e34e65f"
+        },
+        {
+          "sha": "7fa299c",
+          "message": "Fix GitHub Pages button visibility using repository pages info",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T08:08:11Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/7fa299c4cbe40eacadcdc6e5b059971ea9f15f1b"
+        },
+        {
+          "sha": "6e6e094",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T07:52:53Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6e6e094bd447e34487832110c4f618a196949ded"
+        },
+        {
+          "sha": "ad8539b",
+          "message": "Merge pull request #40 from kthss01/codex/add-default-thumbnails-and-link-buttons",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ad8539bc262565007a7026dda3f7788241167799"
+        },
+        {
+          "sha": "46cb081",
+          "message": "feat: add deployment-specific action links and thumbnail fallback",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:39Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/46cb081825f9363891c73bcc68ad5408569265d4"
+        },
+        {
+          "sha": "4d3946d",
+          "message": "Merge pull request #39 from kthss01/codex/fix-project-list-and-detail-screen-updates",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:34:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/4d3946dd6c5c50ba431525df56d39b79b0131f52"
+        },
+        {
+          "sha": "f401ac7",
+          "message": "fix: normalize fetched projects and bypass stale cache",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:33:41Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f401ac7ee516c6fe3f2c0ceaad5cd6e22bc9b4dc"
+        },
+        {
+          "sha": "163e3dd",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T07:19:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/163e3dd92b931896adba02098b6ce8a12da100c6"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 41,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 41,
+            "title": "Show GitHub Pages button for repositories with Pages enabled",
+            "merged_at": "2026-03-06T08:08:57Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/41"
+          },
+          {
+            "number": 40,
+            "title": "feat: add deployment-specific action links and thumbnail fallback",
+            "merged_at": "2026-03-06T07:48:55Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/40"
+          },
+          {
+            "number": 39,
+            "title": "fix: keep project list/detail in sync after data refresh",
+            "merged_at": "2026-03-06T07:34:54Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/39"
+          },
+          {
+            "number": 38,
+            "title": "feat: discover mini-* repositories dynamically for project data",
+            "merged_at": "2026-03-06T07:17:12Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/38"
+          },
+          {
+            "number": 37,
+            "title": "fix: guard Vite env access to restore project list rendering",
+            "merged_at": "2026-02-20T06:41:44Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/37"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-02-28",
+          "count": 21
+        },
+        {
+          "date": "2026-03-01",
+          "count": 19
+        },
+        {
+          "date": "2026-03-02",
+          "count": 19
+        },
+        {
+          "date": "2026-03-03",
+          "count": 19
+        },
+        {
+          "date": "2026-03-04",
+          "count": 19
+        },
+        {
+          "date": "2026-03-05",
+          "count": 18
+        },
+        {
+          "date": "2026-03-06",
+          "count": 22
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-strava-dashboard-codex",
       "owner": "kthss01",
@@ -162,168 +324,6 @@
         {
           "date": "2026-03-06",
           "count": 43
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-project-hub-site-codex",
-      "owner": "kthss01",
-      "repo": "mini-project-hub-site-codex",
-      "title": "mini-project-hub-site-codex",
-      "html_url": "https://github.com/kthss01/mini-project-hub-site-codex",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-06T08:11:40Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
-      "demoUrl": "",
-      "has_pages": true,
-      "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
-      "deployment_url": "",
-      "total_commits": 351,
-      "recent_commits": [
-        {
-          "sha": "4709153",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-06T08:11:36Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/470915373d8f7faa217acb9b8dd09ff0bf691a69"
-        },
-        {
-          "sha": "6086abb",
-          "message": "Merge pull request #41 from kthss01/codex/show-github-page-button-if-available",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T08:08:57Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6086abb1b66c9d90219c70ee2be218400e34e65f"
-        },
-        {
-          "sha": "7fa299c",
-          "message": "Fix GitHub Pages button visibility using repository pages info",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T08:08:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/7fa299c4cbe40eacadcdc6e5b059971ea9f15f1b"
-        },
-        {
-          "sha": "6e6e094",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-06T07:52:53Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6e6e094bd447e34487832110c4f618a196949ded"
-        },
-        {
-          "sha": "ad8539b",
-          "message": "Merge pull request #40 from kthss01/codex/add-default-thumbnails-and-link-buttons",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:48:54Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ad8539bc262565007a7026dda3f7788241167799"
-        },
-        {
-          "sha": "46cb081",
-          "message": "feat: add deployment-specific action links and thumbnail fallback",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:48:39Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/46cb081825f9363891c73bcc68ad5408569265d4"
-        },
-        {
-          "sha": "4d3946d",
-          "message": "Merge pull request #39 from kthss01/codex/fix-project-list-and-detail-screen-updates",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:34:54Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/4d3946dd6c5c50ba431525df56d39b79b0131f52"
-        },
-        {
-          "sha": "f401ac7",
-          "message": "fix: normalize fetched projects and bypass stale cache",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:33:41Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f401ac7ee516c6fe3f2c0ceaad5cd6e22bc9b4dc"
-        },
-        {
-          "sha": "163e3dd",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-06T07:19:32Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/163e3dd92b931896adba02098b6ce8a12da100c6"
-        },
-        {
-          "sha": "f66a40d",
-          "message": "Merge pull request #38 from kthss01/codex/update-project-list-retrieval-for-mini-repositories",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:17:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f66a40dbf7c8964505ff7143f78b817ae945d051"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 41,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 41,
-            "title": "Show GitHub Pages button for repositories with Pages enabled",
-            "merged_at": "2026-03-06T08:08:57Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/41"
-          },
-          {
-            "number": 40,
-            "title": "feat: add deployment-specific action links and thumbnail fallback",
-            "merged_at": "2026-03-06T07:48:55Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/40"
-          },
-          {
-            "number": 39,
-            "title": "fix: keep project list/detail in sync after data refresh",
-            "merged_at": "2026-03-06T07:34:54Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/39"
-          },
-          {
-            "number": 38,
-            "title": "feat: discover mini-* repositories dynamically for project data",
-            "merged_at": "2026-03-06T07:17:12Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/38"
-          },
-          {
-            "number": 37,
-            "title": "fix: guard Vite env access to restore project list rendering",
-            "merged_at": "2026-02-20T06:41:44Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/37"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-02-28",
-          "count": 21
-        },
-        {
-          "date": "2026-03-01",
-          "count": 19
-        },
-        {
-          "date": "2026-03-02",
-          "count": 19
-        },
-        {
-          "date": "2026-03-03",
-          "count": 19
-        },
-        {
-          "date": "2026-03-04",
-          "count": 19
-        },
-        {
-          "date": "2026-03-05",
-          "count": 18
-        },
-        {
-          "date": "2026-03-06",
-          "count": 21
         }
       ]
     },
