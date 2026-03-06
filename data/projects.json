@@ -1,8 +1,169 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-06T07:19:32.602Z",
+  "generated_at": "2026-03-06T07:52:53.037Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-event-race-dashboard-codex",
+      "owner": "kthss01",
+      "repo": "mini-event-race-dashboard-codex",
+      "title": "mini-event-race-dashboard-codex",
+      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-06T07:49:06Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 41,
+      "recent_commits": [
+        {
+          "sha": "7ad89a0",
+          "message": "Merge pull request #20 from kthss01/codex-nwciq2",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:59Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/7ad89a07ac660f3b3ad629f2faa069464bfed1b0"
+        },
+        {
+          "sha": "d33b65f",
+          "message": "Fix Google Docs fetch env parsing and file ID resolution",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:45Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d33b65f880603e62bc93f4dc3e155952ecc03863"
+        },
+        {
+          "sha": "9ba640a",
+          "message": "Merge pull request #19 from kthss01/codex/fix-github-action-ts2554-error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:33:50Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9ba640ae0c0915f264ab0861b29b34b20503c410"
+        },
+        {
+          "sha": "0cce79d",
+          "message": "Fix fetchDoc signature encoding type error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:32:16Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/0cce79de88e47803a59899361e1d2cc911c791ac"
+        },
+        {
+          "sha": "da20908",
+          "message": "Merge pull request #18 from kthss01/codex/check-and-fix-github-action-error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:25:44Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/da209086c6234a94b25fe0be35e723c96da51cb6"
+        },
+        {
+          "sha": "4752ec1",
+          "message": "fix: make sync-doc workflow handle scheduled branch ref",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:25:30Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/4752ec16b9fefc2011e93bdb90bd16600b8842eb"
+        },
+        {
+          "sha": "6f38598",
+          "message": "Merge pull request #17 from kthss01/codex/fix-github-actions-issue",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:21:23Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/6f38598f92bc9529feac064c0477b21c36a06e6b"
+        },
+        {
+          "sha": "f83b45b",
+          "message": "fix: harden GitHub Actions branch/publish flow",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:20:40Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/f83b45be33418def0c813f753aa41a6b1261696e"
+        },
+        {
+          "sha": "fb40286",
+          "message": "Merge pull request #16 from kthss01/codex/fix-github-actions-error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:14:41Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/fb40286899654920c9325eed05b6df212ffd4060"
+        },
+        {
+          "sha": "6ee4bd3",
+          "message": "fix: resolve CI lint/type errors in node shim",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:13:01Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/6ee4bd3b387f996fab109114233634ee18c401f5"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 20,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 20,
+            "title": "Normalize service account key and accept Google Doc URLs in fetch script",
+            "merged_at": "2026-03-06T07:49:00Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/20"
+          },
+          {
+            "number": 19,
+            "title": "Fix TypeScript build error in fetchDoc JWT signature encoding",
+            "merged_at": "2026-03-06T07:33:50Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/19"
+          },
+          {
+            "number": 18,
+            "title": "fix: make sync-doc workflow handle scheduled branch ref",
+            "merged_at": "2026-03-06T07:25:45Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/18"
+          },
+          {
+            "number": 17,
+            "title": "fix: harden GitHub Actions branch/publish flow",
+            "merged_at": "2026-03-06T07:21:23Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/17"
+          },
+          {
+            "number": 16,
+            "title": "fix: resolve GitHub Actions lint/type failures from node shim",
+            "merged_at": "2026-03-06T07:14:42Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/16"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-02-28",
+          "count": 0
+        },
+        {
+          "date": "2026-03-01",
+          "count": 0
+        },
+        {
+          "date": "2026-03-02",
+          "count": 0
+        },
+        {
+          "date": "2026-03-03",
+          "count": 0
+        },
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 5
+        },
+        {
+          "date": "2026-03-06",
+          "count": 36
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,12 +173,49 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-06T07:17:17Z",
-      "thumbnail": "project-thumbnail.svg",
+      "updated_at": "2026-03-06T07:48:59Z",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
-      "total_commits": 342,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 347,
       "recent_commits": [
+        {
+          "sha": "ad8539b",
+          "message": "Merge pull request #40 from kthss01/codex/add-default-thumbnails-and-link-buttons",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ad8539bc262565007a7026dda3f7788241167799"
+        },
+        {
+          "sha": "46cb081",
+          "message": "feat: add deployment-specific action links and thumbnail fallback",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:39Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/46cb081825f9363891c73bcc68ad5408569265d4"
+        },
+        {
+          "sha": "4d3946d",
+          "message": "Merge pull request #39 from kthss01/codex/fix-project-list-and-detail-screen-updates",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:34:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/4d3946dd6c5c50ba431525df56d39b79b0131f52"
+        },
+        {
+          "sha": "f401ac7",
+          "message": "fix: normalize fetched projects and bypass stale cache",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:33:41Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f401ac7ee516c6fe3f2c0ceaad5cd6e22bc9b4dc"
+        },
+        {
+          "sha": "163e3dd",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-06T07:19:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/163e3dd92b931896adba02098b6ce8a12da100c6"
+        },
         {
           "sha": "f66a40d",
           "message": "Merge pull request #38 from kthss01/codex/update-project-list-retrieval-for-mini-repositories",
@@ -52,48 +250,27 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-06T04:47:44Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6853b9b5f8ea2cc15497c1f7ef1381a5875b905b"
-        },
-        {
-          "sha": "6a00a45",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-06T02:39:36Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/6a00a4570002110067270c54d8323fd36bca4e22"
-        },
-        {
-          "sha": "e639d13",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-05T23:03:23Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e639d132579bb576dbf5a2e728436f126543da89"
-        },
-        {
-          "sha": "cb4b189",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-05T21:43:01Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/cb4b1898df02b3896293e0d715f1f39d1ec815ab"
-        },
-        {
-          "sha": "fa56a18",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-05T20:48:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/fa56a184332ed62cd5dc59d30e1bf5f69d67eaae"
-        },
-        {
-          "sha": "3e42836",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-05T19:56:21Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3e428367f8e0d04c939834704b68e2ff813a3616"
         }
       ],
       "pull_requests": {
-        "total_count": 38,
+        "total_count": 40,
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 40,
+            "title": "feat: add deployment-specific action links and thumbnail fallback",
+            "merged_at": "2026-03-06T07:48:55Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/40"
+          },
+          {
+            "number": 39,
+            "title": "fix: keep project list/detail in sync after data refresh",
+            "merged_at": "2026-03-06T07:34:54Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/39"
+          },
           {
             "number": 38,
             "title": "feat: discover mini-* repositories dynamically for project data",
@@ -114,20 +291,6 @@
             "merged_at": "2026-02-20T06:33:34Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/36"
-          },
-          {
-            "number": 35,
-            "title": "fix: 상세 화면에 총 Commit/PR 요약 복원",
-            "merged_at": "2026-02-20T06:29:45Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/35"
-          },
-          {
-            "number": 34,
-            "title": "fix: support external dispatch API for GitHub Pages",
-            "merged_at": "2026-02-20T06:28:27Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/34"
           }
         ]
       },
@@ -158,166 +321,7 @@
         },
         {
           "date": "2026-03-06",
-          "count": 12
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-event-race-dashboard-codex",
-      "owner": "kthss01",
-      "repo": "mini-event-race-dashboard-codex",
-      "title": "mini-event-race-dashboard-codex",
-      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-06T07:14:45Z",
-      "thumbnail": "project-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "demoUrl": "",
-      "total_commits": 33,
-      "recent_commits": [
-        {
-          "sha": "fb40286",
-          "message": "Merge pull request #16 from kthss01/codex/fix-github-actions-error",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:14:41Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/fb40286899654920c9325eed05b6df212ffd4060"
-        },
-        {
-          "sha": "6ee4bd3",
-          "message": "fix: resolve CI lint/type errors in node shim",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:13:01Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/6ee4bd3b387f996fab109114233634ee18c401f5"
-        },
-        {
-          "sha": "b75c459",
-          "message": "Merge pull request #15 from kthss01/codex/expand-state-model-for-empty-data",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:09:53Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/b75c4599b0901f1088817a511d8c9d1012da779f"
-        },
-        {
-          "sha": "bd02c1a",
-          "message": "feat: distinguish empty contest state and show data freshness",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:08:57Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/bd02c1a0249fdbd56dfbbcbd285a6dd14ce40583"
-        },
-        {
-          "sha": "6497500",
-          "message": "Merge pull request #14 from kthss01/codex/finalize-notesfile-schema-contract",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:04:53Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/64975008098626af439d13b58f8cae45ea5c9b95"
-        },
-        {
-          "sha": "904f267",
-          "message": "Unify notes schema contract across parse/enrich pipeline",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:02:46Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/904f267a0198ca6013dce425a53efe503f6f6b9f"
-        },
-        {
-          "sha": "4c438d1",
-          "message": "Merge pull request #13 from kthss01/codex/refactor-types-and-unify-field-mappings",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:55:43Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/4c438d17d9387e35ee77161807aca42a5dfcdeaa"
-        },
-        {
-          "sha": "8d56877",
-          "message": "Refactor enrich typing and add schema contract tests",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:55:27Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/8d5687733ef5812e3055a02d6f28a4164367eb13"
-        },
-        {
-          "sha": "c2f382a",
-          "message": "Merge pull request #12 from kthss01/codex/document-environment-variable-requirements",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:49:22Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/c2f382a9954bd4c6a27010bdfcf324af9074d561"
-        },
-        {
-          "sha": "1953c6a",
-          "message": "Add data pipeline runbook and contest-count validation",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:45:37Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/1953c6a9cb102191beade05eb258f3b58b091997"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 16,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 16,
-            "title": "fix: resolve GitHub Actions lint/type failures from node shim",
-            "merged_at": "2026-03-06T07:14:42Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/16"
-          },
-          {
-            "number": 15,
-            "title": "feat: distinguish empty-data vs error and display data freshness",
-            "merged_at": "2026-03-06T07:09:54Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/15"
-          },
-          {
-            "number": 14,
-            "title": "Unify notes schema contract and add pipeline regression coverage",
-            "merged_at": "2026-03-06T07:04:53Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/14"
-          },
-          {
-            "number": 13,
-            "title": "Refactor enrich script to use shared types, normalize legacy fields, and add contract tests",
-            "merged_at": "2026-03-06T06:55:44Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/13"
-          },
-          {
-            "number": 12,
-            "title": "문서 기반 데이터 파이프라인 운영 가이드 및 생성 검증 가드 추가",
-            "merged_at": "2026-03-06T06:49:23Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/12"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-02-28",
-          "count": 0
-        },
-        {
-          "date": "2026-03-01",
-          "count": 0
-        },
-        {
-          "date": "2026-03-02",
-          "count": 0
-        },
-        {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
-          "date": "2026-03-04",
-          "count": 0
-        },
-        {
-          "date": "2026-03-05",
-          "count": 5
-        },
-        {
-          "date": "2026-03-06",
-          "count": 28
+          "count": 17
         }
       ]
     },
@@ -330,122 +334,124 @@
       "description": "",
       "homepage": "https://mini-strava-dashboard-codex.vercel.app",
       "default_branch": "main",
-      "updated_at": "2026-03-06T07:09:47Z",
-      "thumbnail": "project-thumbnail.svg",
+      "updated_at": "2026-03-06T07:47:44Z",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-strava-dashboard-codex",
       "demoUrl": "https://mini-strava-dashboard-codex.vercel.app",
-      "total_commits": 29,
+      "github_pages_url": "",
+      "deployment_url": "https://mini-strava-dashboard-codex.vercel.app",
+      "total_commits": 39,
       "recent_commits": [
         {
-          "sha": "e814f1f",
-          "message": "Merge pull request #14 from kthss01/codex/add-loading-bar-and-enhance-statistics",
+          "sha": "884c84f",
+          "message": "Merge pull request #19 from kthss01/codex/improve-loading-progress-for-heatmap-components-q90ofa",
           "author": "kthss01",
-          "date_iso": "2026-03-06T07:09:44Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/e814f1f15a660cc8d286d9c9afafeb960893f4d6"
+          "date_iso": "2026-03-06T07:47:40Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/884c84f684a7fcce858b3b4d0e4e6f724fb567b6"
         },
         {
-          "sha": "f7ceacd",
-          "message": "feat: improve heatmap loading, stats, and ride filters",
+          "sha": "b3c500e",
+          "message": "Improve heatmap loading phases and request cancellation",
           "author": "kthss01",
-          "date_iso": "2026-03-06T07:08:54Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/f7ceacd2f05c4bee01da8008c9d9c6907a054b56"
+          "date_iso": "2026-03-06T07:47:03Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/b3c500ec76fe99c83568c70541c3c7ea3486d7af"
         },
         {
-          "sha": "37b18dc",
-          "message": "Merge pull request #13 from kthss01/codex/locate-data-positions-on-heatmap",
+          "sha": "7e60b26",
+          "message": "Merge pull request #18 from kthss01/codex/add-timing-metrics-to-activities-heatmap",
           "author": "kthss01",
-          "date_iso": "2026-03-06T06:58:58Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/37b18dcf2a131f6b5a6fb7d89dda41203d11e565"
+          "date_iso": "2026-03-06T07:38:30Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/7e60b262a8221d7eb9c36af8306bdd3f6cc2a171"
         },
         {
-          "sha": "2fd5133",
-          "message": "Adjust heatmap map viewport based on point clusters",
+          "sha": "30b1266",
+          "message": "Add heatmap route timing metrics and debug metadata",
           "author": "kthss01",
-          "date_iso": "2026-03-06T06:58:24Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/2fd51332e03dcbb0e7f7d70151c3f293fbe72f0c"
+          "date_iso": "2026-03-06T07:37:18Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/30b1266a184b9715d196f1cf781945e9844e072b"
         },
         {
-          "sha": "9bd8bc6",
-          "message": "Merge pull request #12 from kthss01/codex/add-heatmap-page-to-strava-dashboard",
+          "sha": "f5a5716",
+          "message": "Merge pull request #17 from kthss01/codex/improve-heatmap-processing-in-utils-and-api",
           "author": "kthss01",
-          "date_iso": "2026-03-06T06:49:19Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/9bd8bc6781f0d563eb605b40489a51e2ede170b0"
+          "date_iso": "2026-03-06T07:33:46Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/f5a5716007d107f4fe0a28e544d0275920cf8767"
         },
         {
-          "sha": "1743bba",
-          "message": "feat: add strava activity heatmap page and api route",
+          "sha": "a579cb9",
+          "message": "Improve heatmap aggregation scaling and memory controls",
           "author": "kthss01",
-          "date_iso": "2026-03-06T06:46:13Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/1743bbab868ee62d60f804d0b7f51337e64effab"
+          "date_iso": "2026-03-06T07:32:18Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/a579cb96c680ced1738315b8cb44c238d615ee27"
         },
         {
-          "sha": "db9a039",
-          "message": "Merge pull request #11 from kthss01/codex/add-detail-panel-and-refactor-project",
+          "sha": "fb65604",
+          "message": "Merge pull request #16 from kthss01/codex/add-cache-layer-to-heatmap-route",
           "author": "kthss01",
-          "date_iso": "2026-03-06T05:58:49Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/db9a039c4f47853a511b9f57b56b3bb430bcf556"
+          "date_iso": "2026-03-06T07:25:59Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/fb65604b6e44f94da658df0b5ffab75a4040625a"
         },
         {
-          "sha": "7d748c2",
-          "message": "Add activity detail panel and refactor dashboard data flow",
+          "sha": "4a51002",
+          "message": "Add heatmap API response caching with cache hit metadata",
           "author": "kthss01",
-          "date_iso": "2026-03-06T05:57:50Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/7d748c28ebc9e61abb0634afa7a8245922336807"
+          "date_iso": "2026-03-06T07:25:17Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/4a510025b3720f1ebd6bdafb19525144718af255"
         },
         {
-          "sha": "cfc6c16",
-          "message": "Merge pull request #10 from kthss01/codex/add-activity-filter-to-dashboard",
+          "sha": "cc588db",
+          "message": "Merge pull request #15 from kthss01/codex/add-fetchactivitiesbyfilterwindow-function",
           "author": "kthss01",
-          "date_iso": "2026-03-06T05:51:12Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/cfc6c166eeb4ef274ae8bfcf06cfaabf51d77ac6"
+          "date_iso": "2026-03-06T07:22:05Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/cc588dbc30b015654a0f27644d33b1bf4cabb37f"
         },
         {
-          "sha": "38c357d",
-          "message": "Add activity type and period filters to dashboard",
+          "sha": "508e416",
+          "message": "Improve heatmap activity fetching with Strava time window filters",
           "author": "kthss01",
-          "date_iso": "2026-03-06T05:50:29Z",
-          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/38c357d75aa57df85020cd03cfb0b2500f5eb6a8"
+          "date_iso": "2026-03-06T07:21:40Z",
+          "url": "https://github.com/kthss01/mini-strava-dashboard-codex/commit/508e41634fee793468e7c1f7a4a84886cc36ac89"
         }
       ],
       "pull_requests": {
-        "total_count": 14,
+        "total_count": 19,
         "open_count": 0,
         "open": [],
         "recently_merged": [
           {
-            "number": 14,
-            "title": "feat: enhance heatmap UX with progress, richer stats, and ride subtype filters",
-            "merged_at": "2026-03-06T07:09:44Z",
+            "number": 19,
+            "title": "Improve heatmap loading UX with phased progress and request aborts",
+            "merged_at": "2026-03-06T07:47:40Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/14"
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/19"
           },
           {
-            "number": 13,
-            "title": "Adjust heatmap map viewport based on fetched point distribution",
-            "merged_at": "2026-03-06T06:58:58Z",
+            "number": 18,
+            "title": "Add timing instrumentation and debug metadata to activities heatmap route",
+            "merged_at": "2026-03-06T07:38:30Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/13"
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/18"
           },
           {
-            "number": 12,
-            "title": "feat: add activity heatmap page with server-side aggregation",
-            "merged_at": "2026-03-06T06:49:19Z",
+            "number": 17,
+            "title": "Heatmap: per-activity caching, streaming decode, adaptive sampling and output limits",
+            "merged_at": "2026-03-06T07:33:46Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/12"
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/17"
           },
           {
-            "number": 11,
-            "title": "Add activity detail panel and refactor dashboard data layer",
-            "merged_at": "2026-03-06T05:58:49Z",
+            "number": 16,
+            "title": "Add cache layer for heatmap activities API",
+            "merged_at": "2026-03-06T07:25:59Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/11"
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/16"
           },
           {
-            "number": 10,
-            "title": "Add activity type & period filters and centralize filter state",
-            "merged_at": "2026-03-06T05:51:12Z",
+            "number": 15,
+            "title": "Improve heatmap activity fetching with Strava time-window query filters",
+            "merged_at": "2026-03-06T07:22:05Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/10"
+            "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/15"
           }
         ]
       },
@@ -476,7 +482,7 @@
         },
         {
           "date": "2026-03-06",
-          "count": 29
+          "count": 39
         }
       ]
     },
@@ -490,9 +496,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-03-06T06:38:30Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-idle-game-claude",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 20,
       "recent_commits": [
         {
@@ -642,9 +650,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-03-05T06:52:12Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-idle-game-codex",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 135,
       "recent_commits": [
         {
@@ -801,9 +811,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-03-05T02:00:18Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-algo-playground-codex",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 20,
       "recent_commits": [
         {
@@ -960,9 +972,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-02-20T02:19:43Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-delivery-log-report-system",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 38,
       "recent_commits": [
         {
@@ -1105,9 +1119,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-02-20T01:48:51Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-threejs-speed-effect-codex",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 78,
       "recent_commits": [
         {
@@ -1264,9 +1280,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-02-19T07:09:25Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-sample-grid-codex",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 9,
       "recent_commits": [
         {
@@ -1409,9 +1427,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-02-19T07:09:21Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-spectrum-maze-reboot",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 61,
       "recent_commits": [
         {
@@ -1568,9 +1588,11 @@
       "homepage": "",
       "default_branch": "main",
       "updated_at": "2026-02-19T07:09:16Z",
-      "thumbnail": "project-thumbnail.svg",
+      "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-autobattle-game-codex",
       "demoUrl": "",
+      "github_pages_url": "",
+      "deployment_url": "",
       "total_commits": 101,
       "recent_commits": [
         {
