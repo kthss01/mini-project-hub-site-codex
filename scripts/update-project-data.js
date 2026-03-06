@@ -13,6 +13,7 @@ const OPEN_PR_LIMIT = 10;
 const MERGED_PR_LIMIT = 5;
 const ACTIVITY_WINDOW_DAYS = 7;
 const ACTIVITY_COMMITS_MAX_PAGES = 15;
+const REPO_LIST_MAX_PAGES = 10;
 
 function toDateStringByTimezone(dateInput, timezone) {
   const formatter = new Intl.DateTimeFormat('en-CA', {
@@ -127,6 +128,39 @@ async function fetchActivityCommits(owner, repo, token, sinceIso) {
   }
 
   return commits;
+}
+
+async function discoverRepos({ owner, prefix }, token) {
+  const discovered = [];
+
+  for (let page = 1; page <= REPO_LIST_MAX_PAGES; page += 1) {
+    const result = await githubRequest(`/users/${owner}/repos`, token, {
+      sort: 'updated',
+      direction: 'desc',
+      type: 'owner',
+      per_page: '100',
+      page: String(page),
+    });
+
+    const pageItems = Array.isArray(result.data) ? result.data : [];
+    if (pageItems.length === 0) {
+      break;
+    }
+
+    const matched = pageItems.filter((item) => item?.name?.startsWith(prefix));
+    matched.forEach((item) => {
+      discovered.push({
+        owner,
+        repo: item.name,
+      });
+    });
+
+    if (pageItems.length < 100) {
+      break;
+    }
+  }
+
+  return discovered;
 }
 
 function parseLastPageFromLinkHeader(linkHeader) {
@@ -362,13 +396,31 @@ async function main() {
   const etagsRaw = await fs.readFile(ETAG_PATH, 'utf8').catch(() => null);
   const etags = etagsRaw ? JSON.parse(etagsRaw) : {};
 
-  if (!Array.isArray(config.repos) || config.repos.length === 0) {
-    throw new Error('projects.config.json 의 repos 배열이 비어 있습니다.');
+  let repoConfigs = Array.isArray(config.repos) ? config.repos : [];
+
+  if (config?.repo_discovery?.owner && config?.repo_discovery?.prefix) {
+    repoConfigs = await discoverRepos(
+      {
+        owner: config.repo_discovery.owner,
+        prefix: config.repo_discovery.prefix,
+      },
+      token,
+    );
+
+    if (repoConfigs.length === 0) {
+      throw new Error(
+        `repo_discovery 조건에 맞는 저장소가 없습니다. owner=${config.repo_discovery.owner}, prefix=${config.repo_discovery.prefix}`,
+      );
+    }
+  }
+
+  if (repoConfigs.length === 0) {
+    throw new Error('projects.config.json 의 repos 배열이 비어 있고 repo_discovery 설정도 없습니다.');
   }
 
   const repos = [];
 
-  for (const repoConfig of config.repos) {
+  for (const repoConfig of repoConfigs) {
     if (!repoConfig?.owner || !repoConfig?.repo) {
       repos.push({
         owner: repoConfig?.owner || '',
