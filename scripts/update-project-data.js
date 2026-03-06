@@ -279,6 +279,31 @@ function mapOpenPrs(prs) {
   }));
 }
 
+
+function isGithubPagesUrl(value) {
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    return false;
+  }
+
+  try {
+    return new URL(value).hostname.toLowerCase().endsWith('github.io');
+  } catch {
+    return false;
+  }
+}
+
+function isVercelUrl(value) {
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    return false;
+  }
+
+  try {
+    return new URL(value).hostname.toLowerCase().endsWith('vercel.app');
+  } catch {
+    return false;
+  }
+}
+
 function mapMergedPrs(prs) {
   return prs
     .filter((pr) => Boolean(pr.merged_at))
@@ -314,8 +339,10 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
         owner,
         repo,
         title: repoConfig.title || cachedRepo.title || `${owner}/${repo}`,
-        thumbnail: repoConfig.thumbnail || cachedRepo.thumbnail || 'project-thumbnail.svg',
+        thumbnail: repoConfig.thumbnail || cachedRepo.thumbnail || '/images/default-thumbnail.svg',
         demoUrl: repoConfig.demo_url || cachedRepo.demoUrl || '',
+        github_pages_url: cachedRepo.github_pages_url || (isGithubPagesUrl(cachedRepo.demoUrl) ? cachedRepo.demoUrl : ''),
+        deployment_url: cachedRepo.deployment_url || (isVercelUrl(cachedRepo.demoUrl) ? cachedRepo.demoUrl : ''),
       };
     }
 
@@ -353,6 +380,9 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
   const openPullRequests = mapOpenPrs(openPrsRaw);
   const mergedPullRequests = mapMergedPrs(closedPrs);
 
+  const configuredDemoUrl = repoConfig.demo_url || '';
+  const demoUrl = configuredDemoUrl || repoMeta.homepage || '';
+
   return {
     id: repoName.toLowerCase().replace(/[^a-z0-9-]/g, '-'),
     owner,
@@ -360,12 +390,14 @@ async function collectRepoData(repoConfig, timezone, token, options = {}) {
     title: repoConfig.title || repoMeta.name,
     html_url: repoMeta.html_url,
     description: repoConfig.description || repoMeta.description || '',
-    homepage: repoConfig.demo_url || repoMeta.homepage || '',
+    homepage: demoUrl,
     default_branch: repoMeta.default_branch || '',
     updated_at: repoMeta.updated_at || null,
-    thumbnail: repoConfig.thumbnail || 'project-thumbnail.svg',
+    thumbnail: repoConfig.thumbnail || '/images/default-thumbnail.svg',
     repoUrl: repoMeta.html_url,
-    demoUrl: repoConfig.demo_url || repoMeta.homepage || '',
+    demoUrl,
+    github_pages_url: isGithubPagesUrl(demoUrl) ? demoUrl : '',
+    deployment_url: isVercelUrl(demoUrl) ? demoUrl : '',
     total_commits: totalCommitCount,
     recent_commits: recentCommits,
     pull_requests: {
@@ -455,9 +487,11 @@ async function main() {
         homepage: repoConfig.demo_url || '',
         default_branch: '',
         updated_at: null,
-        thumbnail: repoConfig.thumbnail || 'project-thumbnail.svg',
+        thumbnail: repoConfig.thumbnail || '/images/default-thumbnail.svg',
         repoUrl: `https://github.com/${repoConfig.owner}/${repoConfig.repo}`,
         demoUrl: repoConfig.demo_url || '',
+        github_pages_url: isGithubPagesUrl(repoConfig.demo_url || '') ? (repoConfig.demo_url || '') : '',
+        deployment_url: isVercelUrl(repoConfig.demo_url || '') ? (repoConfig.demo_url || '') : '',
         total_commits: 0,
         recent_commits: [],
         pull_requests: { total_count: 0, open_count: 0, open: [], recently_merged: [] },
