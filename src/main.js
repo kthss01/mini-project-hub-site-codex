@@ -9,6 +9,7 @@ const detailDescription = document.querySelector('#detail-description');
 const detailThumbnail = document.querySelector('#detail-thumbnail');
 const detailRepoLink = document.querySelector('#detail-repo-link');
 const detailDemoLink = document.querySelector('#detail-demo-link');
+const detailDeployLink = document.querySelector('#detail-deploy-link');
 const readmeContent = document.querySelector('#readme-content');
 const languageBreakdown = document.querySelector('#language-breakdown');
 const detailSummary = document.querySelector('#detail-summary');
@@ -34,13 +35,25 @@ function normalizeProjects(payload) {
     return Number.isFinite(number) ? number : null;
   };
 
+  const getDeploymentLinks = (repo) => {
+    const githubPagesUrl = repo.githubPagesUrl || repo.github_pages_url || '';
+    const deploymentUrl = repo.deploymentUrl || repo.deployment_url || '';
+    const demoUrl = repo.demoUrl || repo.demo_url || repo.homepage || '';
+
+    return {
+      githubPagesUrl: githubPagesUrl || (isGithubPagesUrl(demoUrl) ? demoUrl : ''),
+      deploymentUrl: deploymentUrl || (isVercelUrl(demoUrl) ? demoUrl : ''),
+    };
+  };
+
   const normalizeRepo = (repo) => ({
     id: repo.id || `${repo.owner}-${repo.repo}`,
     title: repo.title || `${repo.owner}/${repo.repo}`,
     description: repo.description || '프로젝트 설명이 없습니다.',
-    thumbnail: repo.thumbnail || 'project-thumbnail.svg',
+    thumbnail: repo.thumbnail || '/images/default-thumbnail.svg',
     repoUrl: repo.repoUrl || repo.repo_url || repo.html_url,
     demoUrl: repo.demoUrl || repo.demo_url || repo.homepage,
+    ...getDeploymentLinks(repo),
     totalCommits: toFiniteNumberOrNull(repo.totalCommits ?? repo.total_commits),
     recentCommits: Array.isArray(repo.recentCommits)
       ? repo.recentCommits
@@ -65,6 +78,32 @@ function normalizeProjects(payload) {
   }
 
   throw new Error('프로젝트 데이터 형식이 올바르지 않습니다.');
+}
+
+function isGithubPagesUrl(value) {
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    return false;
+  }
+
+  try {
+    const hostname = new URL(value).hostname.toLowerCase();
+    return hostname.endsWith('github.io');
+  } catch {
+    return false;
+  }
+}
+
+function isVercelUrl(value) {
+  if (typeof value !== 'string' || value.trim().length === 0) {
+    return false;
+  }
+
+  try {
+    const hostname = new URL(value).hostname.toLowerCase();
+    return hostname.endsWith('vercel.app');
+  } catch {
+    return false;
+  }
 }
 
 function parseGithubRepo(repoUrl) {
@@ -362,7 +401,8 @@ function showProjectDetail(project) {
 
   setThumbnail(project);
   toggleLink(detailRepoLink, project.repoUrl);
-  toggleLink(detailDemoLink, project.demoUrl);
+  toggleLink(detailDemoLink, project.githubPagesUrl);
+  toggleLink(detailDeployLink, project.deploymentUrl);
 
   renderLanguageBreakdown(languageBreakdown, null);
   void loadGithubLanguages(project);

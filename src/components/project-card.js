@@ -319,9 +319,15 @@ export function createProjectCard(project, { onSelect } = {}) {
     className: 'project-action-link',
   });
 
-  const pageAction = createActionLink({
-    href: project.demoUrl,
+  const githubPagesAction = createActionLink({
+    href: project.githubPagesUrl,
     label: 'GitHub Pages',
+    className: 'project-action-link project-action-link-secondary',
+  });
+
+  const deployAction = createActionLink({
+    href: project.deploymentUrl,
+    label: 'Deploy Page',
     className: 'project-action-link project-action-link-secondary',
   });
 
@@ -329,8 +335,12 @@ export function createProjectCard(project, { onSelect } = {}) {
     actions.appendChild(repoAction);
   }
 
-  if (pageAction) {
-    actions.appendChild(pageAction);
+  if (githubPagesAction) {
+    actions.appendChild(githubPagesAction);
+  }
+
+  if (deployAction) {
+    actions.appendChild(deployAction);
   }
 
   body.append(title, description);
