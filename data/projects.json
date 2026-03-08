@@ -1,8 +1,260 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-08T22:31:52.095Z",
+  "generated_at": "2026-03-08T23:31:26.476Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-idle-game-from-trimps-codex",
+      "owner": "kthss01",
+      "repo": "mini-idle-game-from-trimps-codex",
+      "title": "mini-idle-game-from-trimps-codex",
+      "html_url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "master",
+      "updated_at": "2026-03-08T22:52:28Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
+      "demoUrl": "",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 1359,
+      "recent_commits": [
+        {
+          "sha": "b9edb1d",
+          "message": "Merge pull request #308 from Trimps/dev",
+          "author": "Trimps",
+          "date_iso": "2025-03-12T22:14:28Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/b9edb1dfee270ebf81bef8d934dc71276bf8d963"
+        },
+        {
+          "sha": "b6f32eb",
+          "message": "Merge pull request #307 from SadAugust/fast-attack-bugfix",
+          "author": "Trimps",
+          "date_iso": "2025-03-12T22:10:04Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/b6f32eb882bbd2a5933043ba764d7ec0b29cb71a"
+        },
+        {
+          "sha": "1ff7d69",
+          "message": "fix fast attack map special",
+          "author": "SadAugust",
+          "date_iso": "2025-03-12T22:04:14Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/1ff7d69e778fb42d9352e0cadad4fc6e9a987d5c"
+        },
+        {
+          "sha": "660bbce",
+          "message": "Merge pull request #306 from Trimps/dev",
+          "author": "Trimps",
+          "date_iso": "2025-03-08T20:25:03Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/660bbce87126c662a69dc9597ce9dea197d1b549"
+        },
+        {
+          "sha": "8db1612",
+          "message": "Merge pull request #304 from Quiaaaa/master",
+          "author": "Trimps",
+          "date_iso": "2025-03-08T20:20:45Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/8db1612691065169fa66f4f9523cd9e8a5fb7113"
+        },
+        {
+          "sha": "5623932",
+          "message": "Merge pull request #303 from SadAugust/fix-nurture-void-chance-bug",
+          "author": "Trimps",
+          "date_iso": "2025-03-08T20:19:41Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/56239327fa7302b049314640ba2de4f78fb63a58"
+        },
+        {
+          "sha": "37dd967",
+          "message": "extremely small fixes",
+          "author": "Quiaaaa",
+          "date_iso": "2025-03-03T05:39:22Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/37dd9678a6e6426e1c66ea87768fb15c48ec464f"
+        },
+        {
+          "sha": "70ae85c",
+          "message": "Nurture VMDC bugfix",
+          "author": "SadAugust",
+          "date_iso": "2025-02-25T22:09:02Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/70ae85c894d4373ec954fb4dd8f039d9635c5a03"
+        },
+        {
+          "sha": "526fc24",
+          "message": "playfab fix",
+          "author": "Trimps",
+          "date_iso": "2025-02-18T23:26:36Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/526fc24f1eea6027c7d9803d5949e9788ac907f0"
+        },
+        {
+          "sha": "25f14f2",
+          "message": "playfab fix",
+          "author": "Trimps",
+          "date_iso": "2025-02-18T23:25:49Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/25f14f266aef4a22f1e81be77301dd7a2a771e15"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-03",
+          "count": 0
+        },
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 0
+        },
+        {
+          "date": "2026-03-06",
+          "count": 0
+        },
+        {
+          "date": "2026-03-07",
+          "count": 0
+        },
+        {
+          "date": "2026-03-08",
+          "count": 0
+        },
+        {
+          "date": "2026-03-09",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "id": "kthss01-mini-pokerogue-ai-agent-codex",
+      "owner": "kthss01",
+      "repo": "mini-pokerogue-ai-agent-codex",
+      "title": "mini-pokerogue-ai-agent-codex",
+      "html_url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
+      "description": "A browser based Pokémon fangame heavily inspired by the roguelite genre.",
+      "homepage": "https://pokerogue.net",
+      "default_branch": "beta",
+      "updated_at": "2026-03-08T22:49:41Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
+      "demoUrl": "https://pokerogue.net",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 6330,
+      "recent_commits": [
+        {
+          "sha": "6b22698",
+          "message": "refactor(audio): move biome BGM loop points to assets submodule (#7134)",
+          "author": "DayKev",
+          "date_iso": "2026-03-08T01:48:48Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/6b22698106b6d55908ca022130c376c2c461385d"
+        },
+        {
+          "sha": "637f1d3",
+          "message": "chore: update `pnpm` version to `10.30.3`",
+          "author": "DayKev",
+          "date_iso": "2026-03-07T02:27:44Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/637f1d329d16d9877fd154f4afcac5dca8787d39"
+        },
+        {
+          "sha": "bc8600c",
+          "message": "refactor: split up `BattleScene.newBattle` into sub-methods (#6556)",
+          "author": "Bertie690",
+          "date_iso": "2026-03-05T15:49:42Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/bc8600c72ec8b514c88613da07433e6ae86c9c81"
+        },
+        {
+          "sha": "33059e4",
+          "message": "i18n: Translatable \"Score\" label (#7137)",
+          "author": "Adri1",
+          "date_iso": "2026-03-05T03:09:42Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/33059e448b0bad58e9ee7ebdcdf35ad57cc34bd4"
+        },
+        {
+          "sha": "5b1a183",
+          "message": "chore: fix typo in `.gitignore`",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T12:52:02Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/5b1a183c11506e4024080cf0f214f58fdc643a4d"
+        },
+        {
+          "sha": "96cb456",
+          "message": "chore: update deps (#7135)",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T12:01:37Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/96cb4569109e6bee15d849f3474d23b752a4b29f"
+        },
+        {
+          "sha": "30e6685",
+          "message": "refactor(ui): clean up `challenges-select-ui-handler.ts` (#7069)",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T10:07:08Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/30e6685b17702be330e9ca78e817d8083e0289b9"
+        },
+        {
+          "sha": "505bcff",
+          "message": "dev: add `desktop.ini` files to gitignore (#7133)",
+          "author": "Bertie690",
+          "date_iso": "2026-03-02T19:54:32Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/505bcff2452cb0ef0754f1a8fbeea80c6d0053a6"
+        },
+        {
+          "sha": "4751206",
+          "message": "refactor: rewrite a bunch of biomes code (#7091)",
+          "author": "DayKev",
+          "date_iso": "2026-03-02T13:29:17Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/47512064d12b0bc90920aceb1e8e0914b8989e36"
+        },
+        {
+          "sha": "14d3aa3",
+          "message": "chore: sync beta with main (#7132)",
+          "author": "DayKev",
+          "date_iso": "2026-03-02T09:11:06Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/14d3aa34241e6d8f6819024b891a0c73026beea2"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-03",
+          "count": 4
+        },
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 1
+        },
+        {
+          "date": "2026-03-06",
+          "count": 1
+        },
+        {
+          "date": "2026-03-07",
+          "count": 1
+        },
+        {
+          "date": "2026-03-08",
+          "count": 1
+        },
+        {
+          "date": "2026-03-09",
+          "count": 0
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +264,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-08T21:30:58Z",
+      "updated_at": "2026-03-08T22:31:55Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 404,
+      "total_commits": 405,
       "recent_commits": [
+        {
+          "sha": "879f838",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-08T22:31:52Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/879f83839bae8c95b5c2077ea921e78b23b112ea"
+        },
         {
           "sha": "ca67410",
           "message": "chore(data): refresh project cache",
@@ -83,13 +342,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-08T13:03:42Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/20d8a62612e3abaf3dd9001eb6c124a1d3ff832f"
-        },
-        {
-          "sha": "ec351ae",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-08T11:28:11Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ec351ae50c55d35d909c1d353223945d5236b5e5"
         }
       ],
       "pull_requests": {
@@ -161,7 +413,7 @@
         },
         {
           "date": "2026-03-09",
-          "count": 7
+          "count": 8
         }
       ]
     },
