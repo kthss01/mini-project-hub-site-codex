@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-09T14:59:12.563Z",
+  "generated_at": "2026-03-09T16:08:16.455Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-09T13:20:27Z",
+      "updated_at": "2026-03-09T14:59:17Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 414,
+      "total_commits": 415,
       "recent_commits": [
+        {
+          "sha": "20353f5",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-09T14:59:12Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/20353f536c29bd8ec6643e9ce74a3784d20452e0"
+        },
         {
           "sha": "1c55b87",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-08T23:31:26Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/be1193f2a4af134d64369e3ba9d8988948c7f782"
-        },
-        {
-          "sha": "879f838",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-08T22:31:52Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/879f83839bae8c95b5c2077ea921e78b23b112ea"
         }
       ],
       "pull_requests": {
@@ -136,10 +136,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 19
-        },
-        {
           "date": "2026-03-04",
           "count": 19
         },
@@ -161,7 +157,11 @@
         },
         {
           "date": "2026-03-09",
-          "count": 17
+          "count": 18
+        },
+        {
+          "date": "2026-03-10",
+          "count": 0
         }
       ]
     },
@@ -550,10 +550,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -575,6 +571,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
@@ -712,10 +712,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -737,6 +733,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
@@ -1029,10 +1029,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -1054,6 +1050,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
@@ -1649,10 +1649,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -1674,6 +1670,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
@@ -1811,10 +1811,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -1836,6 +1832,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
@@ -1973,10 +1973,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-03",
-          "count": 0
-        },
-        {
           "date": "2026-03-04",
           "count": 0
         },
@@ -1998,6 +1994,10 @@
         },
         {
           "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
           "count": 0
         }
       ]
