@@ -1,8 +1,305 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-10T07:00:47.973Z",
+  "generated_at": "2026-03-10T08:54:40.185Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-pokerogue-ai-agent-codex",
+      "owner": "kthss01",
+      "repo": "mini-pokerogue-ai-agent-codex",
+      "title": "mini-pokerogue-ai-agent-codex",
+      "html_url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
+      "description": "A browser based Pokémon fangame heavily inspired by the roguelite genre.",
+      "homepage": "https://pokerogue.net",
+      "default_branch": "beta",
+      "updated_at": "2026-03-10T07:38:14Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
+      "demoUrl": "https://pokerogue.net",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 6332,
+      "recent_commits": [
+        {
+          "sha": "2ad39d1",
+          "message": "balance(ai): Moveset generation rebalancing (#6962)",
+          "author": "SirzBenjie",
+          "date_iso": "2026-03-09T07:50:01Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/2ad39d1947cdc322c6ee6c97a1e6de465f39cd7e"
+        },
+        {
+          "sha": "1678027",
+          "message": "refactor(ui): change placement of option labels in challenge select (#7142)",
+          "author": "DayKev",
+          "date_iso": "2026-03-09T03:12:09Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/167802743edcf0927e15e06a0984993a6507d085"
+        },
+        {
+          "sha": "6b22698",
+          "message": "refactor(audio): move biome BGM loop points to assets submodule (#7134)",
+          "author": "DayKev",
+          "date_iso": "2026-03-08T01:48:48Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/6b22698106b6d55908ca022130c376c2c461385d"
+        },
+        {
+          "sha": "637f1d3",
+          "message": "chore: update `pnpm` version to `10.30.3`",
+          "author": "DayKev",
+          "date_iso": "2026-03-07T02:27:44Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/637f1d329d16d9877fd154f4afcac5dca8787d39"
+        },
+        {
+          "sha": "bc8600c",
+          "message": "refactor: split up `BattleScene.newBattle` into sub-methods (#6556)",
+          "author": "Bertie690",
+          "date_iso": "2026-03-05T15:49:42Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/bc8600c72ec8b514c88613da07433e6ae86c9c81"
+        },
+        {
+          "sha": "33059e4",
+          "message": "i18n: Translatable \"Score\" label (#7137)",
+          "author": "Adri1",
+          "date_iso": "2026-03-05T03:09:42Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/33059e448b0bad58e9ee7ebdcdf35ad57cc34bd4"
+        },
+        {
+          "sha": "5b1a183",
+          "message": "chore: fix typo in `.gitignore`",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T12:52:02Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/5b1a183c11506e4024080cf0f214f58fdc643a4d"
+        },
+        {
+          "sha": "96cb456",
+          "message": "chore: update deps (#7135)",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T12:01:37Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/96cb4569109e6bee15d849f3474d23b752a4b29f"
+        },
+        {
+          "sha": "30e6685",
+          "message": "refactor(ui): clean up `challenges-select-ui-handler.ts` (#7069)",
+          "author": "DayKev",
+          "date_iso": "2026-03-03T10:07:08Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/30e6685b17702be330e9ca78e817d8083e0289b9"
+        },
+        {
+          "sha": "505bcff",
+          "message": "dev: add `desktop.ini` files to gitignore (#7133)",
+          "author": "Bertie690",
+          "date_iso": "2026-03-02T19:54:32Z",
+          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/505bcff2452cb0ef0754f1a8fbeea80c6d0053a6"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 1
+        },
+        {
+          "date": "2026-03-06",
+          "count": 1
+        },
+        {
+          "date": "2026-03-07",
+          "count": 1
+        },
+        {
+          "date": "2026-03-08",
+          "count": 1
+        },
+        {
+          "date": "2026-03-09",
+          "count": 2
+        },
+        {
+          "date": "2026-03-10",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "id": "kthss01-mini-event-race-dashboard-codex",
+      "owner": "kthss01",
+      "repo": "mini-event-race-dashboard-codex",
+      "title": "mini-event-race-dashboard-codex",
+      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-10T07:23:21Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "demoUrl": "",
+      "has_pages": true,
+      "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
+      "deployment_url": "",
+      "total_commits": 44,
+      "recent_commits": [
+        {
+          "sha": "f413d88",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-10T07:23:17Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/f413d881e4d7d1cfc5e4fadbfdec12e4bbc99174"
+        },
+        {
+          "sha": "a24e6aa",
+          "message": "Merge pull request #21 from kthss01/codex/verify-sync-doc-data-functionality",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:59:56Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/a24e6aac69cccf066524de5741856ee172b6bd76"
+        },
+        {
+          "sha": "d2b0d22",
+          "message": "feat: show full contest list on dashboard",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:59:04Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d2b0d2259fdb1238eb9d5dc827a54abc210e4369"
+        },
+        {
+          "sha": "7ad89a0",
+          "message": "Merge pull request #20 from kthss01/codex-nwciq2",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:59Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/7ad89a07ac660f3b3ad629f2faa069464bfed1b0"
+        },
+        {
+          "sha": "d33b65f",
+          "message": "Fix Google Docs fetch env parsing and file ID resolution",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:48:45Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d33b65f880603e62bc93f4dc3e155952ecc03863"
+        },
+        {
+          "sha": "9ba640a",
+          "message": "Merge pull request #19 from kthss01/codex/fix-github-action-ts2554-error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:33:50Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9ba640ae0c0915f264ab0861b29b34b20503c410"
+        },
+        {
+          "sha": "0cce79d",
+          "message": "Fix fetchDoc signature encoding type error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:32:16Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/0cce79de88e47803a59899361e1d2cc911c791ac"
+        },
+        {
+          "sha": "da20908",
+          "message": "Merge pull request #18 from kthss01/codex/check-and-fix-github-action-error",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:25:44Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/da209086c6234a94b25fe0be35e723c96da51cb6"
+        },
+        {
+          "sha": "4752ec1",
+          "message": "fix: make sync-doc workflow handle scheduled branch ref",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:25:30Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/4752ec16b9fefc2011e93bdb90bd16600b8842eb"
+        },
+        {
+          "sha": "6f38598",
+          "message": "Merge pull request #17 from kthss01/codex/fix-github-actions-issue",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T07:21:23Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/6f38598f92bc9529feac064c0477b21c36a06e6b"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 22,
+        "open_count": 1,
+        "open": [
+          {
+            "number": 22,
+            "title": "fix: publish synced Google Doc data to app static path",
+            "author": "kthss01",
+            "created_at": "2026-03-10T07:37:59Z",
+            "updated_at": "2026-03-10T07:38:00Z",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/22"
+          }
+        ],
+        "recently_merged": [
+          {
+            "number": 21,
+            "title": "feat: show full contest list on dashboard",
+            "merged_at": "2026-03-06T07:59:56Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/21"
+          },
+          {
+            "number": 20,
+            "title": "Normalize service account key and accept Google Doc URLs in fetch script",
+            "merged_at": "2026-03-06T07:49:00Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/20"
+          },
+          {
+            "number": 19,
+            "title": "Fix TypeScript build error in fetchDoc JWT signature encoding",
+            "merged_at": "2026-03-06T07:33:50Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/19"
+          },
+          {
+            "number": 18,
+            "title": "fix: make sync-doc workflow handle scheduled branch ref",
+            "merged_at": "2026-03-06T07:25:45Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/18"
+          },
+          {
+            "number": 17,
+            "title": "fix: harden GitHub Actions branch/publish flow",
+            "merged_at": "2026-03-06T07:21:23Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/17"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-04",
+          "count": 0
+        },
+        {
+          "date": "2026-03-05",
+          "count": 5
+        },
+        {
+          "date": "2026-03-06",
+          "count": 38
+        },
+        {
+          "date": "2026-03-07",
+          "count": 0
+        },
+        {
+          "date": "2026-03-08",
+          "count": 0
+        },
+        {
+          "date": "2026-03-09",
+          "count": 0
+        },
+        {
+          "date": "2026-03-10",
+          "count": 1
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +309,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-10T05:53:05Z",
+      "updated_at": "2026-03-10T07:00:52Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 425,
+      "total_commits": 426,
       "recent_commits": [
+        {
+          "sha": "59502a9",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-10T07:00:48Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/59502a9dd719ebd5ddd67900c1dc1ce61894abf8"
+        },
         {
           "sha": "14f70c7",
           "message": "chore(data): refresh project cache",
@@ -83,13 +387,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-09T17:51:54Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3219e7d0d78f9008a5a0c35c5ac77d777a54a6c0"
-        },
-        {
-          "sha": "a6c18d0",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-09T16:08:16Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a6c18d07e3d1de004253b17fa562101e407a0d29"
         }
       ],
       "pull_requests": {
@@ -161,7 +458,7 @@
         },
         {
           "date": "2026-03-10",
-          "count": 10
+          "count": 11
         }
       ]
     },
@@ -280,132 +577,6 @@
         {
           "date": "2026-03-08",
           "count": 0
-        },
-        {
-          "date": "2026-03-09",
-          "count": 0
-        },
-        {
-          "date": "2026-03-10",
-          "count": 0
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-pokerogue-ai-agent-codex",
-      "owner": "kthss01",
-      "repo": "mini-pokerogue-ai-agent-codex",
-      "title": "mini-pokerogue-ai-agent-codex",
-      "html_url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
-      "description": "A browser based Pokémon fangame heavily inspired by the roguelite genre.",
-      "homepage": "https://pokerogue.net",
-      "default_branch": "beta",
-      "updated_at": "2026-03-08T22:49:41Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex",
-      "demoUrl": "https://pokerogue.net",
-      "has_pages": false,
-      "github_pages_url": "",
-      "deployment_url": "",
-      "total_commits": 6330,
-      "recent_commits": [
-        {
-          "sha": "6b22698",
-          "message": "refactor(audio): move biome BGM loop points to assets submodule (#7134)",
-          "author": "DayKev",
-          "date_iso": "2026-03-08T01:48:48Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/6b22698106b6d55908ca022130c376c2c461385d"
-        },
-        {
-          "sha": "637f1d3",
-          "message": "chore: update `pnpm` version to `10.30.3`",
-          "author": "DayKev",
-          "date_iso": "2026-03-07T02:27:44Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/637f1d329d16d9877fd154f4afcac5dca8787d39"
-        },
-        {
-          "sha": "bc8600c",
-          "message": "refactor: split up `BattleScene.newBattle` into sub-methods (#6556)",
-          "author": "Bertie690",
-          "date_iso": "2026-03-05T15:49:42Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/bc8600c72ec8b514c88613da07433e6ae86c9c81"
-        },
-        {
-          "sha": "33059e4",
-          "message": "i18n: Translatable \"Score\" label (#7137)",
-          "author": "Adri1",
-          "date_iso": "2026-03-05T03:09:42Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/33059e448b0bad58e9ee7ebdcdf35ad57cc34bd4"
-        },
-        {
-          "sha": "5b1a183",
-          "message": "chore: fix typo in `.gitignore`",
-          "author": "DayKev",
-          "date_iso": "2026-03-03T12:52:02Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/5b1a183c11506e4024080cf0f214f58fdc643a4d"
-        },
-        {
-          "sha": "96cb456",
-          "message": "chore: update deps (#7135)",
-          "author": "DayKev",
-          "date_iso": "2026-03-03T12:01:37Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/96cb4569109e6bee15d849f3474d23b752a4b29f"
-        },
-        {
-          "sha": "30e6685",
-          "message": "refactor(ui): clean up `challenges-select-ui-handler.ts` (#7069)",
-          "author": "DayKev",
-          "date_iso": "2026-03-03T10:07:08Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/30e6685b17702be330e9ca78e817d8083e0289b9"
-        },
-        {
-          "sha": "505bcff",
-          "message": "dev: add `desktop.ini` files to gitignore (#7133)",
-          "author": "Bertie690",
-          "date_iso": "2026-03-02T19:54:32Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/505bcff2452cb0ef0754f1a8fbeea80c6d0053a6"
-        },
-        {
-          "sha": "4751206",
-          "message": "refactor: rewrite a bunch of biomes code (#7091)",
-          "author": "DayKev",
-          "date_iso": "2026-03-02T13:29:17Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/47512064d12b0bc90920aceb1e8e0914b8989e36"
-        },
-        {
-          "sha": "14d3aa3",
-          "message": "chore: sync beta with main (#7132)",
-          "author": "DayKev",
-          "date_iso": "2026-03-02T09:11:06Z",
-          "url": "https://github.com/kthss01/mini-pokerogue-ai-agent-codex/commit/14d3aa34241e6d8f6819024b891a0c73026beea2"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 0,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": []
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-04",
-          "count": 0
-        },
-        {
-          "date": "2026-03-05",
-          "count": 1
-        },
-        {
-          "date": "2026-03-06",
-          "count": 1
-        },
-        {
-          "date": "2026-03-07",
-          "count": 1
-        },
-        {
-          "date": "2026-03-08",
-          "count": 1
         },
         {
           "date": "2026-03-09",
@@ -560,168 +731,6 @@
         {
           "date": "2026-03-06",
           "count": 43
-        },
-        {
-          "date": "2026-03-07",
-          "count": 0
-        },
-        {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
-          "date": "2026-03-09",
-          "count": 0
-        },
-        {
-          "date": "2026-03-10",
-          "count": 0
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-event-race-dashboard-codex",
-      "owner": "kthss01",
-      "repo": "mini-event-race-dashboard-codex",
-      "title": "mini-event-race-dashboard-codex",
-      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-06T08:00:03Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "demoUrl": "",
-      "has_pages": true,
-      "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
-      "deployment_url": "",
-      "total_commits": 43,
-      "recent_commits": [
-        {
-          "sha": "a24e6aa",
-          "message": "Merge pull request #21 from kthss01/codex/verify-sync-doc-data-functionality",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:59:56Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/a24e6aac69cccf066524de5741856ee172b6bd76"
-        },
-        {
-          "sha": "d2b0d22",
-          "message": "feat: show full contest list on dashboard",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:59:04Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d2b0d2259fdb1238eb9d5dc827a54abc210e4369"
-        },
-        {
-          "sha": "7ad89a0",
-          "message": "Merge pull request #20 from kthss01/codex-nwciq2",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:48:59Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/7ad89a07ac660f3b3ad629f2faa069464bfed1b0"
-        },
-        {
-          "sha": "d33b65f",
-          "message": "Fix Google Docs fetch env parsing and file ID resolution",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:48:45Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d33b65f880603e62bc93f4dc3e155952ecc03863"
-        },
-        {
-          "sha": "9ba640a",
-          "message": "Merge pull request #19 from kthss01/codex/fix-github-action-ts2554-error",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:33:50Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9ba640ae0c0915f264ab0861b29b34b20503c410"
-        },
-        {
-          "sha": "0cce79d",
-          "message": "Fix fetchDoc signature encoding type error",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:32:16Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/0cce79de88e47803a59899361e1d2cc911c791ac"
-        },
-        {
-          "sha": "da20908",
-          "message": "Merge pull request #18 from kthss01/codex/check-and-fix-github-action-error",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:25:44Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/da209086c6234a94b25fe0be35e723c96da51cb6"
-        },
-        {
-          "sha": "4752ec1",
-          "message": "fix: make sync-doc workflow handle scheduled branch ref",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:25:30Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/4752ec16b9fefc2011e93bdb90bd16600b8842eb"
-        },
-        {
-          "sha": "6f38598",
-          "message": "Merge pull request #17 from kthss01/codex/fix-github-actions-issue",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:21:23Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/6f38598f92bc9529feac064c0477b21c36a06e6b"
-        },
-        {
-          "sha": "f83b45b",
-          "message": "fix: harden GitHub Actions branch/publish flow",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:20:40Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/f83b45be33418def0c813f753aa41a6b1261696e"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 21,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 21,
-            "title": "feat: show full contest list on dashboard",
-            "merged_at": "2026-03-06T07:59:56Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/21"
-          },
-          {
-            "number": 20,
-            "title": "Normalize service account key and accept Google Doc URLs in fetch script",
-            "merged_at": "2026-03-06T07:49:00Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/20"
-          },
-          {
-            "number": 19,
-            "title": "Fix TypeScript build error in fetchDoc JWT signature encoding",
-            "merged_at": "2026-03-06T07:33:50Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/19"
-          },
-          {
-            "number": 18,
-            "title": "fix: make sync-doc workflow handle scheduled branch ref",
-            "merged_at": "2026-03-06T07:25:45Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/18"
-          },
-          {
-            "number": 17,
-            "title": "fix: harden GitHub Actions branch/publish flow",
-            "merged_at": "2026-03-06T07:21:23Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/17"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-04",
-          "count": 0
-        },
-        {
-          "date": "2026-03-05",
-          "count": 5
-        },
-        {
-          "date": "2026-03-06",
-          "count": 38
         },
         {
           "date": "2026-03-07",
