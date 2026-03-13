@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-13T04:50:32.168Z",
+  "generated_at": "2026-03-13T05:55:39.195Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-13T02:41:35Z",
+      "updated_at": "2026-03-13T04:50:36Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 475,
+      "total_commits": 476,
       "recent_commits": [
+        {
+          "sha": "a8ff6c5",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-13T04:50:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a8ff6c5e439208213ab24a3073aaaba898a258da"
+        },
         {
           "sha": "4a6e121",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-12T14:57:50Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/1dcae3f403d88dca334a70a94c8700b525fa604a"
-        },
-        {
-          "sha": "290c5f6",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-12T13:17:46Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/290c5f6a60595047a2b5502c8259f04ce7e4ba92"
         }
       ],
       "pull_requests": {
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-03-13",
-          "count": 8
+          "count": 9
         }
       ]
     },
@@ -461,7 +461,7 @@
       "html_url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
       "description": "",
       "homepage": "",
-      "default_branch": "master",
+      "default_branch": "develop",
       "updated_at": "2026-03-08T22:52:28Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
