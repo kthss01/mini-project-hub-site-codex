@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-14T14:36:55.177Z",
+  "generated_at": "2026-03-14T15:34:48.856Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-14T13:07:48Z",
+      "updated_at": "2026-03-14T14:36:59Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 503,
+      "total_commits": 504,
       "recent_commits": [
+        {
+          "sha": "45244b5",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-14T14:36:55Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/45244b5d598572a594257136966c16aebbd994e0"
+        },
         {
           "sha": "199158a",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-14T04:48:18Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2b204a3911ea0ea4b275e2f6167e1edbd6654776"
-        },
-        {
-          "sha": "90b1665",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-14T02:39:49Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/90b1665c367d816449ab566dc6e9319ed408e358"
         }
       ],
       "pull_requests": {
@@ -136,10 +136,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 20
-        },
-        {
           "date": "2026-03-09",
           "count": 18
         },
@@ -161,7 +157,11 @@
         },
         {
           "date": "2026-03-14",
-          "count": 19
+          "count": 20
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
         }
       ]
     },
@@ -298,10 +298,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -323,6 +319,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -460,10 +460,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -485,6 +481,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -586,10 +586,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 1
-        },
-        {
           "date": "2026-03-09",
           "count": 2
         },
@@ -611,6 +607,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -748,10 +748,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -773,6 +769,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -903,10 +903,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -928,6 +924,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1065,10 +1065,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1090,6 +1086,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1227,10 +1227,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1252,6 +1248,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1375,10 +1375,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1400,6 +1396,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1537,10 +1537,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1562,6 +1558,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1685,10 +1685,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1710,6 +1706,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -1847,10 +1847,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -1872,6 +1868,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
@@ -2009,10 +2009,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-03-08",
-          "count": 0
-        },
-        {
           "date": "2026-03-09",
           "count": 0
         },
@@ -2034,6 +2030,10 @@
         },
         {
           "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
           "count": 0
         }
       ]
