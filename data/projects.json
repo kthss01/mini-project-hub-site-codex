@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-16T07:26:29.400Z",
+  "generated_at": "2026-03-16T07:41:25.279Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,36 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-16T07:24:25Z",
+      "updated_at": "2026-03-16T07:34:01Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 535,
+      "total_commits": 538,
       "recent_commits": [
+        {
+          "sha": "7d4563b",
+          "message": "Merge pull request #43 from kthss01/codex/check-visibility-of-github-pages-button",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:33:56Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/7d4563b11295c8616738113912903469191df11b"
+        },
+        {
+          "sha": "c282160",
+          "message": "Fix GitHub Pages button visibility logic",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:33:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c28216097ce97a87148719c0f6d9539bf0db9db5"
+        },
+        {
+          "sha": "d40476c",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-16T07:26:29Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/d40476ca774d14ea788f26bc66f0e8086aadd14a"
+        },
         {
           "sha": "c3502ab",
           "message": "Merge pull request #42 from kthss01/codex/-github-page",
@@ -69,34 +90,20 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-15T21:34:52Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/21f771bee1f8d3772db3c6125e67ffa8baf65976"
-        },
-        {
-          "sha": "45c6dbd",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T20:37:57Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/45c6dbde549752e15e2e96bb6171dce291eb052a"
-        },
-        {
-          "sha": "5e04600",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T19:34:45Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/5e04600c5797524591c3c2f2bb745605ee44097b"
-        },
-        {
-          "sha": "05828bd",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T18:51:45Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/05828bd7b2354a1dab58bfbb303a4edc1a08a36d"
         }
       ],
       "pull_requests": {
-        "total_count": 42,
+        "total_count": 43,
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 43,
+            "title": "Fix GitHub Pages button visibility by removing deploymentUrl-based fallback",
+            "merged_at": "2026-03-16T07:33:56Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/43"
+          },
           {
             "number": 42,
             "title": "Fix missing GitHub Pages action for repos with deployment URLs",
@@ -124,13 +131,6 @@
             "merged_at": "2026-03-06T07:34:54Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/39"
-          },
-          {
-            "number": 38,
-            "title": "feat: discover mini-* repositories dynamically for project data",
-            "merged_at": "2026-03-06T07:17:12Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/38"
           }
         ]
       },
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-03-16",
-          "count": 13
+          "count": 16
         }
       ]
     },
@@ -417,10 +417,24 @@
         }
       ],
       "pull_requests": {
-        "total_count": 28,
+        "total_count": 30,
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 30,
+            "title": "Localize runtime UI strings in main/updates/config/objects",
+            "merged_at": "2026-03-16T07:36:35Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/30"
+          },
+          {
+            "number": 29,
+            "title": "Unify multi-entry i18n keys for offline/settings UI",
+            "merged_at": "2026-03-16T07:28:31Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/29"
+          },
           {
             "number": 28,
             "title": "Add Korean localization backlog, expand i18n domains, and add domain DoD",
@@ -441,20 +455,6 @@
             "merged_at": "2026-03-16T07:10:52Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/26"
-          },
-          {
-            "number": 25,
-            "title": "Add prioritized UI i18n keys and HTML-preserving i18n support for index and ScreenReader",
-            "merged_at": "2026-03-16T07:09:54Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/25"
-          },
-          {
-            "number": 24,
-            "title": "Add language selector to Settings and hook into i18n rerender flow",
-            "merged_at": "2026-03-16T06:57:32Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/24"
           }
         ]
       },
