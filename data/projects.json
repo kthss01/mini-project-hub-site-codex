@@ -1,8 +1,163 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-16T07:41:25.279Z",
+  "generated_at": "2026-03-16T09:06:17.532Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-idle-game-claude",
+      "owner": "kthss01",
+      "repo": "mini-idle-game-claude",
+      "title": "mini-idle-game-claude",
+      "html_url": "https://github.com/kthss01/mini-idle-game-claude",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-16T08:22:48Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-idle-game-claude",
+      "demoUrl": "",
+      "has_pages": true,
+      "github_pages_url": "https://kthss01.github.io/mini-idle-game-claude/",
+      "deployment_url": "",
+      "total_commits": 26,
+      "recent_commits": [
+        {
+          "sha": "42994c9",
+          "message": "feat: 하단 패널 상점 탭 추가 및 장비 시스템 UI 정리",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T08:22:25Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/42994c94f73b1622e7db652cd3a47a36aa5ee96f"
+        },
+        {
+          "sha": "5bb08ce",
+          "message": "feat: 첫 플레이어 튜토리얼 시스템 추가 (TutorialSystem)",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T08:08:55Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/5bb08ce53154d9eaa6a645bb2c088af213efce71"
+        },
+        {
+          "sha": "97b5b80",
+          "message": "feat: 스킬별 고유 VFX 추가 (흡혈/광전사/강철 피부)",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T08:05:03Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/97b5b80108cdcf8576d393dd107825681b82ca14"
+        },
+        {
+          "sha": "7aa6728",
+          "message": "feat: 콘텐츠 확장 - 퀘스트/레시피/소모품 추가",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T08:01:20Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/7aa67289d2cda8cd0f73f472a513e08f67ec15b0"
+        },
+        {
+          "sha": "c4bebad",
+          "message": "feat: 타이틀/슬롯 선택 화면 구현 (TitleScene)",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:51:52Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/c4bebad03287c1d7406964e375fd952ead2b0791"
+        },
+        {
+          "sha": "b9d9006",
+          "message": "feat: 반응형 레이아웃 구현 및 작업 로그 추가",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:41:38Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/b9d90063eea2baaf0685f78174086c1bd345ba6e"
+        },
+        {
+          "sha": "102d59a",
+          "message": "docs: README 최신 기능 반영 업데이트",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T06:34:57Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/102d59ada8b7a364bbf969e2776721b4ab8c5429"
+        },
+        {
+          "sha": "3223b30",
+          "message": "개선 작업",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T06:19:44Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/3223b308acfdbe2619b0fd379ef7789cc4424ba2"
+        },
+        {
+          "sha": "2f254e2",
+          "message": "Merge pull request #4 from kthss01/feature/phase4-save-expansion",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T05:29:14Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/2f254e2ae6e569be447865b10a2ac71c0c454b5a"
+        },
+        {
+          "sha": "ca532df",
+          "message": "style: 세이브 슬롯 UI 및 통계 대시보드 스타일링",
+          "author": "kthss01",
+          "date_iso": "2026-03-06T05:20:40Z",
+          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/ca532dfcc1fbb289dde45fef2b2ce538f11a359b"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 4,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 4,
+            "title": "Feature/phase4 save expansion",
+            "merged_at": "2026-03-06T05:29:15Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/4"
+          },
+          {
+            "number": 3,
+            "title": "Feature/phase3",
+            "merged_at": "2026-03-05T07:26:35Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/3"
+          },
+          {
+            "number": 2,
+            "title": "feat: Phase 2 - 프레스티지/업적/퀘스트 시스템 구현",
+            "merged_at": "2026-03-05T06:25:17Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/2"
+          },
+          {
+            "number": 1,
+            "title": "Feature/phase1",
+            "merged_at": "2026-03-05T05:45:15Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/1"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-10",
+          "count": 0
+        },
+        {
+          "date": "2026-03-11",
+          "count": 0
+        },
+        {
+          "date": "2026-03-12",
+          "count": 0
+        },
+        {
+          "date": "2026-03-13",
+          "count": 0
+        },
+        {
+          "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 6
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +167,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-16T07:34:01Z",
+      "updated_at": "2026-03-16T07:41:29Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 538,
+      "total_commits": 539,
       "recent_commits": [
+        {
+          "sha": "2e3029b",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-16T07:41:25Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2e3029bf041e1c671cd4fad486848659afdd2ab1"
+        },
         {
           "sha": "7d4563b",
           "message": "Merge pull request #43 from kthss01/codex/check-visibility-of-github-pages-button",
@@ -83,13 +245,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-15T22:35:32Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/34256308161dfe5750be407a170ac8e525360274"
-        },
-        {
-          "sha": "21f771b",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T21:34:52Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/21f771bee1f8d3772db3c6125e67ffa8baf65976"
         }
       ],
       "pull_requests": {
@@ -161,7 +316,7 @@
         },
         {
           "date": "2026-03-16",
-          "count": 16
+          "count": 17
         }
       ]
     },
@@ -417,44 +572,44 @@
         }
       ],
       "pull_requests": {
-        "total_count": 30,
+        "total_count": 35,
         "open_count": 0,
         "open": [],
         "recently_merged": [
           {
-            "number": 30,
-            "title": "Localize runtime UI strings in main/updates/config/objects",
-            "merged_at": "2026-03-16T07:36:35Z",
+            "number": 35,
+            "title": "docs: add Korean localization progress, gameplay-first priorities, and merge readiness",
+            "merged_at": "2026-03-16T08:07:20Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/30"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/35"
           },
           {
-            "number": 29,
-            "title": "Unify multi-entry i18n keys for offline/settings UI",
-            "merged_at": "2026-03-16T07:28:31Z",
+            "number": 34,
+            "title": "Improve i18n extraction and validation coverage for KO localization sprints",
+            "merged_at": "2026-03-16T08:01:26Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/29"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/34"
           },
           {
-            "number": 28,
-            "title": "Add Korean localization backlog, expand i18n domains, and add domain DoD",
-            "merged_at": "2026-03-16T07:20:58Z",
+            "number": 33,
+            "title": "docs: formalize KO localization domain workflow and release gates",
+            "merged_at": "2026-03-16T07:55:10Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/28"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/33"
           },
           {
-            "number": 27,
-            "title": "i18n: Localize map, challenge and Spire Assault user-facing strings",
-            "merged_at": "2026-03-16T07:14:50Z",
+            "number": 32,
+            "title": "Add attribute-level i18n mapping for map/ARIA strings",
+            "merged_at": "2026-03-16T07:51:19Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/27"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/32"
           },
           {
-            "number": 26,
-            "title": "Add Korean localization progress report (LOCALIZATION_KO_PROGRESS_REPORT.md)",
-            "merged_at": "2026-03-16T07:10:52Z",
+            "number": 31,
+            "title": "Localize Spire preset and settings UI strings",
+            "merged_at": "2026-03-16T07:45:28Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/26"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/31"
           }
         ]
       },
@@ -743,161 +898,6 @@
             "merged_at": "2026-03-06T07:33:46Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-strava-dashboard-codex/pull/17"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-10",
-          "count": 0
-        },
-        {
-          "date": "2026-03-11",
-          "count": 0
-        },
-        {
-          "date": "2026-03-12",
-          "count": 0
-        },
-        {
-          "date": "2026-03-13",
-          "count": 0
-        },
-        {
-          "date": "2026-03-14",
-          "count": 0
-        },
-        {
-          "date": "2026-03-15",
-          "count": 0
-        },
-        {
-          "date": "2026-03-16",
-          "count": 0
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-idle-game-claude",
-      "owner": "kthss01",
-      "repo": "mini-idle-game-claude",
-      "title": "mini-idle-game-claude",
-      "html_url": "https://github.com/kthss01/mini-idle-game-claude",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-06T06:38:30Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-idle-game-claude",
-      "demoUrl": "",
-      "has_pages": true,
-      "github_pages_url": "https://kthss01.github.io/mini-idle-game-claude/",
-      "deployment_url": "",
-      "total_commits": 20,
-      "recent_commits": [
-        {
-          "sha": "102d59a",
-          "message": "docs: README 최신 기능 반영 업데이트",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:34:57Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/102d59ada8b7a364bbf969e2776721b4ab8c5429"
-        },
-        {
-          "sha": "3223b30",
-          "message": "개선 작업",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T06:19:44Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/3223b308acfdbe2619b0fd379ef7789cc4424ba2"
-        },
-        {
-          "sha": "2f254e2",
-          "message": "Merge pull request #4 from kthss01/feature/phase4-save-expansion",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:29:14Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/2f254e2ae6e569be447865b10a2ac71c0c454b5a"
-        },
-        {
-          "sha": "ca532df",
-          "message": "style: 세이브 슬롯 UI 및 통계 대시보드 스타일링",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:20:40Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/ca532dfcc1fbb289dde45fef2b2ce538f11a359b"
-        },
-        {
-          "sha": "138fcf4",
-          "message": "feat: 설정 패널 슬롯 관리 UI 구현 (불러오기/복사/삭제/export/import)",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:20:27Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/138fcf49849f1e0815a977a836ff8170cee45c23"
-        },
-        {
-          "sha": "784e40e",
-          "message": "chore: SAVE_VERSION 6 업데이트 및 index.html SaveSlotManager 로드 추가",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:17:29Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/784e40ee98d339038cb6f783492918169b366535"
-        },
-        {
-          "sha": "53ce8b4",
-          "message": "refactor: SaveSystem을 SaveSlotManager 기반으로 위임 + 레거시 마이그레이션",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:17:13Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/53ce8b4608955ba344daf7da6d56ca2d1d05a091"
-        },
-        {
-          "sha": "e315047",
-          "message": "feat: SaveSlotManager 3슬롯 구조 및 CRUD 구현",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T05:10:34Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/e315047d66caaccdc4a96397c8ae0c9fe7949a41"
-        },
-        {
-          "sha": "642aa2d",
-          "message": "Merge pull request #3 from kthss01/feature/phase3",
-          "author": "kthss01",
-          "date_iso": "2026-03-05T07:26:35Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/642aa2d09230af2cde0cc473d22b2cd4bc8836b0"
-        },
-        {
-          "sha": "adfa38b",
-          "message": "feat: 제작 시스템 구현 (Phase 3-3)",
-          "author": "kthss01",
-          "date_iso": "2026-03-05T07:16:33Z",
-          "url": "https://github.com/kthss01/mini-idle-game-claude/commit/adfa38b4611101efe1fe1ebceefd413d916d3c54"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 4,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 4,
-            "title": "Feature/phase4 save expansion",
-            "merged_at": "2026-03-06T05:29:15Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/4"
-          },
-          {
-            "number": 3,
-            "title": "Feature/phase3",
-            "merged_at": "2026-03-05T07:26:35Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/3"
-          },
-          {
-            "number": 2,
-            "title": "feat: Phase 2 - 프레스티지/업적/퀘스트 시스템 구현",
-            "merged_at": "2026-03-05T06:25:17Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/2"
-          },
-          {
-            "number": 1,
-            "title": "Feature/phase1",
-            "merged_at": "2026-03-05T05:45:15Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-claude/pull/1"
           }
         ]
       },
