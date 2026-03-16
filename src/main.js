@@ -47,8 +47,7 @@ function normalizeProjects(payload) {
       githubPagesUrl:
         githubPagesUrl
         || (isGithubPagesUrl(demoUrl) ? demoUrl : '')
-        || (hasPages ? inferredGithubPagesUrl : '')
-        || (deploymentUrl ? inferredGithubPagesUrl : ''),
+        || (hasPages ? inferredGithubPagesUrl : ''),
       deploymentUrl: deploymentUrl || (isVercelUrl(demoUrl) ? demoUrl : ''),
     };
   };
