@@ -41,9 +41,14 @@ function normalizeProjects(payload) {
     const demoUrl = repo.demoUrl || repo.demo_url || repo.homepage || '';
     const hasPages = Boolean(repo.has_pages || repo.hasPages);
     const repoUrl = repo.repoUrl || repo.repo_url || repo.html_url || '';
+    const inferredGithubPagesUrl = buildGithubPagesUrl(repoUrl);
 
     return {
-      githubPagesUrl: githubPagesUrl || (isGithubPagesUrl(demoUrl) ? demoUrl : '') || (hasPages ? buildGithubPagesUrl(repoUrl) : ''),
+      githubPagesUrl:
+        githubPagesUrl
+        || (isGithubPagesUrl(demoUrl) ? demoUrl : '')
+        || (hasPages ? inferredGithubPagesUrl : '')
+        || (deploymentUrl ? inferredGithubPagesUrl : ''),
       deploymentUrl: deploymentUrl || (isVercelUrl(demoUrl) ? demoUrl : ''),
     };
   };
