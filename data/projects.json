@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-16T05:52:15.397Z",
+  "generated_at": "2026-03-16T07:26:29.400Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,36 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-16T03:20:13Z",
+      "updated_at": "2026-03-16T07:24:25Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 532,
+      "total_commits": 535,
       "recent_commits": [
+        {
+          "sha": "c3502ab",
+          "message": "Merge pull request #42 from kthss01/codex/-github-page",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:24:20Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c3502abef90d0460b7d9740b8b45e531fb264fea"
+        },
+        {
+          "sha": "5460395",
+          "message": "Fix GitHub Pages link fallback when deployment URL exists",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T07:23:52Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/5460395694fa465297829f8c0256bd1296271ab9"
+        },
+        {
+          "sha": "a98bc66",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-16T05:52:15Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a98bc662eb2739ea5ec87715b6427ffa5dde612f"
+        },
         {
           "sha": "233754e",
           "message": "chore(data): refresh project cache",
@@ -69,34 +90,20 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-15T18:51:45Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/05828bd7b2354a1dab58bfbb303a4edc1a08a36d"
-        },
-        {
-          "sha": "e8e57e2",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T17:35:32Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/e8e57e2bec43b6337f646eb56dcea92a6bf5cb12"
-        },
-        {
-          "sha": "46004f2",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T16:40:20Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/46004f22d2b4c167fde24fa670c6ce1e3cf37006"
-        },
-        {
-          "sha": "d6811b8",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-15T15:35:36Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/d6811b86afa6d34dc6e3a70a6a81a4fc61c28dc6"
         }
       ],
       "pull_requests": {
-        "total_count": 41,
+        "total_count": 42,
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 42,
+            "title": "Fix missing GitHub Pages action for repos with deployment URLs",
+            "merged_at": "2026-03-16T07:24:20Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/42"
+          },
           {
             "number": 41,
             "title": "Show GitHub Pages button for repositories with Pages enabled",
@@ -124,13 +131,6 @@
             "merged_at": "2026-03-06T07:17:12Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/38"
-          },
-          {
-            "number": 37,
-            "title": "fix: guard Vite env access to restore project list rendering",
-            "merged_at": "2026-02-20T06:41:44Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-project-hub-site-codex/pull/37"
           }
         ]
       },
@@ -161,169 +161,7 @@
         },
         {
           "date": "2026-03-16",
-          "count": 10
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-idle-game-from-trimps-codex",
-      "owner": "kthss01",
-      "repo": "mini-idle-game-from-trimps-codex",
-      "title": "mini-idle-game-from-trimps-codex",
-      "html_url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
-      "description": "",
-      "homepage": "",
-      "default_branch": "develop",
-      "updated_at": "2026-03-13T07:24:43Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
-      "demoUrl": "",
-      "has_pages": true,
-      "github_pages_url": "https://kthss01.github.io/mini-idle-game-from-trimps-codex/",
-      "deployment_url": "",
-      "total_commits": 1361,
-      "recent_commits": [
-        {
-          "sha": "9b27c05",
-          "message": "Merge pull request #1 from kthss01/codex/create-development-plan-for-trimps-project",
-          "author": "kthss01",
-          "date_iso": "2026-03-13T07:24:38Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/9b27c0521c610b29db7cb01837be8194f78e9b71"
-        },
-        {
-          "sha": "37b65f0",
-          "message": "Add detailed Trimps development roadmap",
-          "author": "kthss01",
-          "date_iso": "2026-03-13T07:24:27Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/37b65f0e2e5a7eb7d7189bea45e3248a10ed570d"
-        },
-        {
-          "sha": "b9edb1d",
-          "message": "Merge pull request #308 from Trimps/dev",
-          "author": "Trimps",
-          "date_iso": "2025-03-12T22:14:28Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/b9edb1dfee270ebf81bef8d934dc71276bf8d963"
-        },
-        {
-          "sha": "b6f32eb",
-          "message": "Merge pull request #307 from SadAugust/fast-attack-bugfix",
-          "author": "Trimps",
-          "date_iso": "2025-03-12T22:10:04Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/b6f32eb882bbd2a5933043ba764d7ec0b29cb71a"
-        },
-        {
-          "sha": "1ff7d69",
-          "message": "fix fast attack map special",
-          "author": "SadAugust",
-          "date_iso": "2025-03-12T22:04:14Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/1ff7d69e778fb42d9352e0cadad4fc6e9a987d5c"
-        },
-        {
-          "sha": "660bbce",
-          "message": "Merge pull request #306 from Trimps/dev",
-          "author": "Trimps",
-          "date_iso": "2025-03-08T20:25:03Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/660bbce87126c662a69dc9597ce9dea197d1b549"
-        },
-        {
-          "sha": "8db1612",
-          "message": "Merge pull request #304 from Quiaaaa/master",
-          "author": "Trimps",
-          "date_iso": "2025-03-08T20:20:45Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/8db1612691065169fa66f4f9523cd9e8a5fb7113"
-        },
-        {
-          "sha": "5623932",
-          "message": "Merge pull request #303 from SadAugust/fix-nurture-void-chance-bug",
-          "author": "Trimps",
-          "date_iso": "2025-03-08T20:19:41Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/56239327fa7302b049314640ba2de4f78fb63a58"
-        },
-        {
-          "sha": "37dd967",
-          "message": "extremely small fixes",
-          "author": "Quiaaaa",
-          "date_iso": "2025-03-03T05:39:22Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/37dd9678a6e6426e1c66ea87768fb15c48ec464f"
-        },
-        {
-          "sha": "70ae85c",
-          "message": "Nurture VMDC bugfix",
-          "author": "SadAugust",
-          "date_iso": "2025-02-25T22:09:02Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/70ae85c894d4373ec954fb4dd8f039d9635c5a03"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 13,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 9,
-            "title": "feat(i18n): extend Korean localization for Bone Trader UI",
-            "merged_at": "2026-03-13T07:57:19Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/9"
-          },
-          {
-            "number": 7,
-            "title": "docs: add dedicated save/load and migration guide",
-            "merged_at": "2026-03-13T07:51:31Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/7"
-          },
-          {
-            "number": 8,
-            "title": "feat(i18n): localize additional Bone Trader UI strings",
-            "merged_at": "2026-03-13T07:50:45Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/8"
-          },
-          {
-            "number": 6,
-            "title": "docs: add initial Trimps architecture analysis deliverables",
-            "merged_at": "2026-03-13T07:42:30Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/6"
-          },
-          {
-            "number": 5,
-            "title": "Add i18n locale validation script and update localization workflow/docs",
-            "merged_at": "2026-03-13T07:42:25Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/5"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-10",
-          "count": 0
-        },
-        {
-          "date": "2026-03-11",
-          "count": 0
-        },
-        {
-          "date": "2026-03-12",
-          "count": 0
-        },
-        {
-          "date": "2026-03-13",
-          "count": 2
-        },
-        {
-          "date": "2026-03-14",
-          "count": 0
-        },
-        {
-          "date": "2026-03-15",
-          "count": 0
-        },
-        {
-          "date": "2026-03-16",
-          "count": 0
+          "count": 13
         }
       ]
     },
@@ -336,15 +174,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-11T06:44:54Z",
+      "updated_at": "2026-03-16T07:10:05Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
       "deployment_url": "",
-      "total_commits": 48,
+      "total_commits": 49,
       "recent_commits": [
+        {
+          "sha": "8c03bcc",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-16T07:10:00Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/8c03bcc62a3c2c61a1bbd2e22be1f9c232029856"
+        },
         {
           "sha": "3fa896c",
           "message": "chore: sync doc data",
@@ -407,13 +252,6 @@
           "author": "kthss01",
           "date_iso": "2026-03-06T07:48:45Z",
           "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/d33b65f880603e62bc93f4dc3e155952ecc03863"
-        },
-        {
-          "sha": "9ba640a",
-          "message": "Merge pull request #19 from kthss01/codex/fix-github-action-ts2554-error",
-          "author": "kthss01",
-          "date_iso": "2026-03-06T07:33:50Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9ba640ae0c0915f264ab0861b29b34b20503c410"
         }
       ],
       "pull_requests": {
@@ -485,7 +323,169 @@
         },
         {
           "date": "2026-03-16",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "kthss01-mini-idle-game-from-trimps-codex",
+      "owner": "kthss01",
+      "repo": "mini-idle-game-from-trimps-codex",
+      "title": "mini-idle-game-from-trimps-codex",
+      "html_url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "develop",
+      "updated_at": "2026-03-16T06:57:02Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
+      "demoUrl": "",
+      "has_pages": true,
+      "github_pages_url": "https://kthss01.github.io/mini-idle-game-from-trimps-codex/",
+      "deployment_url": "",
+      "total_commits": 1380,
+      "recent_commits": [
+        {
+          "sha": "bd352b7",
+          "message": "Merge pull request #23 from kthss01/analysis/docs",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:56:56Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/bd352b71a0175a1f4e261e64ee699597d0f90bf3"
+        },
+        {
+          "sha": "78036c3",
+          "message": "Merge pull request #21 from kthss01/codex/establish-documentation-maintenance-policy",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:49:22Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/78036c3fc93b55cec3a2217cba6738d5a6f908b2"
+        },
+        {
+          "sha": "1622c46",
+          "message": "Add documentation governance policy and PR impact guidance",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:46:42Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/1622c4670caf4134d59951606b0aa89f1ce80894"
+        },
+        {
+          "sha": "620f4e6",
+          "message": "Merge pull request #19 from kthss01/codex/enhance-save_load_and_migration.md",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:43:58Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/620f4e6e5409b2bb2a06aa2f7fe4f64b3fd0f28c"
+        },
+        {
+          "sha": "13a25a7",
+          "message": "docs: close save/load migration TODO items",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:35:18Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/13a25a7c5a522aab2ca80d7512fd06cdda8b1d0d"
+        },
+        {
+          "sha": "860c279",
+          "message": "Merge pull request #18 from kthss01/codex/consistent-document-structure",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:31:42Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/860c27929268717400cc0a0767a8383d7ae14bb2"
+        },
+        {
+          "sha": "0d5c05b",
+          "message": "docs: reorganize documentation into docs/ 00-10 structure",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:25:06Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/0d5c05bbdee884d51b17c23d616c3777ad6150ae"
+        },
+        {
+          "sha": "8a9f8d3",
+          "message": "Merge pull request #16 from kthss01/codex/reorganize-readme.md-sections",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:20:52Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/8a9f8d32a537fe6117c2d4a758819e7a441ae221"
+        },
+        {
+          "sha": "a85cc3a",
+          "message": "docs: reorganize README with project/doc structure guidance",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:20:41Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/a85cc3ac5ce44ab8ccc6f73bcd66d918e8e1a44b"
+        },
+        {
+          "sha": "3964024",
+          "message": "Merge pull request #15 from kthss01/codex/continue-document-work-and-report-status",
+          "author": "kthss01",
+          "date_iso": "2026-03-16T06:09:28Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/3964024ba2feb10b429fc9e02644fd2029cbba64"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 28,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 28,
+            "title": "Add Korean localization backlog, expand i18n domains, and add domain DoD",
+            "merged_at": "2026-03-16T07:20:58Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/28"
+          },
+          {
+            "number": 27,
+            "title": "i18n: Localize map, challenge and Spire Assault user-facing strings",
+            "merged_at": "2026-03-16T07:14:50Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/27"
+          },
+          {
+            "number": 26,
+            "title": "Add Korean localization progress report (LOCALIZATION_KO_PROGRESS_REPORT.md)",
+            "merged_at": "2026-03-16T07:10:52Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/26"
+          },
+          {
+            "number": 25,
+            "title": "Add prioritized UI i18n keys and HTML-preserving i18n support for index and ScreenReader",
+            "merged_at": "2026-03-16T07:09:54Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/25"
+          },
+          {
+            "number": 24,
+            "title": "Add language selector to Settings and hook into i18n rerender flow",
+            "merged_at": "2026-03-16T06:57:32Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/24"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-10",
           "count": 0
+        },
+        {
+          "date": "2026-03-11",
+          "count": 0
+        },
+        {
+          "date": "2026-03-12",
+          "count": 0
+        },
+        {
+          "date": "2026-03-13",
+          "count": 10
+        },
+        {
+          "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 11
         }
       ]
     },
