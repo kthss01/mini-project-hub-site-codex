@@ -1,8 +1,134 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-17T06:07:48.396Z",
+  "generated_at": "2026-03-17T07:57:44.197Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-react-study-claude",
+      "owner": "kthss01",
+      "repo": "mini-react-study-claude",
+      "title": "mini-react-study-claude",
+      "html_url": "https://github.com/kthss01/mini-react-study-claude",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-17T06:45:48Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-react-study-claude",
+      "demoUrl": "",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 21,
+      "recent_commits": [
+        {
+          "sha": "f94ab06",
+          "message": "merge: ex03 state 학습 루프 완료",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:45:31Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/f94ab0664f0600cdbe9700f1792d0b82d6da13fc"
+        },
+        {
+          "sha": "b8d28df",
+          "message": "docs(ex03): useState 제네릭, 이벤트 타입, 함수형 업데이트 개념 정리",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:45:30Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/b8d28dff0c17aa0d0271c9ddc8d07283b0fe02ce"
+        },
+        {
+          "sha": "0d52e09",
+          "message": "refactor(ex03)",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:42:49Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/0d52e09690caa171535534cd71901cb45dfc3b9c"
+        },
+        {
+          "sha": "7b08265",
+          "message": "review(ex03): 반환 타입 미명시 및 NaN 처리 누락 피드백",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:32:02Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/7b082653e7f13a457147fc2b1f711044678739a5"
+        },
+        {
+          "sha": "2e869e4",
+          "message": "feat(ex03): Counter 컴포넌트 구현",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:27:41Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/2e869e46c37338b28b26ee4c04966ec1998027ea"
+        },
+        {
+          "sha": "bd96c38",
+          "message": "exercise(ex03): useState 제네릭과 이벤트 타입 명시 문제 추가",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T05:01:32Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/bd96c38b738b9c7b7e75634fcb66ab9c87d6f0a2"
+        },
+        {
+          "sha": "e365520",
+          "message": "merge: ex02 props 학습 루프 완료",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T05:00:27Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e365520445a7f828c7b3d574afc8c02cef76fc7a"
+        },
+        {
+          "sha": "aa94ecc",
+          "message": "docs(ex02): optional props, type alias vs interface, 조건부 렌더링 개념 정리",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T05:00:27Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/aa94ecccf915b7892d68849790880e268b91b14e"
+        },
+        {
+          "sha": "e45075f",
+          "message": "refactor(ex02)",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T04:59:17Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e45075f2bbe195b8cda46db6b9b3eabc115a61e9"
+        },
+        {
+          "sha": "2c58db5",
+          "message": "review(ex02): age falsy 체크 버그 및 && 조건부 렌더링 피드백",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T04:51:52Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/2c58db5574e655c6a5a305a81b6f6310ac9251ce"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-11",
+          "count": 0
+        },
+        {
+          "date": "2026-03-12",
+          "count": 0
+        },
+        {
+          "date": "2026-03-13",
+          "count": 0
+        },
+        {
+          "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 0
+        },
+        {
+          "date": "2026-03-17",
+          "count": 21
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-idle-game-from-trimps-codex",
       "owner": "kthss01",
@@ -12,15 +138,36 @@
       "description": "",
       "homepage": "",
       "default_branch": "develop",
-      "updated_at": "2026-03-17T05:34:36Z",
+      "updated_at": "2026-03-17T06:30:41Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-idle-game-from-trimps-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-idle-game-from-trimps-codex/",
       "deployment_url": "",
-      "total_commits": 1444,
+      "total_commits": 1447,
       "recent_commits": [
+        {
+          "sha": "f564ed0",
+          "message": "Merge pull request #50 from kthss01/feature/localization-prep",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:30:36Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/f564ed00c68a41543bffbdd8f2e911cc1990044b"
+        },
+        {
+          "sha": "0f35fdd",
+          "message": "Merge pull request #49 from kthss01/codex/localize-hardcoded-english-text",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:29:03Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/0f35fdd7dc92e60dd6a11bbb6031216bcba1de2b"
+        },
+        {
+          "sha": "5dffb18",
+          "message": "한글 UI 하드코딩 문자열 추가 현지화",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:28:52Z",
+          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/5dffb18e135b45101a563affb603b4f4272591a8"
+        },
         {
           "sha": "fadc979",
           "message": "Merge pull request #48 from kthss01/analysis/docs",
@@ -69,34 +216,34 @@
           "author": "kthss01",
           "date_iso": "2026-03-17T04:59:58Z",
           "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/2fd78a6c65db5eb2147422829db2a2b9104fdbef"
-        },
-        {
-          "sha": "a187f3c",
-          "message": "docs: add Korean untranslated coverage audit",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:59:49Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/a187f3cf919a55e62f4246f517cf2470aa35ea9d"
-        },
-        {
-          "sha": "5b67349",
-          "message": "Merge pull request #43 from kthss01/codex/verify-untranslated-sections",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:33:50Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/5b67349469c56ed461dceb5c21b4097ed247bafa"
-        },
-        {
-          "sha": "36c955f",
-          "message": "Refine Korean screen reader guidance translations",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:33:39Z",
-          "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/commit/36c955f2deff74d278186f58420e722a65b386e0"
         }
       ],
       "pull_requests": {
-        "total_count": 48,
+        "total_count": 51,
         "open_count": 0,
         "open": [],
         "recently_merged": [
+          {
+            "number": 51,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T07:15:21Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/51"
+          },
+          {
+            "number": 50,
+            "title": "Feature/localization prep",
+            "merged_at": "2026-03-17T06:30:36Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/50"
+          },
+          {
+            "number": 49,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T06:29:03Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/49"
+          },
           {
             "number": 48,
             "title": "Analysis/docs",
@@ -110,27 +257,6 @@
             "merged_at": "2026-03-17T05:34:03Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/47"
-          },
-          {
-            "number": 45,
-            "title": "Codex-generated pull request",
-            "merged_at": "2026-03-17T05:33:31Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/45"
-          },
-          {
-            "number": 46,
-            "title": "Codex-generated pull request",
-            "merged_at": "2026-03-17T05:33:28Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/46"
-          },
-          {
-            "number": 44,
-            "title": "Codex-generated pull request",
-            "merged_at": "2026-03-17T04:59:58Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/44"
           }
         ]
       },
@@ -161,133 +287,7 @@
         },
         {
           "date": "2026-03-17",
-          "count": 24
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-react-study-claude",
-      "owner": "kthss01",
-      "repo": "mini-react-study-claude",
-      "title": "mini-react-study-claude",
-      "html_url": "https://github.com/kthss01/mini-react-study-claude",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-17T05:00:40Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-react-study-claude",
-      "demoUrl": "",
-      "has_pages": false,
-      "github_pages_url": "",
-      "deployment_url": "",
-      "total_commits": 15,
-      "recent_commits": [
-        {
-          "sha": "e365520",
-          "message": "merge: ex02 props 학습 루프 완료",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T05:00:27Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e365520445a7f828c7b3d574afc8c02cef76fc7a"
-        },
-        {
-          "sha": "aa94ecc",
-          "message": "docs(ex02): optional props, type alias vs interface, 조건부 렌더링 개념 정리",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T05:00:27Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/aa94ecccf915b7892d68849790880e268b91b14e"
-        },
-        {
-          "sha": "e45075f",
-          "message": "refactor(ex02)",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:59:17Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e45075f2bbe195b8cda46db6b9b3eabc115a61e9"
-        },
-        {
-          "sha": "2c58db5",
-          "message": "review(ex02): age falsy 체크 버그 및 && 조건부 렌더링 피드백",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:51:52Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/2c58db5574e655c6a5a305a81b6f6310ac9251ce"
-        },
-        {
-          "sha": "0a8913d",
-          "message": "feat(ex02): UserCard 컴포넌트 구현",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:47:13Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/0a8913d876693c6c3afc761dc9b65931608f226d"
-        },
-        {
-          "sha": "73299de",
-          "message": "exercise(ex02): optional props와 type alias 학습 문제 추가",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:21:33Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/73299defea7451cbcb28754da50d0a0841330b0a"
-        },
-        {
-          "sha": "bf22631",
-          "message": "merge: ex01 hello-tsx 학습 루프 완료",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T02:21:14Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/bf22631ad287969e1ff7651b25bf61ae22a33d56"
-        },
-        {
-          "sha": "761e768",
-          "message": "docs(ex01): JSX/TSX, 함수형 컴포넌트, Props 타입 개념 정리",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T02:21:14Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/761e7681caf50a6e672e40215b5deb5577a4a728"
-        },
-        {
-          "sha": "33eb7e3",
-          "message": "refactor(ex01)",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T02:19:32Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/33eb7e3c4a4ddae6a074b13c56f1eb9525ecf34d"
-        },
-        {
-          "sha": "7f08282",
-          "message": "review(ex01): 반환 타입 미명시 및 파일 위치 피드백",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T02:12:11Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/7f08282e1c94650ca291659780007dc943f42ce4"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 0,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": []
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-11",
-          "count": 0
-        },
-        {
-          "date": "2026-03-12",
-          "count": 0
-        },
-        {
-          "date": "2026-03-13",
-          "count": 0
-        },
-        {
-          "date": "2026-03-14",
-          "count": 0
-        },
-        {
-          "date": "2026-03-15",
-          "count": 0
-        },
-        {
-          "date": "2026-03-16",
-          "count": 0
-        },
-        {
-          "date": "2026-03-17",
-          "count": 15
+          "count": 27
         }
       ]
     },
@@ -300,15 +300,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-17T04:58:26Z",
+      "updated_at": "2026-03-17T06:07:52Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 551,
+      "total_commits": 552,
       "recent_commits": [
+        {
+          "sha": "3c43c84",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-17T06:07:48Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3c43c840f63809845cbde068483ca15f5e31fbef"
+        },
         {
           "sha": "9eb5838",
           "message": "chore(data): refresh project cache",
@@ -371,13 +378,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-16T15:09:27Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/766719418fc21d77f782046b9ca08f8c412e6f5a"
-        },
-        {
-          "sha": "d61d134",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-16T13:43:06Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/d61d13457c1045095f4c9d3f57984a382b194a8c"
         }
       ],
       "pull_requests": {
@@ -449,7 +449,7 @@
         },
         {
           "date": "2026-03-17",
-          "count": 9
+          "count": 10
         }
       ]
     },
