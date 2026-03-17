@@ -1,8 +1,92 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-16T23:37:06.029Z",
+  "generated_at": "2026-03-17T02:43:32.648Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-react-study-claude",
+      "owner": "kthss01",
+      "repo": "mini-react-study-claude",
+      "title": "mini-react-study-claude",
+      "html_url": "https://github.com/kthss01/mini-react-study-claude",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-17T01:53:14Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-react-study-claude",
+      "demoUrl": "",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 4,
+      "recent_commits": [
+        {
+          "sha": "4dcf80a",
+          "message": "Merge branch 'ex01-hello-tsx'",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T01:52:46Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/4dcf80a97364b518070c8157acb1de73f988c54c"
+        },
+        {
+          "sha": "7645d31",
+          "message": "init vite project",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T01:51:08Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/7645d31ac0d6d549b9029eb260dba0ae976010dd"
+        },
+        {
+          "sha": "41dd1f5",
+          "message": "exercise(ex01): JSX 기본 문법과 함수형 컴포넌트 작성 문제 추가",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T01:41:39Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/41dd1f55b848bb678af6e9e027e3019a814d95fb"
+        },
+        {
+          "sha": "dae9ea6",
+          "message": "init project",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T01:39:29Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/dae9ea61e1a940e560f5a73f8f88ff0d0de8f937"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-11",
+          "count": 0
+        },
+        {
+          "date": "2026-03-12",
+          "count": 0
+        },
+        {
+          "date": "2026-03-13",
+          "count": 0
+        },
+        {
+          "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 0
+        },
+        {
+          "date": "2026-03-17",
+          "count": 4
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +96,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-16T22:41:33Z",
+      "updated_at": "2026-03-16T23:37:09Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 548,
+      "total_commits": 549,
       "recent_commits": [
+        {
+          "sha": "0fc7550",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-16T23:37:06Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/0fc7550ca6866fcb75c418096fee7d39b8cf1448"
+        },
         {
           "sha": "c983ed2",
           "message": "chore(data): refresh project cache",
@@ -83,13 +174,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-16T09:06:17Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/da0037594eb45b1967a728276e8da62a3842719c"
-        },
-        {
-          "sha": "2e3029b",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-16T07:41:25Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/2e3029bf041e1c671cd4fad486848659afdd2ab1"
         }
       ],
       "pull_requests": {
@@ -161,7 +245,7 @@
         },
         {
           "date": "2026-03-17",
-          "count": 6
+          "count": 7
         }
       ]
     },
@@ -572,44 +656,44 @@
         }
       ],
       "pull_requests": {
-        "total_count": 35,
+        "total_count": 40,
         "open_count": 0,
         "open": [],
         "recently_merged": [
           {
-            "number": 35,
-            "title": "docs: add Korean localization progress, gameplay-first priorities, and merge readiness",
-            "merged_at": "2026-03-16T08:07:20Z",
+            "number": 40,
+            "title": "i18n(ko): translate remaining unknown perks label",
+            "merged_at": "2026-03-17T02:10:09Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/35"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/40"
           },
           {
-            "number": 34,
-            "title": "Improve i18n extraction and validation coverage for KO localization sprints",
-            "merged_at": "2026-03-16T08:01:26Z",
+            "number": 39,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T01:54:09Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/34"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/39"
           },
           {
-            "number": 33,
-            "title": "docs: formalize KO localization domain workflow and release gates",
-            "merged_at": "2026-03-16T07:55:10Z",
+            "number": 38,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T01:45:27Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/33"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/38"
           },
           {
-            "number": 32,
-            "title": "Add attribute-level i18n mapping for map/ARIA strings",
-            "merged_at": "2026-03-16T07:51:19Z",
+            "number": 37,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T01:26:27Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/32"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/37"
           },
           {
-            "number": 31,
-            "title": "Localize Spire preset and settings UI strings",
-            "merged_at": "2026-03-16T07:45:28Z",
+            "number": 36,
+            "title": "Codex-generated pull request",
+            "merged_at": "2026-03-17T01:11:47Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/31"
+            "url": "https://github.com/kthss01/mini-idle-game-from-trimps-codex/pull/36"
           }
         ]
       },
