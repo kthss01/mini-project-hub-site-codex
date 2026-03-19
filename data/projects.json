@@ -1,8 +1,134 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-03-18T23:36:35.281Z",
+  "generated_at": "2026-03-19T02:51:42.294Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-react-study-claude",
+      "owner": "kthss01",
+      "repo": "mini-react-study-claude",
+      "title": "mini-react-study-claude",
+      "html_url": "https://github.com/kthss01/mini-react-study-claude",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-03-19T01:46:06Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-react-study-claude",
+      "demoUrl": "",
+      "has_pages": false,
+      "github_pages_url": "",
+      "deployment_url": "",
+      "total_commits": 28,
+      "recent_commits": [
+        {
+          "sha": "7e9f074",
+          "message": "Merge branch 'ex04-children'",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:45:47Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/7e9f0742a6b5e1651c26a3c16cb21d33a70011f0"
+        },
+        {
+          "sha": "d5524fc",
+          "message": "docs(ex04): ReactNode, children props, 컴포넌트 합성 패턴 개념 정리",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:45:19Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/d5524fcc2a95d3e888f55c53a43070ebcc64d009"
+        },
+        {
+          "sha": "6a6fdd1",
+          "message": "refactor(ex04)",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:44:06Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/6a6fdd109c78c7272ae4a0abb834b0612d91ea5a"
+        },
+        {
+          "sha": "ec1c464",
+          "message": "refactor(ex04)",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:33:20Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/ec1c4640e083bfb3312fd84e9aab5959fb8c0ab0"
+        },
+        {
+          "sha": "e81b59f",
+          "message": "review(ex04): 중복 조건부 렌더링 및 불필요한 이벤트 매개변수 피드백",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:29:32Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e81b59f24d250726f7297f2b202faf4e06042cfd"
+        },
+        {
+          "sha": "b0ae94c",
+          "message": "feat(04): Modal 컴포넌트 구현",
+          "author": "kthss01",
+          "date_iso": "2026-03-19T01:25:04Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/b0ae94cf5970608df8fe4141885281255da67f7e"
+        },
+        {
+          "sha": "87a6c38",
+          "message": "exercise(ex04): children props와 컴포넌트 합성 패턴 문제 추가",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:53:06Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/87a6c382bbecdd542433bf943a4fc94af1e78cda"
+        },
+        {
+          "sha": "f94ab06",
+          "message": "merge: ex03 state 학습 루프 완료",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:45:31Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/f94ab0664f0600cdbe9700f1792d0b82d6da13fc"
+        },
+        {
+          "sha": "b8d28df",
+          "message": "docs(ex03): useState 제네릭, 이벤트 타입, 함수형 업데이트 개념 정리",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:45:30Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/b8d28dff0c17aa0d0271c9ddc8d07283b0fe02ce"
+        },
+        {
+          "sha": "0d52e09",
+          "message": "refactor(ex03)",
+          "author": "kthss01",
+          "date_iso": "2026-03-17T06:42:49Z",
+          "url": "https://github.com/kthss01/mini-react-study-claude/commit/0d52e09690caa171535534cd71901cb45dfc3b9c"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 0,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": []
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-03-13",
+          "count": 0
+        },
+        {
+          "date": "2026-03-14",
+          "count": 0
+        },
+        {
+          "date": "2026-03-15",
+          "count": 0
+        },
+        {
+          "date": "2026-03-16",
+          "count": 0
+        },
+        {
+          "date": "2026-03-17",
+          "count": 22
+        },
+        {
+          "date": "2026-03-18",
+          "count": 0
+        },
+        {
+          "date": "2026-03-19",
+          "count": 6
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +138,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-03-18T22:39:04Z",
+      "updated_at": "2026-03-18T23:36:39Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 577,
+      "total_commits": 578,
       "recent_commits": [
+        {
+          "sha": "ffa80e0",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-03-18T23:36:35Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ffa80e0c63adb87885c6d9b587f0cf3190a25c87"
+        },
         {
           "sha": "c22d33e",
           "message": "chore(data): refresh project cache",
@@ -83,13 +216,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-03-18T10:06:24Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/0d40a768b666c2bc2ab6b3064fcbad1f3861a9ac"
-        },
-        {
-          "sha": "69abcb4",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-03-18T08:59:15Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/69abcb42ccc336b42c3600f9a50f8ee552c22a0e"
         }
       ],
       "pull_requests": {
@@ -161,7 +287,7 @@
         },
         {
           "date": "2026-03-19",
-          "count": 6
+          "count": 7
         }
       ]
     },
@@ -320,132 +446,6 @@
         {
           "date": "2026-03-18",
           "count": 1
-        },
-        {
-          "date": "2026-03-19",
-          "count": 0
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-react-study-claude",
-      "owner": "kthss01",
-      "repo": "mini-react-study-claude",
-      "title": "mini-react-study-claude",
-      "html_url": "https://github.com/kthss01/mini-react-study-claude",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-03-17T06:45:48Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-react-study-claude",
-      "demoUrl": "",
-      "has_pages": false,
-      "github_pages_url": "",
-      "deployment_url": "",
-      "total_commits": 21,
-      "recent_commits": [
-        {
-          "sha": "f94ab06",
-          "message": "merge: ex03 state 학습 루프 완료",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T06:45:31Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/f94ab0664f0600cdbe9700f1792d0b82d6da13fc"
-        },
-        {
-          "sha": "b8d28df",
-          "message": "docs(ex03): useState 제네릭, 이벤트 타입, 함수형 업데이트 개념 정리",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T06:45:30Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/b8d28dff0c17aa0d0271c9ddc8d07283b0fe02ce"
-        },
-        {
-          "sha": "0d52e09",
-          "message": "refactor(ex03)",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T06:42:49Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/0d52e09690caa171535534cd71901cb45dfc3b9c"
-        },
-        {
-          "sha": "7b08265",
-          "message": "review(ex03): 반환 타입 미명시 및 NaN 처리 누락 피드백",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T06:32:02Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/7b082653e7f13a457147fc2b1f711044678739a5"
-        },
-        {
-          "sha": "2e869e4",
-          "message": "feat(ex03): Counter 컴포넌트 구현",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T06:27:41Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/2e869e46c37338b28b26ee4c04966ec1998027ea"
-        },
-        {
-          "sha": "bd96c38",
-          "message": "exercise(ex03): useState 제네릭과 이벤트 타입 명시 문제 추가",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T05:01:32Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/bd96c38b738b9c7b7e75634fcb66ab9c87d6f0a2"
-        },
-        {
-          "sha": "e365520",
-          "message": "merge: ex02 props 학습 루프 완료",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T05:00:27Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e365520445a7f828c7b3d574afc8c02cef76fc7a"
-        },
-        {
-          "sha": "aa94ecc",
-          "message": "docs(ex02): optional props, type alias vs interface, 조건부 렌더링 개념 정리",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T05:00:27Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/aa94ecccf915b7892d68849790880e268b91b14e"
-        },
-        {
-          "sha": "e45075f",
-          "message": "refactor(ex02)",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:59:17Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/e45075f2bbe195b8cda46db6b9b3eabc115a61e9"
-        },
-        {
-          "sha": "2c58db5",
-          "message": "review(ex02): age falsy 체크 버그 및 && 조건부 렌더링 피드백",
-          "author": "kthss01",
-          "date_iso": "2026-03-17T04:51:52Z",
-          "url": "https://github.com/kthss01/mini-react-study-claude/commit/2c58db5574e655c6a5a305a81b6f6310ac9251ce"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 0,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": []
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-03-13",
-          "count": 0
-        },
-        {
-          "date": "2026-03-14",
-          "count": 0
-        },
-        {
-          "date": "2026-03-15",
-          "count": 0
-        },
-        {
-          "date": "2026-03-16",
-          "count": 0
-        },
-        {
-          "date": "2026-03-17",
-          "count": 21
-        },
-        {
-          "date": "2026-03-18",
-          "count": 0
         },
         {
           "date": "2026-03-19",
