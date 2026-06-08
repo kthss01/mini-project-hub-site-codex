@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-08T05:57:47.152Z",
+  "generated_at": "2026-06-08T11:16:17.078Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-06-08T03:28:02Z",
+      "updated_at": "2026-06-08T10:26:27Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
       "deployment_url": "",
-      "total_commits": 77,
+      "total_commits": 78,
       "recent_commits": [
+        {
+          "sha": "9e6dad6",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-06-08T10:26:22Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9e6dad6cb24fffc0a5c5d7bd652e9bda9f9a19d6"
+        },
         {
           "sha": "b1414c0",
           "message": "chore: sync doc data",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-05-22T08:53:52Z",
           "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/c3c90a5e30045eea7bf13efa7204fbd94152d246"
-        },
-        {
-          "sha": "1061e1e",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-05-20T02:45:36Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/1061e1e84ed6e88bd0f7f9dd9db29f6dffdabf2e"
         }
       ],
       "pull_requests": {
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-06-08",
-          "count": 1
+          "count": 2
         }
       ]
     },
@@ -174,15 +174,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-06-08T00:16:40Z",
+      "updated_at": "2026-06-08T05:57:51Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 1535,
+      "total_commits": 1536,
       "recent_commits": [
+        {
+          "sha": "c682e1b",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-06-08T05:57:47Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c682e1bccb4e0edbbdfea964deff2e3475238bee"
+        },
         {
           "sha": "fb1921f",
           "message": "chore(data): refresh project cache",
@@ -245,13 +252,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-06-07T05:43:39Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/21a94a13eb2b02cc303ff75c7d3a037801a1e989"
-        },
-        {
-          "sha": "ba3d0a6",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-06-07T00:11:33Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ba3d0a6714ce1aa76728944719a831c1b653fcf6"
         }
       ],
       "pull_requests": {
@@ -323,7 +323,7 @@
         },
         {
           "date": "2026-06-08",
-          "count": 5
+          "count": 6
         }
       ]
     },
