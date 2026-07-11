@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-11T10:20:04.595Z",
+  "generated_at": "2026-07-11T11:57:00.921Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-07-11T08:52:06Z",
+      "updated_at": "2026-07-11T10:20:16Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 1791,
+      "total_commits": 1792,
       "recent_commits": [
+        {
+          "sha": "635a627",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-07-11T10:20:04Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/635a627d79d58e9a01a0d6abe7f0484100dc244d"
+        },
         {
           "sha": "62b0682",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-07-10T12:01:02Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/9ce90b6e763b22b291a3e9c7750a211a6ab76a18"
-        },
-        {
-          "sha": "16e4405",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-07-10T08:30:40Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/16e44056dbb681abad6744ecbe3288be97c9484c"
         }
       ],
       "pull_requests": {
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-07-11",
-          "count": 8
+          "count": 9
         }
       ]
     },
