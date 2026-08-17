@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-17T15:31:41.671Z",
+  "generated_at": "2026-08-17T16:34:30.415Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-08-17T14:34:47Z",
+      "updated_at": "2026-08-17T15:31:46Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2231,
+      "total_commits": 2232,
       "recent_commits": [
+        {
+          "sha": "ba9ea6b",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-08-17T15:31:41Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/ba9ea6b1fc8148b3d58770ccd77e4957d36df3f3"
+        },
         {
           "sha": "5b94094",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-08-17T05:39:37Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/29ef13d8aecca14572f35653e9f0142e0aea5bae"
-        },
-        {
-          "sha": "64ae92f",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-17T04:50:26Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/64ae92f8fcdf03cfcef0d5b553e7dda1cb57cc07"
         }
       ],
       "pull_requests": {
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-08-18",
-          "count": 0
+          "count": 1
         }
       ]
     },
@@ -1501,10 +1501,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-08-11",
-          "count": 0
-        },
-        {
           "date": "2026-08-12",
           "count": 0
         },
@@ -1526,6 +1522,10 @@
         },
         {
           "date": "2026-08-17",
+          "count": 0
+        },
+        {
+          "date": "2026-08-18",
           "count": 0
         }
       ]
