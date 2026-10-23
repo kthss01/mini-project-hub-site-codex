@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23T14:50:32.099Z",
+  "generated_at": "2026-10-23T19:00:51.598Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,29 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-23T13:17:51Z",
+      "updated_at": "2026-10-23T16:09:21Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-danmaku-ai-claude",
       "demoUrl": "",
       "has_pages": false,
       "github_pages_url": "",
       "deployment_url": "",
-      "total_commits": 36,
+      "total_commits": 38,
       "recent_commits": [
+        {
+          "sha": "fd6f865",
+          "message": "fix: Windows 포트 중복 바인딩 시 serve-web 종료 코드 3 보장 (#18)",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T16:09:16Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/fd6f8659b945dcb7fcf1832f1e734585345477f0"
+        },
+        {
+          "sha": "b307708",
+          "message": "fix: Windows에서 이미 사용 중인 포트에 serve-web이 중복 바인딩하던 문제 수정 (#7)",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T16:05:42Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/b307708dea583ee3fc5b401696028eb7a323f826"
+        },
         {
           "sha": "6e77995",
           "message": "fix: 검사기 동적 로더 추적과 공식 산출물 재검증 (#16)",
@@ -76,24 +90,10 @@
           "author": "kthss01",
           "date_iso": "2026-10-23T13:02:35Z",
           "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/2ce08a320533ce53989aa5f8b38f2e44dd7382fd"
-        },
-        {
-          "sha": "7e19317",
-          "message": "fix: 검사기가 셸의 동적 로더를 따라가도록 수정하고 공식 산출물 검증 기록 (#7)",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T12:41:50Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/7e193174ff3bdde3b71c3db2fcc45e24ad9d7954"
-        },
-        {
-          "sha": "4f6686f",
-          "message": "docs: f59212b7 공식 웹 빌드·서빙 검사·브라우저 진입 결과 기록",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T12:37:41Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/4f6686f9c875187f47e5646b607092159cbfded7"
         }
       ],
       "pull_requests": {
-        "total_count": 10,
+        "total_count": 11,
         "open_count": 1,
         "open": [
           {
@@ -101,11 +101,18 @@
             "title": "test: 웹 통합 QA 수행·탐색 기록·최종 문서 (#8 후속)",
             "author": "kthss01",
             "created_at": "2026-10-23T11:55:33Z",
-            "updated_at": "2026-10-23T13:10:51Z",
+            "updated_at": "2026-10-23T16:11:04Z",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/14"
           }
         ],
         "recently_merged": [
+          {
+            "number": 18,
+            "title": "fix: Windows 포트 중복 바인딩 시 serve-web 종료 코드 3 보장 (#7)",
+            "merged_at": "2026-10-23T16:09:16Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/18"
+          },
           {
             "number": 16,
             "title": "fix: 검사기 동적 로더 추적과 공식 산출물 재검증 (#7)",
@@ -133,21 +140,10 @@
             "merged_at": "2026-10-23T12:21:28Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/13"
-          },
-          {
-            "number": 11,
-            "title": "[세션1] Emscripten 웹 빌드 자동화와 산출물 계약",
-            "merged_at": "2026-10-23T12:24:49Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/11"
           }
         ]
       },
       "activity_last_7_days": [
-        {
-          "date": "2026-10-17",
-          "count": 0
-        },
         {
           "date": "2026-10-18",
           "count": 0
@@ -171,6 +167,10 @@
         {
           "date": "2026-10-23",
           "count": 36
+        },
+        {
+          "date": "2026-10-24",
+          "count": 2
         }
       ]
     },
@@ -183,15 +183,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-23T09:52:34Z",
+      "updated_at": "2026-10-23T14:50:37Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2720,
+      "total_commits": 2721,
       "recent_commits": [
+        {
+          "sha": "a26c32d",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-23T14:50:32Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a26c32d21f259a9b8c769f7235722a66a840cb10"
+        },
         {
           "sha": "e29c0b3",
           "message": "chore(data): refresh project cache",
@@ -254,13 +261,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-10-21T20:00:21Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/71fab64d71b73a744817b5beabf60c28063f2e70"
-        },
-        {
-          "sha": "c96b082",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-21T15:03:36Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c96b0828270a49e0262e1bf852196c9e8f891c45"
         }
       ],
       "pull_requests": {
@@ -307,10 +307,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 6
-        },
-        {
           "date": "2026-10-18",
           "count": 7
         },
@@ -332,7 +328,11 @@
         },
         {
           "date": "2026-10-23",
-          "count": 5
+          "count": 6
+        },
+        {
+          "date": "2026-10-24",
+          "count": 0
         }
       ]
     },
@@ -469,10 +469,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -494,6 +490,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -595,10 +595,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -620,6 +616,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -757,10 +757,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -782,6 +778,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -912,10 +912,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -937,6 +933,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1038,10 +1038,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1063,6 +1059,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1200,10 +1200,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1225,6 +1221,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1362,10 +1362,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1387,6 +1383,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1524,10 +1524,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1549,6 +1545,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1672,10 +1672,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1697,6 +1693,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1834,10 +1834,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -1859,6 +1855,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -1982,10 +1982,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -2007,6 +2003,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -2144,10 +2144,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -2169,6 +2165,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
@@ -2306,10 +2306,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-17",
-          "count": 0
-        },
-        {
           "date": "2026-10-18",
           "count": 0
         },
@@ -2331,6 +2327,10 @@
         },
         {
           "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
           "count": 0
         }
       ]
