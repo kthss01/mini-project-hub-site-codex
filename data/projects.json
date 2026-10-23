@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-23T19:00:51.598Z",
+  "generated_at": "2026-10-23T22:59:22.044Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,15 +12,43 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-23T16:09:21Z",
+      "updated_at": "2026-10-23T22:10:39Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-danmaku-ai-claude",
       "demoUrl": "",
       "has_pages": false,
       "github_pages_url": "",
       "deployment_url": "",
-      "total_commits": 38,
+      "total_commits": 42,
       "recent_commits": [
+        {
+          "sha": "acf9b62",
+          "message": "Merge pull request #25: setup-taisei CRLF 정리로 빌드 출처 dirty 해소 (#4)",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T22:07:29Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/acf9b6253f35884888a0a1928d8afc1c3a98970c"
+        },
+        {
+          "sha": "4878f9b",
+          "message": "test: 웹 통합 공식 QA와 최종 문서 (#8) (#14)",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T21:57:09Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/4878f9b159d379774ab6fd978887800a473da05b"
+        },
+        {
+          "sha": "1d74903",
+          "message": "fix: 줄바꿈 정리를 내용 검증 후 제자리 재작성으로 바꿔 사용자 수정 보호",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T21:53:41Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/1d749030b9f7293c8636c3e0e3e16a2dcb77dd58"
+        },
+        {
+          "sha": "043c4cb",
+          "message": "fix: setup-taisei가 CRLF 체크아웃을 LF로 정리해 빌드 출처 dirty 해소",
+          "author": "kthss01",
+          "date_iso": "2026-10-23T21:28:32Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/043c4cb9fd45fcb6044441ca3de306e9c3d59451"
+        },
         {
           "sha": "fd6f865",
           "message": "fix: Windows 포트 중복 바인딩 시 serve-web 종료 코드 3 보장 (#18)",
@@ -62,50 +90,27 @@
           "author": "kthss01",
           "date_iso": "2026-10-23T13:10:22Z",
           "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/3fbe736c49be5f5bf4709990694bdc84785f4ce9"
-        },
-        {
-          "sha": "3589177",
-          "message": "docs(web): 즉시 실패·1회 요청 표현을 필수 리소스 HTTP 404 시나리오로 한정 (#6)",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T13:09:52Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/35891770c45624537d04239ae64202e6db9bf487"
-        },
-        {
-          "sha": "fd9e00e",
-          "message": "Merge pull request #15: Taisei gitlink f59212b7 갱신과 공식 웹 빌드 결과 (#4)",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T13:04:07Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/fd9e00ea087f2b4f3606755ddace7f5bc2f8c00c"
-        },
-        {
-          "sha": "a6d6e96",
-          "message": "docs: BUILD.md 이전 고정값 문단을 도구 표 아래로 이동",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T13:03:16Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/a6d6e964a331d2cb33bcae6d2c7b81b45bb07174"
-        },
-        {
-          "sha": "2ce08a3",
-          "message": "docs(web): 공식 산출물과 세션 4 서버로 셸 통합 검증 결과 기록 (#6)",
-          "author": "kthss01",
-          "date_iso": "2026-10-23T13:02:35Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/2ce08a320533ce53989aa5f8b38f2e44dd7382fd"
         }
       ],
       "pull_requests": {
-        "total_count": 11,
-        "open_count": 1,
-        "open": [
+        "total_count": 12,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 25,
+            "title": "[세션1] setup-taisei CRLF 정리로 빌드 출처 dirty 해소 (#4)",
+            "merged_at": "2026-10-23T22:07:29Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/25"
+          },
           {
             "number": 14,
-            "title": "test: 웹 통합 QA 수행·탐색 기록·최종 문서 (#8 후속)",
+            "title": "test: 웹 통합 공식 QA와 최종 문서 (#8)",
+            "merged_at": "2026-10-23T21:57:09Z",
             "author": "kthss01",
-            "created_at": "2026-10-23T11:55:33Z",
-            "updated_at": "2026-10-23T16:11:04Z",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/14"
-          }
-        ],
-        "recently_merged": [
+          },
           {
             "number": 18,
             "title": "fix: Windows 포트 중복 바인딩 시 serve-web 종료 코드 3 보장 (#7)",
@@ -126,20 +131,6 @@
             "merged_at": "2026-10-23T13:10:22Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/17"
-          },
-          {
-            "number": 15,
-            "title": "[세션1] Taisei gitlink f59212b7 갱신과 공식 웹 빌드 결과",
-            "merged_at": "2026-10-23T13:04:07Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/15"
-          },
-          {
-            "number": 13,
-            "title": "docs: 웹 런타임 호환성·입력·저장 조사 결과 (#5)",
-            "merged_at": "2026-10-23T12:21:28Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/13"
           }
         ]
       },
@@ -170,7 +161,7 @@
         },
         {
           "date": "2026-10-24",
-          "count": 2
+          "count": 6
         }
       ]
     },
@@ -183,15 +174,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-23T14:50:37Z",
+      "updated_at": "2026-10-23T19:01:26Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2721,
+      "total_commits": 2722,
       "recent_commits": [
+        {
+          "sha": "4304262",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-23T19:01:20Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/43042621c9edcc2c5d9f426f5551c0dd2bf6cbe9"
+        },
         {
           "sha": "a26c32d",
           "message": "chore(data): refresh project cache",
@@ -254,13 +252,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-10-21T23:13:25Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/73780f27b3d92413f21bc3ab0b63e65ea78cd019"
-        },
-        {
-          "sha": "71fab64",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-21T20:00:21Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/71fab64d71b73a744817b5beabf60c28063f2e70"
         }
       ],
       "pull_requests": {
@@ -332,7 +323,7 @@
         },
         {
           "date": "2026-10-24",
-          "count": 0
+          "count": 1
         }
       ]
     },
