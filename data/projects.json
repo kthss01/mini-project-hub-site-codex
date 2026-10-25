@@ -1,8 +1,170 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-25T05:55:54.976Z",
+  "generated_at": "2026-10-25T11:11:07.095Z",
   "timezone": "Asia/Seoul",
   "repos": [
+    {
+      "id": "kthss01-mini-event-race-dashboard-codex",
+      "owner": "kthss01",
+      "repo": "mini-event-race-dashboard-codex",
+      "title": "mini-event-race-dashboard-codex",
+      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "description": "",
+      "homepage": "",
+      "default_branch": "main",
+      "updated_at": "2026-10-25T10:32:50Z",
+      "thumbnail": "/images/default-thumbnail.svg",
+      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
+      "demoUrl": "",
+      "has_pages": true,
+      "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
+      "deployment_url": "",
+      "total_commits": 112,
+      "recent_commits": [
+        {
+          "sha": "869269c",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-25T10:32:46Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/869269c53c39501b6ccf5eac883dd0081edbac82"
+        },
+        {
+          "sha": "8a0d33e",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-16T02:47:07Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/8a0d33ed1f3d6756463d72a1cd22f05d6b64d284"
+        },
+        {
+          "sha": "15ea847",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-09-22T10:47:53Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/15ea8470777dae0a67a3e362048b7e23dc6b673a"
+        },
+        {
+          "sha": "c4f753c",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-09-07T11:21:21Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/c4f753cd6eb19d0ad9fcd8ff753140f5cd249f0e"
+        },
+        {
+          "sha": "03e47fc",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-09-07T02:25:57Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/03e47fc1836e60dac5427ae1c2d30cf96e91b41a"
+        },
+        {
+          "sha": "65c21a8",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-09-01T10:57:10Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/65c21a876d7f70a3caae6c2265d774b22ef20859"
+        },
+        {
+          "sha": "de4acc6",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-08-31T12:26:54Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/de4acc60906aaf3f30fff39ff6fa195f29887016"
+        },
+        {
+          "sha": "9552b98",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-08-26T06:37:46Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9552b98770eadf10e04e0791ef7e3acbf4161131"
+        },
+        {
+          "sha": "50d0025",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-08-26T00:57:22Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/50d00251a40369e7fcf8b2221fd54a9fdff58f3d"
+        },
+        {
+          "sha": "eae8fb4",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-08-23T12:27:26Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/eae8fb402518ad87abb44be286a06d63d116e87e"
+        }
+      ],
+      "pull_requests": {
+        "total_count": 22,
+        "open_count": 0,
+        "open": [],
+        "recently_merged": [
+          {
+            "number": 22,
+            "title": "fix: publish synced Google Doc data to app static path",
+            "merged_at": "2026-03-11T01:22:49Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/22"
+          },
+          {
+            "number": 21,
+            "title": "feat: show full contest list on dashboard",
+            "merged_at": "2026-03-06T07:59:56Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/21"
+          },
+          {
+            "number": 20,
+            "title": "Normalize service account key and accept Google Doc URLs in fetch script",
+            "merged_at": "2026-03-06T07:49:00Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/20"
+          },
+          {
+            "number": 19,
+            "title": "Fix TypeScript build error in fetchDoc JWT signature encoding",
+            "merged_at": "2026-03-06T07:33:50Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/19"
+          },
+          {
+            "number": 18,
+            "title": "fix: make sync-doc workflow handle scheduled branch ref",
+            "merged_at": "2026-03-06T07:25:45Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/18"
+          }
+        ]
+      },
+      "activity_last_7_days": [
+        {
+          "date": "2026-10-19",
+          "count": 0
+        },
+        {
+          "date": "2026-10-20",
+          "count": 0
+        },
+        {
+          "date": "2026-10-21",
+          "count": 0
+        },
+        {
+          "date": "2026-10-22",
+          "count": 0
+        },
+        {
+          "date": "2026-10-23",
+          "count": 0
+        },
+        {
+          "date": "2026-10-24",
+          "count": 0
+        },
+        {
+          "date": "2026-10-25",
+          "count": 1
+        }
+      ]
+    },
     {
       "id": "kthss01-mini-project-hub-site-codex",
       "owner": "kthss01",
@@ -12,15 +174,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-25T00:57:56Z",
+      "updated_at": "2026-10-25T05:55:59Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2730,
+      "total_commits": 2731,
       "recent_commits": [
+        {
+          "sha": "808777e",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-25T05:55:55Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/808777e7ec30a1d5def4e7b928d48fb6ca5b3e06"
+        },
         {
           "sha": "5c18352",
           "message": "chore(data): refresh project cache",
@@ -83,13 +252,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-10-23T19:01:20Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/43042621c9edcc2c5d9f426f5551c0dd2bf6cbe9"
-        },
-        {
-          "sha": "a26c32d",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-23T14:50:32Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a26c32d21f259a9b8c769f7235722a66a840cb10"
         }
       ],
       "pull_requests": {
@@ -161,7 +323,7 @@
         },
         {
           "date": "2026-10-25",
-          "count": 4
+          "count": 5
         }
       ]
     },
@@ -320,168 +482,6 @@
         {
           "date": "2026-10-24",
           "count": 6
-        },
-        {
-          "date": "2026-10-25",
-          "count": 0
-        }
-      ]
-    },
-    {
-      "id": "kthss01-mini-event-race-dashboard-codex",
-      "owner": "kthss01",
-      "repo": "mini-event-race-dashboard-codex",
-      "title": "mini-event-race-dashboard-codex",
-      "html_url": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "description": "",
-      "homepage": "",
-      "default_branch": "main",
-      "updated_at": "2026-10-16T02:47:12Z",
-      "thumbnail": "/images/default-thumbnail.svg",
-      "repoUrl": "https://github.com/kthss01/mini-event-race-dashboard-codex",
-      "demoUrl": "",
-      "has_pages": true,
-      "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
-      "deployment_url": "",
-      "total_commits": 111,
-      "recent_commits": [
-        {
-          "sha": "8a0d33e",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-16T02:47:07Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/8a0d33ed1f3d6756463d72a1cd22f05d6b64d284"
-        },
-        {
-          "sha": "15ea847",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-09-22T10:47:53Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/15ea8470777dae0a67a3e362048b7e23dc6b673a"
-        },
-        {
-          "sha": "c4f753c",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-09-07T11:21:21Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/c4f753cd6eb19d0ad9fcd8ff753140f5cd249f0e"
-        },
-        {
-          "sha": "03e47fc",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-09-07T02:25:57Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/03e47fc1836e60dac5427ae1c2d30cf96e91b41a"
-        },
-        {
-          "sha": "65c21a8",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-09-01T10:57:10Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/65c21a876d7f70a3caae6c2265d774b22ef20859"
-        },
-        {
-          "sha": "de4acc6",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-31T12:26:54Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/de4acc60906aaf3f30fff39ff6fa195f29887016"
-        },
-        {
-          "sha": "9552b98",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-26T06:37:46Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/9552b98770eadf10e04e0791ef7e3acbf4161131"
-        },
-        {
-          "sha": "50d0025",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-26T00:57:22Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/50d00251a40369e7fcf8b2221fd54a9fdff58f3d"
-        },
-        {
-          "sha": "eae8fb4",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-23T12:27:26Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/eae8fb402518ad87abb44be286a06d63d116e87e"
-        },
-        {
-          "sha": "26ebde0",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-21T06:35:57Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/26ebde0c4d956c69ecb6d01c27f87cfe530f131b"
-        }
-      ],
-      "pull_requests": {
-        "total_count": 22,
-        "open_count": 0,
-        "open": [],
-        "recently_merged": [
-          {
-            "number": 22,
-            "title": "fix: publish synced Google Doc data to app static path",
-            "merged_at": "2026-03-11T01:22:49Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/22"
-          },
-          {
-            "number": 21,
-            "title": "feat: show full contest list on dashboard",
-            "merged_at": "2026-03-06T07:59:56Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/21"
-          },
-          {
-            "number": 20,
-            "title": "Normalize service account key and accept Google Doc URLs in fetch script",
-            "merged_at": "2026-03-06T07:49:00Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/20"
-          },
-          {
-            "number": 19,
-            "title": "Fix TypeScript build error in fetchDoc JWT signature encoding",
-            "merged_at": "2026-03-06T07:33:50Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/19"
-          },
-          {
-            "number": 18,
-            "title": "fix: make sync-doc workflow handle scheduled branch ref",
-            "merged_at": "2026-03-06T07:25:45Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/pull/18"
-          }
-        ]
-      },
-      "activity_last_7_days": [
-        {
-          "date": "2026-10-19",
-          "count": 0
-        },
-        {
-          "date": "2026-10-20",
-          "count": 0
-        },
-        {
-          "date": "2026-10-21",
-          "count": 0
-        },
-        {
-          "date": "2026-10-22",
-          "count": 0
-        },
-        {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
-          "date": "2026-10-24",
-          "count": 0
         },
         {
           "date": "2026-10-25",
