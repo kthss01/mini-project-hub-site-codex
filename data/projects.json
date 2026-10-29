@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-29T14:02:57.436Z",
+  "generated_at": "2026-10-29T20:08:14.751Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,133 +12,162 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-29T13:32:25Z",
+      "updated_at": "2026-10-29T16:20:04Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-danmaku-ai-claude",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-danmaku-ai-claude/",
       "deployment_url": "",
-      "total_commits": 51,
+      "total_commits": 81,
       "recent_commits": [
         {
-          "sha": "9a81036",
-          "message": "Merge pull request #34: 웹: 첫 실행 프롤로그 건너뛰기 (#33)",
+          "sha": "14bcf26",
+          "message": "Merge pull request #46 from kthss01/feat/ai-runner",
           "author": "kthss01",
-          "date_iso": "2026-10-29T13:32:20Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/9a8103601b5615f8eda4e2ae356c527aa05be13f"
+          "date_iso": "2026-10-29T16:19:57Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/14bcf267c5a5940c554ea97114ba94ada6863063"
         },
         {
-          "sha": "03bac44",
-          "message": "Merge origin/main into feat/intro-skip",
+          "sha": "adbf401",
+          "message": "fix: 평가 도구 스키마에 맞춤(run.json config·final·trace 경로) (#20)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T13:31:48Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/03bac44149d8a1ec37083627791b3f93efe322f0"
+          "date_iso": "2026-10-29T16:13:52Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/adbf401704cf853c3bd9ededb0ea94e952d20119"
         },
         {
-          "sha": "0c6ffd5",
-          "message": "Merge pull request #35: #25 표적 재검증·QA-03 결과와 웹 완료 판정 (#8)",
+          "sha": "dac2d8f",
+          "message": "Merge remote-tracking branch 'origin/main' into feat/ai-runner",
           "author": "kthss01",
-          "date_iso": "2026-10-29T13:29:51Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/0c6ffd5a0741dd5429f2cd6800107dc34443dc34"
+          "date_iso": "2026-10-29T16:02:44Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/dac2d8f0d5566e6558f93176b69bb5e8d066907f"
         },
         {
-          "sha": "c5c99f2",
-          "message": "feat: 첫 실행 프롤로그 건너뛰기 (#33)",
+          "sha": "70a23e1",
+          "message": "fix: summary 기록 실패 시 run.json에도 종료 코드 5를 확정 (#20)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T13:26:08Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/c5c99f2377750cb1ab911214a85eed0e394d53fd"
+          "date_iso": "2026-10-29T16:02:09Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/70a23e16e84a8516d417969e5bda5d13db709055"
         },
         {
-          "sha": "dbf8a2b",
-          "message": "docs: #25 표적 재검증·QA-03 결과와 웹 완료 판정 기록 (#8)",
+          "sha": "b625002",
+          "message": "Merge pull request #39: AI 브리지 계약 v1과 JS 어댑터 골격 (#21)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T13:26:03Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/dbf8a2b6d5023c45f8e3179ec252b6951ec4d802"
+          "date_iso": "2026-10-29T16:00:56Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/b625002e8245bd430219824d3c285e6413c3638a"
         },
         {
-          "sha": "e10b4c3",
-          "message": "Merge pull request #32: GitHub Pages 공개 배포 검증 결과 기록 (#29)",
+          "sha": "60451b2",
+          "message": "Merge pull request #41: feat: AI 평가 결과 스키마 v1과 평가 도구 (#23)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T11:36:51Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/e10b4c33f00c9c105060a5caa937e0ccf0761d00"
+          "date_iso": "2026-10-29T15:59:55Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/60451b23649536ab59cfe217fcf71377d73ed199"
         },
         {
-          "sha": "1fde694",
-          "message": "docs: GitHub Pages 공개 배포 검증 결과 기록 (#29)",
+          "sha": "cf3688b",
+          "message": "Merge pull request #45: feat: 충돌 예측·자동 회피 기준선 정책 avoid-v1과 fixture 검증 (#22)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T11:35:33Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/1fde6942aa03ce8fba9494a1705a1dbaf6c8d8c4"
+          "date_iso": "2026-10-29T15:59:47Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/cf3688b5d74441aec77e50d08cd34a133b36f867"
         },
         {
-          "sha": "0387c04",
-          "message": "Merge pull request #26: 웹 빌드 GitHub Pages 자동 배포 워크플로 추가 (#2)",
+          "sha": "e00623a",
+          "message": "docs: Codex 검토 반영 — 레이저 width 정의, 연속 누락 만료, 검증 범위 한정 (#21)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T11:01:49Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/0387c04a39ed3cb240f016a69c9431a4d8b66c50"
+          "date_iso": "2026-10-29T15:40:23Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/e00623a47680d07e0f4c4c65f810ac5c705242a5"
         },
         {
-          "sha": "67f2ae9",
-          "message": "ci: 웹 빌드를 GitHub Pages로 자동 배포하는 워크플로 추가",
+          "sha": "9ce1e7b",
+          "message": "fix: 로그·드라이버·최종 기록 격리, 프로세스 조회 실패는 unknown, 프레임 기준 보강 (#20 Codex 재검토)",
           "author": "kthss01",
-          "date_iso": "2026-10-29T10:54:36Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/67f2ae94fd10a623926ec7f3fd2d3fc09fa52561"
+          "date_iso": "2026-10-29T15:35:10Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/9ce1e7bcffc7f6a6c348efc736ce83dfb41a63d0"
         },
         {
-          "sha": "acf9b62",
-          "message": "Merge pull request #25: setup-taisei CRLF 정리로 빌드 출처 dirty 해소 (#4)",
+          "sha": "f8cdf8a",
+          "message": "fix: Codex 검토 반영 — reuse 경로 정지 일치(P1), 수치 입력 검증·퇴화 형상 보수 처리(P2) (#22)",
           "author": "kthss01",
-          "date_iso": "2026-10-23T22:07:29Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/acf9b6253f35884888a0a1928d8afc1c3a98970c"
+          "date_iso": "2026-10-29T15:31:32Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/f8cdf8a022688317bb31cb11d5b2cc9c9a6da806"
         }
       ],
       "pull_requests": {
-        "total_count": 16,
-        "open_count": 0,
-        "open": [],
+        "total_count": 26,
+        "open_count": 4,
+        "open": [
+          {
+            "number": 48,
+            "title": "자전거 테마 1차: 이미지 준비 도구와 fork gitlink(MINIVELO 문자열·색) (#44)",
+            "author": "kthss01",
+            "created_at": "2026-10-29T15:12:56Z",
+            "updated_at": "2026-10-29T16:03:34Z",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/48"
+          },
+          {
+            "number": 42,
+            "title": "셸 AI 연결 1차: 호스트 API·수동/AI 전환 UI (mock 검증, #24)",
+            "author": "kthss01",
+            "created_at": "2026-10-29T14:39:35Z",
+            "updated_at": "2026-10-29T15:59:47Z",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/42"
+          },
+          {
+            "number": 47,
+            "title": "디자인: 메뉴 UI 현대화 1단계 문서·스크린샷과 Taisei gitlink 갱신",
+            "author": "kthss01",
+            "created_at": "2026-10-29T15:00:00Z",
+            "updated_at": "2026-10-29T15:00:00Z",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/47"
+          },
+          {
+            "number": 43,
+            "title": "docs: 자전거 의인화 테마 1차 시험 적용 검토 — 스테이지 1 보스 (#44)",
+            "author": "kthss01",
+            "created_at": "2026-10-29T14:40:24Z",
+            "updated_at": "2026-10-29T14:43:12Z",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/43"
+          }
+        ],
         "recently_merged": [
           {
-            "number": 34,
-            "title": "웹: 첫 실행 프롤로그 건너뛰기 (#33)",
-            "merged_at": "2026-10-29T13:32:20Z",
+            "number": 46,
+            "title": "AI 실험 실행기와 실행·결과 저장 계약 v1, 개발자 빌드 경로 (#20)",
+            "merged_at": "2026-10-29T16:19:58Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/34"
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/46"
           },
           {
-            "number": 35,
-            "title": "docs: #25 표적 재검증·QA-03 결과와 웹 완료 판정 (#8)",
-            "merged_at": "2026-10-29T13:29:51Z",
+            "number": 39,
+            "title": "AI 브리지 계약 v1과 JS 어댑터 골격 (#21)",
+            "merged_at": "2026-10-29T16:00:56Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/35"
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/39"
           },
           {
-            "number": 32,
-            "title": "docs: GitHub Pages 공개 배포 검증 결과 기록 (#29)",
-            "merged_at": "2026-10-29T11:36:52Z",
+            "number": 41,
+            "title": "feat: AI 평가 결과 스키마 v1과 평가 도구 (#23)",
+            "merged_at": "2026-10-29T15:59:55Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/32"
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/41"
           },
           {
-            "number": 26,
-            "title": "ci: 웹 빌드 GitHub Pages 자동 배포 워크플로 추가",
-            "merged_at": "2026-10-29T11:01:49Z",
+            "number": 45,
+            "title": "feat: 충돌 예측·자동 회피 기준선 정책 avoid-v1과 fixture 검증 (#22)",
+            "merged_at": "2026-10-29T15:59:48Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/26"
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/45"
           },
           {
-            "number": 25,
-            "title": "[세션1] setup-taisei CRLF 정리로 빌드 출처 dirty 해소 (#4)",
-            "merged_at": "2026-10-23T22:07:29Z",
+            "number": 40,
+            "title": "웹: 자동 발사 기본값 켜기 (#36)",
+            "merged_at": "2026-10-29T14:34:15Z",
             "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/25"
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/40"
           }
         ]
       },
       "activity_last_7_days": [
-        {
-          "date": "2026-10-23",
-          "count": 36
-        },
         {
           "date": "2026-10-24",
           "count": 6
@@ -161,7 +190,11 @@
         },
         {
           "date": "2026-10-29",
-          "count": 9
+          "count": 24
+        },
+        {
+          "date": "2026-10-30",
+          "count": 15
         }
       ]
     },
@@ -174,15 +207,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-29T06:53:17Z",
+      "updated_at": "2026-10-29T14:03:07Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2750,
+      "total_commits": 2751,
       "recent_commits": [
+        {
+          "sha": "7dc90af",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-29T14:03:02Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/7dc90afb761a2d2dbc75b267f72c424fb3c20a63"
+        },
         {
           "sha": "f101748",
           "message": "chore(data): refresh project cache",
@@ -245,13 +285,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-10-27T10:18:48Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a9be488158a436527db4c5afbf4d7429d873013c"
-        },
-        {
-          "sha": "71d921e",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-27T04:37:23Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/71d921e9f4dc9ec939ba095e2b360fdc5ead48aa"
         }
       ],
       "pull_requests": {
@@ -298,10 +331,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 6
-        },
-        {
           "date": "2026-10-24",
           "count": 5
         },
@@ -323,7 +352,11 @@
         },
         {
           "date": "2026-10-29",
-          "count": 4
+          "count": 5
+        },
+        {
+          "date": "2026-10-30",
+          "count": 0
         }
       ]
     },
@@ -460,10 +493,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -485,6 +514,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -586,10 +619,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -611,6 +640,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -748,10 +781,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -773,6 +802,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -903,10 +936,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -928,6 +957,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1029,10 +1062,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1054,6 +1083,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1191,10 +1224,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1216,6 +1245,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1353,10 +1386,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1378,6 +1407,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1515,10 +1548,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1540,6 +1569,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1663,10 +1696,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1688,6 +1717,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1825,10 +1858,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1850,6 +1879,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -1973,10 +2006,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -1998,6 +2027,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -2135,10 +2168,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -2160,6 +2189,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
@@ -2297,10 +2330,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-10-23",
-          "count": 0
-        },
-        {
           "date": "2026-10-24",
           "count": 0
         },
@@ -2322,6 +2351,10 @@
         },
         {
           "date": "2026-10-29",
+          "count": 0
+        },
+        {
+          "date": "2026-10-30",
           "count": 0
         }
       ]
