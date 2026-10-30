@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-29T20:08:14.751Z",
+  "generated_at": "2026-10-30T00:43:13.504Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -12,113 +12,105 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-29T16:20:04Z",
+      "updated_at": "2026-10-29T21:16:01Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-danmaku-ai-claude",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-danmaku-ai-claude/",
       "deployment_url": "",
-      "total_commits": 81,
+      "total_commits": 95,
       "recent_commits": [
+        {
+          "sha": "14f947c",
+          "message": "Merge pull request #47 from kthss01/feat/ui-modern-menus",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T21:15:56Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/14f947c213d5ee90d3830105f89b4b29e5ee239d"
+        },
+        {
+          "sha": "469bc42",
+          "message": "docs: UI 현대화 문서에 fork 머지 커밋 e1b6f29a와 main 병합 기준 반영 (#47)",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T21:03:19Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/469bc42cf64bc6d1f89d0df99a0c86b23fb11986"
+        },
+        {
+          "sha": "aedfe25",
+          "message": "Merge origin/main into feat/ui-modern-menus: gitlink를 fork 머지 커밋 e1b6f29a로 갱신 (#47)",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T21:03:15Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/aedfe2587bb8d20a43323c71a8340b96d0852aab"
+        },
+        {
+          "sha": "df722b1",
+          "message": "Merge pull request #42 from kthss01/test/ai-integration",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T21:01:09Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/df722b1614fdbda292b1af90cb5b3daab6354147"
+        },
+        {
+          "sha": "5c68575",
+          "message": "fix: 셸의 AI 경로 문자열이 정적 검사에 걸리는 문제 수정, action_timeout 사유 추가 (#24)",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T20:54:54Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/5c68575997d56a8646caf38cdaf812a77277bea0"
+        },
+        {
+          "sha": "4c1786e",
+          "message": "Merge origin/main into test/ai-integration",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T20:53:10Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/4c1786e6d06a714918ed6b78e98cc0f5a80776db"
+        },
+        {
+          "sha": "0dd55ec",
+          "message": "Merge pull request #49 from kthss01/feat/ai-gitlink-packaging",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T20:46:52Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/0dd55ece484eb7141a135f9952b1e61c7b2d2049"
+        },
+        {
+          "sha": "f1fc5d1",
+          "message": "docs: ai/** 패키징과 gitlink 갱신 절차 반영 (#20)",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T20:40:06Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/f1fc5d1fa12f487d3b7ad9ce9af1bcf5f3ba21dc"
+        },
+        {
+          "sha": "b1df189",
+          "message": "build: gitlink를 fork master 4d417486(AI 브리지 포함)으로 갱신하고 ai/**를 site/game/ai로 패키징 (#20)",
+          "author": "kthss01",
+          "date_iso": "2026-10-29T16:22:35Z",
+          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/b1df18906cffd00d16bfe30ecf246d1c57c1aa11"
+        },
         {
           "sha": "14bcf26",
           "message": "Merge pull request #46 from kthss01/feat/ai-runner",
           "author": "kthss01",
           "date_iso": "2026-10-29T16:19:57Z",
           "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/14bcf267c5a5940c554ea97114ba94ada6863063"
-        },
-        {
-          "sha": "adbf401",
-          "message": "fix: 평가 도구 스키마에 맞춤(run.json config·final·trace 경로) (#20)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T16:13:52Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/adbf401704cf853c3bd9ededb0ea94e952d20119"
-        },
-        {
-          "sha": "dac2d8f",
-          "message": "Merge remote-tracking branch 'origin/main' into feat/ai-runner",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T16:02:44Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/dac2d8f0d5566e6558f93176b69bb5e8d066907f"
-        },
-        {
-          "sha": "70a23e1",
-          "message": "fix: summary 기록 실패 시 run.json에도 종료 코드 5를 확정 (#20)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T16:02:09Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/70a23e16e84a8516d417969e5bda5d13db709055"
-        },
-        {
-          "sha": "b625002",
-          "message": "Merge pull request #39: AI 브리지 계약 v1과 JS 어댑터 골격 (#21)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T16:00:56Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/b625002e8245bd430219824d3c285e6413c3638a"
-        },
-        {
-          "sha": "60451b2",
-          "message": "Merge pull request #41: feat: AI 평가 결과 스키마 v1과 평가 도구 (#23)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T15:59:55Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/60451b23649536ab59cfe217fcf71377d73ed199"
-        },
-        {
-          "sha": "cf3688b",
-          "message": "Merge pull request #45: feat: 충돌 예측·자동 회피 기준선 정책 avoid-v1과 fixture 검증 (#22)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T15:59:47Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/cf3688b5d74441aec77e50d08cd34a133b36f867"
-        },
-        {
-          "sha": "e00623a",
-          "message": "docs: Codex 검토 반영 — 레이저 width 정의, 연속 누락 만료, 검증 범위 한정 (#21)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T15:40:23Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/e00623a47680d07e0f4c4c65f810ac5c705242a5"
-        },
-        {
-          "sha": "9ce1e7b",
-          "message": "fix: 로그·드라이버·최종 기록 격리, 프로세스 조회 실패는 unknown, 프레임 기준 보강 (#20 Codex 재검토)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T15:35:10Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/9ce1e7bcffc7f6a6c348efc736ce83dfb41a63d0"
-        },
-        {
-          "sha": "f8cdf8a",
-          "message": "fix: Codex 검토 반영 — reuse 경로 정지 일치(P1), 수치 입력 검증·퇴화 형상 보수 처리(P2) (#22)",
-          "author": "kthss01",
-          "date_iso": "2026-10-29T15:31:32Z",
-          "url": "https://github.com/kthss01/mini-danmaku-ai-claude/commit/f8cdf8a022688317bb31cb11d5b2cc9c9a6da806"
         }
       ],
       "pull_requests": {
-        "total_count": 26,
-        "open_count": 4,
+        "total_count": 28,
+        "open_count": 3,
         "open": [
           {
+            "number": 50,
+            "title": "자전거 테마: 프롤로그·엔딩·엑스트라 컷신 대사와 이미지 요청서 (#44)",
+            "author": "kthss01",
+            "created_at": "2026-10-29T21:58:10Z",
+            "updated_at": "2026-10-29T22:00:41Z",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/50"
+          },
+          {
             "number": 48,
-            "title": "자전거 테마 1차: 이미지 준비 도구와 fork gitlink(MINIVELO 문자열·색) (#44)",
+            "title": "자전거 테마 1차: 시트 추출 도구·시트 원본·gitlink(보스 5명 임시 적용) (#44)",
             "author": "kthss01",
             "created_at": "2026-10-29T15:12:56Z",
-            "updated_at": "2026-10-29T16:03:34Z",
+            "updated_at": "2026-10-29T21:36:19Z",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/48"
-          },
-          {
-            "number": 42,
-            "title": "셸 AI 연결 1차: 호스트 API·수동/AI 전환 UI (mock 검증, #24)",
-            "author": "kthss01",
-            "created_at": "2026-10-29T14:39:35Z",
-            "updated_at": "2026-10-29T15:59:47Z",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/42"
-          },
-          {
-            "number": 47,
-            "title": "디자인: 메뉴 UI 현대화 1단계 문서·스크린샷과 Taisei gitlink 갱신",
-            "author": "kthss01",
-            "created_at": "2026-10-29T15:00:00Z",
-            "updated_at": "2026-10-29T15:00:00Z",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/47"
           },
           {
             "number": 43,
@@ -130,6 +122,27 @@
           }
         ],
         "recently_merged": [
+          {
+            "number": 47,
+            "title": "디자인: 메뉴 UI 현대화 1단계 문서·스크린샷과 Taisei gitlink 갱신",
+            "merged_at": "2026-10-29T21:15:57Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/47"
+          },
+          {
+            "number": 42,
+            "title": "셸 AI 연결 1차: 호스트 API·수동/AI 전환 UI (mock 검증, #24)",
+            "merged_at": "2026-10-29T21:01:09Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/42"
+          },
+          {
+            "number": 49,
+            "title": "gitlink를 AI 브리지 포함 fork master로 갱신하고 ai/**를 사이트로 패키징 (#20)",
+            "merged_at": "2026-10-29T20:46:52Z",
+            "author": "kthss01",
+            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/49"
+          },
           {
             "number": 46,
             "title": "AI 실험 실행기와 실행·결과 저장 계약 v1, 개발자 빌드 경로 (#20)",
@@ -143,27 +156,6 @@
             "merged_at": "2026-10-29T16:00:56Z",
             "author": "kthss01",
             "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/39"
-          },
-          {
-            "number": 41,
-            "title": "feat: AI 평가 결과 스키마 v1과 평가 도구 (#23)",
-            "merged_at": "2026-10-29T15:59:55Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/41"
-          },
-          {
-            "number": 45,
-            "title": "feat: 충돌 예측·자동 회피 기준선 정책 avoid-v1과 fixture 검증 (#22)",
-            "merged_at": "2026-10-29T15:59:48Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/45"
-          },
-          {
-            "number": 40,
-            "title": "웹: 자동 발사 기본값 켜기 (#36)",
-            "merged_at": "2026-10-29T14:34:15Z",
-            "author": "kthss01",
-            "url": "https://github.com/kthss01/mini-danmaku-ai-claude/pull/40"
           }
         ]
       },
@@ -190,11 +182,11 @@
         },
         {
           "date": "2026-10-29",
-          "count": 24
+          "count": 28
         },
         {
           "date": "2026-10-30",
-          "count": 15
+          "count": 25
         }
       ]
     },
@@ -207,15 +199,22 @@
       "description": "",
       "homepage": "",
       "default_branch": "main",
-      "updated_at": "2026-10-29T14:03:07Z",
+      "updated_at": "2026-10-29T20:08:24Z",
       "thumbnail": "/images/default-thumbnail.svg",
       "repoUrl": "https://github.com/kthss01/mini-project-hub-site-codex",
       "demoUrl": "",
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2751,
+      "total_commits": 2752,
       "recent_commits": [
+        {
+          "sha": "3ef08b5",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-10-29T20:08:19Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/3ef08b5d35a01d06497bf64f0fd694b3012b4872"
+        },
         {
           "sha": "7dc90af",
           "message": "chore(data): refresh project cache",
@@ -278,13 +277,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-10-27T16:20:26Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/8396c1e26e182ff6da44205a64d9b1cfc23abc19"
-        },
-        {
-          "sha": "a9be488",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-10-27T10:18:48Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/a9be488158a436527db4c5afbf4d7429d873013c"
         }
       ],
       "pull_requests": {
@@ -356,7 +348,7 @@
         },
         {
           "date": "2026-10-30",
-          "count": 0
+          "count": 1
         }
       ]
     },
