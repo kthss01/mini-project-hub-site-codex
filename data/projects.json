@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-17T12:59:24.946Z",
+  "generated_at": "2026-11-17T21:41:50.814Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -19,8 +19,15 @@
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2820,
+      "total_commits": 2821,
       "recent_commits": [
+        {
+          "sha": "9c4f807",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-11-17T12:59:54Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/9c4f807a0d3df5824363cfe92d2a97553e2c83ec"
+        },
         {
           "sha": "fd303b8",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-11-14T21:16:43Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f614b35d95601db93caf6100c50d3c356a9f52df"
-        },
-        {
-          "sha": "562e0a9",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-11-14T16:55:37Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/562e0a926a0a5b1490895807fe9b7ca16db9bf59"
         }
       ],
       "pull_requests": {
@@ -136,10 +136,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 4
-        },
-        {
           "date": "2026-11-12",
           "count": 3
         },
@@ -161,7 +157,11 @@
         },
         {
           "date": "2026-11-17",
-          "count": 2
+          "count": 3
+        },
+        {
+          "date": "2026-11-18",
+          "count": 0
         }
       ]
     },
@@ -181,8 +181,15 @@
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
       "deployment_url": "",
-      "total_commits": 115,
+      "total_commits": 116,
       "recent_commits": [
+        {
+          "sha": "ea200cb",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-11-17T15:23:13Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/ea200cbb85580bf3053e57d77283315d429a99c7"
+        },
         {
           "sha": "531ad4c",
           "message": "chore: sync doc data",
@@ -245,13 +252,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-09-01T10:57:10Z",
           "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/65c21a876d7f70a3caae6c2265d774b22ef20859"
-        },
-        {
-          "sha": "de4acc6",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-08-31T12:26:54Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/de4acc60906aaf3f30fff39ff6fa195f29887016"
         }
       ],
       "pull_requests": {
@@ -298,10 +298,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 1
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -324,6 +320,10 @@
         {
           "date": "2026-11-17",
           "count": 0
+        },
+        {
+          "date": "2026-11-18",
+          "count": 1
         }
       ]
     },
@@ -485,10 +485,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -510,6 +506,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -611,10 +611,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -636,6 +632,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -773,10 +773,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -798,6 +794,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -928,10 +928,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -953,6 +949,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1054,10 +1054,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1079,6 +1075,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1216,10 +1216,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1241,6 +1237,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1378,10 +1378,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1403,6 +1399,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1540,10 +1540,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1565,6 +1561,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1688,10 +1688,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1713,6 +1709,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1850,10 +1850,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -1875,6 +1871,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -1998,10 +1998,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -2023,6 +2019,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -2160,10 +2160,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -2185,6 +2181,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
@@ -2322,10 +2322,6 @@
       },
       "activity_last_7_days": [
         {
-          "date": "2026-11-11",
-          "count": 0
-        },
-        {
           "date": "2026-11-12",
           "count": 0
         },
@@ -2347,6 +2343,10 @@
         },
         {
           "date": "2026-11-17",
+          "count": 0
+        },
+        {
+          "date": "2026-11-18",
           "count": 0
         }
       ]
