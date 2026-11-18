@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-17T21:41:50.814Z",
+  "generated_at": "2026-11-18T03:32:07.416Z",
   "timezone": "Asia/Seoul",
   "repos": [
     {
@@ -19,8 +19,15 @@
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-project-hub-site-codex/",
       "deployment_url": "",
-      "total_commits": 2821,
+      "total_commits": 2822,
       "recent_commits": [
+        {
+          "sha": "c2b5758",
+          "message": "chore(data): refresh project cache",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-11-17T21:41:55Z",
+          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/c2b57586f98715e5eeb5c08f97fb18c552de9865"
+        },
         {
           "sha": "9c4f807",
           "message": "chore(data): refresh project cache",
@@ -83,13 +90,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-11-15T01:41:03Z",
           "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/b33ec11046680da2726e99af7107643573f6bdab"
-        },
-        {
-          "sha": "f614b35",
-          "message": "chore(data): refresh project cache",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-11-14T21:16:43Z",
-          "url": "https://github.com/kthss01/mini-project-hub-site-codex/commit/f614b35d95601db93caf6100c50d3c356a9f52df"
         }
       ],
       "pull_requests": {
@@ -161,7 +161,7 @@
         },
         {
           "date": "2026-11-18",
-          "count": 0
+          "count": 1
         }
       ]
     },
@@ -181,8 +181,15 @@
       "has_pages": true,
       "github_pages_url": "https://kthss01.github.io/mini-event-race-dashboard-codex/",
       "deployment_url": "",
-      "total_commits": 116,
+      "total_commits": 117,
       "recent_commits": [
+        {
+          "sha": "2be34a3",
+          "message": "chore: sync doc data",
+          "author": "github-actions[bot]",
+          "date_iso": "2026-11-18T00:23:29Z",
+          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/2be34a3481abc7505a88daa5fd0ff369f7431ada"
+        },
         {
           "sha": "ea200cb",
           "message": "chore: sync doc data",
@@ -245,13 +252,6 @@
           "author": "github-actions[bot]",
           "date_iso": "2026-09-07T02:25:57Z",
           "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/03e47fc1836e60dac5427ae1c2d30cf96e91b41a"
-        },
-        {
-          "sha": "65c21a8",
-          "message": "chore: sync doc data",
-          "author": "github-actions[bot]",
-          "date_iso": "2026-09-01T10:57:10Z",
-          "url": "https://github.com/kthss01/mini-event-race-dashboard-codex/commit/65c21a876d7f70a3caae6c2265d774b22ef20859"
         }
       ],
       "pull_requests": {
@@ -323,7 +323,7 @@
         },
         {
           "date": "2026-11-18",
-          "count": 1
+          "count": 2
         }
       ]
     },
